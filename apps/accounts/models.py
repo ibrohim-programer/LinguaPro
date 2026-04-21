@@ -7,7 +7,7 @@ class CustomUser(AbstractUser):
         TEACHER = 'teacher', "O'qituvchi"
         STUDENT = 'student', "O'quvchi"
 
-    role = models.CharField(max_length=10, choices=Role.choices, default=Role.STUDENT, verbose_name='Rol')
+    role = models.CharField(max_length=10, default=Role.STUDENT , choices=Role.choices,verbose_name='Rol')
     username = models.CharField(max_length=50, unique=True, verbose_name='Foydalanuvchi nomi', error_messages={'unique': "Bu foydalanuvchi nomi band. Boshqa nom tanlang.",})
     phone = models.CharField(max_length=9,blank=True,null=True,verbose_name='Telefon raqami')
     avatar = models.URLField(blank=True,null=True,verbose_name='Profil rasmi')
@@ -18,8 +18,13 @@ class CustomUser(AbstractUser):
     updated_at = models.DateTimeField(auto_now=True,verbose_name='Yangilangan vaqt')
 
     EMAIL_FIELD = None
-    REQUIRED_FIELDS = []  
-
+    REQUIRED_FIELDS = [] 
+    
+    def save(self, *args, **kwargs):
+        if self.is_superuser:
+            self.role = self.Role.ADMIN
+        super().save(*args, **kwargs)
+        
     class Meta:
         verbose_name = 'Foydalanuvchi'
         verbose_name_plural = 'Foydalanuvchilar'
