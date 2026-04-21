@@ -31,7 +31,7 @@ def get_tokens_for_user(user):
 )
 class RegisterView(GenericAPIView):
     serializer_class = RegisterSerializer
-    permission_classes = [AllowAny]
+    permission_classes = [IsAuthenticated , IsAdmin]
     def post(self, request):
         serializer = RegisterSerializer(data=request.data)
         if not serializer.is_valid():

@@ -8,10 +8,8 @@ class RegisterSerializer(serializers.ModelSerializer):
     password2 = serializers.CharField(write_only=True,label='Parolni tasdiqlang')
     class Meta:
         model = User
-        fields = ['username',"phone",'password','password2','first_name','last_name','phone','role',]
-        read_only_fields = ['first_name','last_name','role',]
-        extra_kwargs = {'password': {'write_only': True, 'min_length': 8},'first_name': {'required': True},'last_name': {'required': True},}
-
+        fields = ['username',"phone",'password','password2','phone','role',]
+        extra_kwargs = {'password': {'write_only': True, 'min_length': 8},}
     def validate_username(self, value):
         value = value.lower()
         if not re.match(r'^[a-z0-9_]+$', value):
@@ -46,7 +44,6 @@ class LoginSerializer(serializers.Serializer):
         data['user'] = user
         return data
 
-
 class ProfileSerealizers(serializers.ModelSerializer):
     username = serializers.CharField(read_only = True)
     class Meta:
@@ -74,7 +71,6 @@ class UserListSerializer(serializers.ModelSerializer):
         model = User
         fields = ['id','username','full_name','role','role_display','phone','is_active','created_at',]   
 
-
 class ForgotPasswordSerealizers(serializers.Serializer):
     username = serializers.CharField(write_only = True , required = True)
     phone = serializers.CharField(write_only = True , required = True)    
@@ -95,8 +91,7 @@ class ForgotPasswordSerealizers(serializers.Serializer):
             
         except Exception as e:
             raise serializers.ValidationError({"Xatolik yuzaga keldi" : str(e)})
-        
-     
+          
     
 class VirfiyPasswordSerialezers(serializers.Serializer):
     username = serializers.CharField(write_only = True , required = True)  

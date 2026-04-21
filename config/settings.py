@@ -36,8 +36,6 @@ INSTALLED_APPS = [
     # app 
     "apps.common",
     "apps.accounts",               
-    "apps.teachers",                  
-    "apps.students",                  
     "apps.groups",                  
     "apps.courses",                   
     "apps.attendance",                

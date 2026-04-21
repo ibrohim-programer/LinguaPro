@@ -6,7 +6,6 @@ from .views import (RegisterView , LoginView,
                     )
 urlpatterns = [
     # Auth
-    path('register/',RegisterView.as_view(),name='register'),
     path('login/',LoginView.as_view(),name='login'),
   
     # Verify password
@@ -18,6 +17,7 @@ urlpatterns = [
     path("my-profile-update-delete/" , ProfileUpdateView.as_view() ,name='profile-update-delete'),
     
     # IS_Admin
+    path('register/',RegisterView.as_view(),name='register'),
     path('user-list/' , UserListAdminView.as_view() , name='user-list')
     
 ]
