@@ -8,7 +8,7 @@ class RegisterSerializer(serializers.ModelSerializer):
     password2 = serializers.CharField(write_only=True,label='Parolni tasdiqlang')
     class Meta:
         model = User
-        fields = ['username',"phone",'password','password2','phone','role',]
+        fields = ['username',"phone",'password','password2','role',]
         extra_kwargs = {'password': {'write_only': True, 'min_length': 8},}
     def validate_username(self, value):
         value = value.lower()
