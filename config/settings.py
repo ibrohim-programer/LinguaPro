@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'channels',   
     
     # app 
+    "apps.common",
     "apps.accounts",               
     "apps.teachers",                  
     "apps.students",                  

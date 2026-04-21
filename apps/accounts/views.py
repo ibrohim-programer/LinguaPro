@@ -18,7 +18,7 @@ def get_tokens_for_user(user):
 
 @extend_schema(
     tags=["Auth - Register - Login - OTP"],
-    summary="Foydalanuvchini ro'yxatdan o'tkazish / Kirish / OTP",
+    summary="Foydalanuvchini ro'yxatdan o'tkazish",
     description="""
     Bu endpoint quyidagi amallarni bajaradi:
     - Yangi foydalanuvchini ro'yxatdan o'tkazish
