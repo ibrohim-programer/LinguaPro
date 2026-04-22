@@ -1,3 +1,25 @@
 from django.shortcuts import render
+from rest_framework.generics import ListAPIView,CreateAPIView,RetrieveUpdateDestroyAPIView
+from rest_framework.permissions import IsAuthenticatedOrReadOnly
+from apps.common.permissions import *
+from .models import Course
+from .serailizers import CourseSerializer
+from drf_spectacular.utils import extend_schema
 
-# Create your views here.
+@extend_schema(tags=["Course"],)  
+class CourseListView(ListAPIView):
+    queryset = Course.objects.all()
+    permission_classes = [IsAuthenticatedOrReadOnly]
+    serializer_class = CourseSerializer
+
+@extend_schema(tags=["Course"],)  
+class CourseCreateView(CreateAPIView):
+    queryset = Course.objects.all()
+    permission_classes = [IsAdmin]
+    serializer_class = CourseSerializer
+
+@extend_schema(tags=["Course"],)  
+class CourseUpdateDeleteView(RetrieveUpdateDestroyAPIView):
+    queryset = Course.objects.all()
+    permission_classes = [IsAdmin]
+    serializer_class = CourseSerializer
