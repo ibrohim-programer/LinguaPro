@@ -9,7 +9,7 @@ from drf_spectacular.utils import extend_schema
 @extend_schema(tags=["Course"],)  
 class CourseListView(ListAPIView):
     queryset = Course.objects.all()
-    permission_classes = [IsAuthenticatedOrReadOnly]
+    permission_classes = [IsAuthenticatedOrReadOnly , IsAdmin]
     serializer_class = CourseSerializer
 
 @extend_schema(tags=["Course"],)  
@@ -23,3 +23,4 @@ class CourseUpdateDeleteView(RetrieveUpdateDestroyAPIView):
     queryset = Course.objects.all()
     permission_classes = [IsAdmin]
     serializer_class = CourseSerializer
+    http_method_names = ['put' , 'delete']

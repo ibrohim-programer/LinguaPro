@@ -9,7 +9,7 @@ class CustomUser(AbstractUser):
 
     role = models.CharField(max_length=10, default=Role.STUDENT , choices=Role.choices,verbose_name='Rol')
     username = models.CharField(max_length=50, unique=True, verbose_name='Foydalanuvchi nomi', error_messages={'unique': "Bu foydalanuvchi nomi band. Boshqa nom tanlang.",})
-    phone = models.CharField(max_length=9,blank=True,null=True,verbose_name='Telefon raqami')
+    phone = models.CharField(max_length=9,unique=True,blank=True,null=True,verbose_name='Telefon raqami')
     avatar = models.URLField(blank=True,null=True,verbose_name='Profil rasmi')
     timezone = models.CharField(max_length=50,default='Asia/Tashkent',verbose_name='Vaqt zonasi')
     bio = models.TextField(blank=True,default='',verbose_name="Qisqa ma'lumot")

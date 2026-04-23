@@ -10,7 +10,7 @@ class Course(models.Model):
         KIDS    = 'kids',    "Bolalar uchun"
         BUSINESS= 'business','Business English'
  
-    category = models.CharField(max_length=100,verbose_name='Kategoriya')
+    couser_objective = models.CharField(max_length=100, choices=Category.choices ,verbose_name='Kursni maqasadi')
     class Level(models.TextChoices):
         BEGINNER     = 'beginner',     'Beginner'
         INTERMEDIATE = 'intermediate', 'Intermediate'

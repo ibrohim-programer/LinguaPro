@@ -10,8 +10,8 @@ urlpatterns = [
  
     # API versiyasi v1
     path('api/auth/',include('apps.accounts.urls')),
-    # path('api/groups/',include('apps.groups.urls')),
-    # path('api/courses/',include('apps.courses.urls')),
+    path('api/courses/',include('apps.courses.urls')),
+    path('api/groups/',include('apps.groups.urls')),
     # path('api/attendance/',include('apps.attendance.urls')),
     # path('api/assignments/',include('apps.assignments.urls')),
     # path('api/results/',include('apps.results.urls')),
