@@ -158,7 +158,9 @@ class VerfiyPasswordView(GenericAPIView):
         except Exception as e:
              return Response({"Error" : str(e)} , status=400)
          
-        
+   
+   
+@extend_schema(tags=['Admin User list full'],summary='Admin barcha userlar ruyxatini kuradi.')     
 class UserListAdminView(GenericAPIView):
     serializer_class = UserListAdminSerailizirs
     permission_classes = [IsAdmin]
@@ -171,9 +173,9 @@ class UserListAdminView(GenericAPIView):
         if search:
             from django.db.models import Q
             users = users.filter(
-                Q(username__icontains=search) |      # username ichida qidiradi
-                Q(first_name__icontains=search) |    # ismda qidiradi
-                Q(last_name__icontains=search)       # familiyada qidiradi
+                Q(username__icontains=search) |      
+                Q(first_name__icontains=search) |    
+                Q(last_name__icontains=search)       
             )
  
         serializer = UserListSerializer(users, many=True)

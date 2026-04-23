@@ -12,10 +12,10 @@ urlpatterns = [
     path('api/auth/',include('apps.accounts.urls')),
     path('api/courses/',include('apps.courses.urls')),
     path('api/groups/',include('apps.groups.urls')),
-    # path('api/attendance/',include('apps.attendance.urls')),
+    path('api/attendance/',include('apps.attendance.urls')),
     # path('api/assignments/',include('apps.assignments.urls')),
     # path('api/results/',include('apps.results.urls')),
-    # path('api/notifications/',include('apps.notifications.urls')),
+    path('api/notifications/',include('apps.notifications.urls')),
     # path('api/messages/',include('apps.messages_app.urls')),
     # path('api/settings/',include('apps.settings_app.urls')),
     
