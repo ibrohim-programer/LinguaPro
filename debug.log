@@ -1,0 +1,35 @@
+INFO 2026-04-24 10:20:16,059 autoreload 3180 868 Watching for file changes with StatReloader
+WARNING 2026-04-24 10:22:19,492 log 3180 8000 Unauthorized: /api/groups/groups/222/add-student/
+WARNING 2026-04-24 10:22:19,493 log 3180 8000 "POST /api/groups/groups/222/add-student/ HTTP/1.1" 401 58
+WARNING 2026-04-24 10:23:39,664 log 3180 8000 Unauthorized: /api/groups/groups/222/add-student/
+WARNING 2026-04-24 10:23:39,665 log 3180 8000 "POST /api/groups/groups/222/add-student/ HTTP/1.1" 401 51
+WARNING 2026-04-24 10:24:05,210 log 3180 8000 Unauthorized: /api/groups/groups/222/add-student/
+WARNING 2026-04-24 10:24:05,211 log 3180 8000 "POST /api/groups/groups/222/add-student/ HTTP/1.1" 401 51
+WARNING 2026-04-24 10:24:28,210 log 3180 8000 Unauthorized: /api/courses/course-create/
+WARNING 2026-04-24 10:24:28,212 log 3180 8000 "POST /api/courses/course-create/ HTTP/1.1" 401 51
+WARNING 2026-04-24 10:24:43,522 log 3180 8000 Unauthorized: /api/courses/course-create/
+WARNING 2026-04-24 10:24:43,523 log 3180 8000 "POST /api/courses/course-create/ HTTP/1.1" 401 51
+WARNING 2026-04-24 10:25:56,083 log 3180 8000 Unauthorized: /api/courses/course-create/
+WARNING 2026-04-24 10:25:56,084 log 3180 8000 "POST /api/courses/course-create/ HTTP/1.1" 401 51
+INFO 2026-04-24 10:26:26,298 log 3180 8000 "GET /admin/ HTTP/1.1" 302 0
+INFO 2026-04-24 10:26:26,353 log 3180 8000 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4089
+INFO 2026-04-24 10:26:26,378 log 3180 8000 "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO 2026-04-24 10:26:26,380 log 3180 10192 "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2026-04-24 10:26:26,395 log 3180 8000 "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2026-04-24 10:26:26,398 log 3180 10192 "GET /static/admin/css/login.css HTTP/1.1" 304 0
+INFO 2026-04-24 10:26:26,400 log 3180 8552 "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2026-04-24 10:26:26,403 log 3180 2400 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO 2026-04-24 10:26:26,411 log 3180 2400 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO 2026-04-24 10:26:30,363 log 3180 2400 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 4272
+INFO 2026-04-24 10:26:40,672 log 3180 2400 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 4265
+INFO 2026-04-24 10:26:47,066 log 3180 2400 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 4265
+INFO 2026-04-24 10:27:30,012 log 3180 2400 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 4265
+INFO 2026-04-24 10:31:49,826 autoreload 3180 868 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\config\settings.py changed, reloading.
+INFO 2026-04-24 10:31:50,338 autoreload 4608 7540 Watching for file changes with StatReloader
+INFO 2026-04-24 10:33:04,916 autoreload 4608 7540 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\config\settings.py changed, reloading.
+INFO 2026-04-24 10:33:05,657 autoreload 9960 6896 Watching for file changes with StatReloader
+INFO 2026-04-24 10:33:08,641 autoreload 9960 6896 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\config\settings.py changed, reloading.
+INFO 2026-04-24 10:33:09,478 autoreload 7988 8400 Watching for file changes with StatReloader
+INFO 2026-04-24 10:33:17,017 log 7988 9236 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 4265
+WARNING 2026-04-24 10:33:43,138 log 7988 9236 Unauthorized: /api/auth/my-profile-update-delete/
+WARNING 2026-04-24 10:33:43,138 log 7988 9236 "PATCH /api/auth/my-profile-update-delete/ HTTP/1.1" 401 51

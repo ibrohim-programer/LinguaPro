@@ -77,17 +77,16 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'config.wsgi.application'
 
-# # PostgreSQL
-# DB_NAME=linguapro_db
-# DB_USER=postgres
-# DB_PASSWORD=your_password
-# DB_HOST=localhost
-# DB_PORT=5432
+
  
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        "NAME": "lingoupro",
+        "USER": "postgres",
+        "PASSWORD": "ibrohim_09",
+        "HOST": "localhost",
+        "PORT": "5432",
     }
 }
 
@@ -165,3 +164,41 @@ SPECTACULAR_SETTINGS = {
     'SERVE_INCLUDE_SCHEMA': False,
     # OTHER SETTINGS
 }
+
+
+
+
+
+
+import os
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'verbose': {
+            'format': '{levelname} {asctime} {module} {process:d} {thread:d} {message}',
+            'style': '{',
+        },
+    },
+    'handlers': {
+        'file': {
+            'level': 'INFO',
+            'class': 'logging.FileHandler',
+            'filename': os.path.join(BASE_DIR, 'debug.log'),
+            'formatter': 'verbose',
+        },
+    },
+    'loggers': {
+        'django': {  # Django uchun logger
+            'handlers': ['file'], # Faqat faylga yozadi
+            'level': 'INFO',
+        },
+        'myapp': {  # Sizning appingiz uchun alohida logger
+            'handlers': ['file'], # Faqat faylga yozadi
+            'level': 'INFO',
+        },
+    },
+}
+
+DRF_API_LOGGER_DATABASE = True
