@@ -1,24 +1,19 @@
 from pathlib import Path
+from decouple  import config , Csv
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+SECRET_KEY = config('SECRET_KEY')
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/6.0/howto/deployment/checklist/
+DEBUG = config('DEBUG', default=False, cast=bool)
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-)7g@j9u@f-gm5dzec5vq4@vno^3s+s0bg3_*i3hg8+%1lh!da4'
-
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'daphne',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -31,7 +26,7 @@ INSTALLED_APPS = [
     'corsheaders',                 
     'django_filters',              
     'drf_spectacular',            
-    'channels',   
+    'channels', 
     
     # app 
     "apps.common",
@@ -40,10 +35,8 @@ INSTALLED_APPS = [
     "apps.courses",                   
     "apps.attendance",                
     "apps.assignments",             
-    "apps.results",       
     "apps.notifications" ,           
     "apps.messages_app",              
-    "apps.settings",             
 ]
 
 AUTH_USER_MODEL = 'accounts.CustomUser'
@@ -82,11 +75,11 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        "NAME": "lingoupro",
-        "USER": "postgres",
-        "PASSWORD": "ibrohim_09",
-        "HOST": "localhost",
-        "PORT": "5432",
+        'NAME': config('DB_NAME'),
+        'USER': config('DB_USER'),
+        'PASSWORD': config('DB_PASSWORD'),
+        'HOST': config('DB_HOST', default='localhost'),
+        'PORT': config('DB_PORT', default='5432'),
     }
 }
 
@@ -165,11 +158,6 @@ SPECTACULAR_SETTINGS = {
     # OTHER SETTINGS
 }
 
-
-
-
-
-
 import os
 
 LOGGING = {
@@ -202,3 +190,17 @@ LOGGING = {
 }
 
 DRF_API_LOGGER_DATABASE = True
+
+IMGBB_API_KEY = config('IMGBB_API_KEY')
+
+ASGI_APPLICATION = 'config.asgi.application'
+
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels_redis.core.RedisChannelLayer',
+        'CONFIG': {
+            'hosts': [(config('REDIS_HOST', default='127.0.0.1'), 
+                       config('REDIS_PORT', default=6379, cast=int))],
+        },
+    },
+}
