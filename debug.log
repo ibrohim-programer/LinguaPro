@@ -6183,3 +6183,12 @@ INFO 2026-04-25 00:32:43,339 autoreload 7820 8692 C:\Users\user\Documents\Loyxal
 INFO 2026-04-25 00:32:44,834 autoreload 8312 3208 Watching for file changes with StatReloader
 INFO 2026-04-25 00:33:03,533 autoreload 8312 3208 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\config\settings.py changed, reloading.
 INFO 2026-04-25 00:36:32,448 autoreload 3984 9288 Watching for file changes with StatReloader
+INFO 2026-04-25 03:34:15,308 autoreload 5264 10164 Watching for file changes with StatReloader
+WARNING 2026-04-25 03:34:18,659 log 5264 8476 Not Found: /
+WARNING 2026-04-25 03:34:18,661 runserver 5264 4144 [33mHTTP GET / 404 [0.03, 127.0.0.1:53482][0m
+WARNING 2026-04-25 03:34:18,799 log 5264 8476 Not Found: /favicon.ico
+WARNING 2026-04-25 03:34:18,800 runserver 5264 4144 [33mHTTP GET /favicon.ico 404 [0.01, 127.0.0.1:53482][0m
+INFO 2026-04-25 03:34:23,482 runserver 5264 4144 [mHTTP GET /swagger/ 200 [0.04, 127.0.0.1:53482][0m
+INFO 2026-04-25 03:34:23,723 runserver 5264 4144 [mHTTP GET /api/schema/ 200 [0.10, 127.0.0.1:53482][0m
+INFO 2026-04-25 03:36:15,485 autoreload 5264 10164 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\config\settings.py changed, reloading.
+INFO 2026-04-25 03:36:16,897 autoreload 9592 5540 Watching for file changes with StatReloader

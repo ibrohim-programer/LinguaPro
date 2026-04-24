@@ -151,11 +151,13 @@ REST_FRAMEWORK = {
 }
 
 SPECTACULAR_SETTINGS = {
-    'TITLE': 'Your Project API',
-    'DESCRIPTION': 'Your project description',
+    'TITLE': 'LinguaPro API',
+    'DESCRIPTION': 'LinguaPro project API',
     'VERSION': '1.0.0',
     'SERVE_INCLUDE_SCHEMA': False,
-    # OTHER SETTINGS
+    'SERVERS': [
+        {'url': 'http://185.190.143.64', 'description': 'Production server'},
+    ],
 }
 
 import os
