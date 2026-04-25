@@ -1,8 +1,8 @@
 from rest_framework.generics import ListAPIView, CreateAPIView, RetrieveUpdateDestroyAPIView, GenericAPIView
 from rest_framework.permissions import IsAuthenticated
-from drf_spectacular.utils import extend_schema, inline_serializer
-from rest_framework import serializers as rf_serializers
 from rest_framework.response import Response
+from rest_framework import serializers as rf_serializers
+from drf_spectacular.utils import extend_schema, inline_serializer
 
 from django.contrib.auth import get_user_model
 from apps.common.permissions import IsAdmin, IsAdminOrTeacher
@@ -40,6 +40,7 @@ class GroupUpdateDeleteIsAdmin(RetrieveUpdateDestroyAPIView):
     description="""
     Admin barcha guruxlar ruyxatini kura oladi
     Teacher uz guruxlarini ruyxatini kura oladi
+    Student uz guruxlarini ruyxatini kura oladi
     """
 )
 class MyGroupsView(ListAPIView):
@@ -47,7 +48,7 @@ class MyGroupsView(ListAPIView):
     permission_classes = [IsAuthenticated]
 
     def get_queryset(self):
-        if getattr(self, 'swagger_fake_view', False):
+        if getattr(self, 'swagger_fake_view', False):   # ✅ AnonymousUser xatosini oldini oladi
             return Group.objects.none()
 
         user = self.request.user
@@ -62,7 +63,7 @@ class MyGroupsView(ListAPIView):
 
 @extend_schema(
     tags=['Group - Admin - Teacher'],
-    summary='Guruhga student qo\'shish',
+    summary="Guruhga student qo'shish",
     description="""
     Admin barcha guruxlarga student qusha oladi
     Teacher uz guruxlariga student qusha oladi
@@ -80,6 +81,7 @@ class AddStudentView(GenericAPIView):
     def post(self, request, pk=None):
         group = self.get_object()
         self.check_object_permissions(request, group)
+
         serializer = self.get_serializer(data=request.data)
         serializer.is_valid(raise_exception=True)
 
@@ -89,14 +91,14 @@ class AddStudentView(GenericAPIView):
         if not created:
             return Response({'detail': 'Student allaqachon guruhda!'}, status=400)
 
-        return Response({'detail': 'Student muvaffaqiyatli qo\'shildi!'}, status=201)
+        return Response({'detail': "Student muvaffaqiyatli qo'shildi!"}, status=201)
 
 
 @extend_schema(
     tags=['Group - Admin - Teacher'],
-    summary='Guruhdan student o\'chirish',
+    summary="Guruhdan student o'chirish",
     description="""
-    Admin barcha guruxlargadagi studentlarni uchira oladi
+    Admin barcha guruxlardagi studentlarni uchira oladi
     Teacher uz guruxlaridagi studentlarni uchira oladi
     """,
     responses={
@@ -107,12 +109,12 @@ class AddStudentView(GenericAPIView):
 class RemoveStudentView(GenericAPIView):
     queryset = Group.objects.all()
     permission_classes = [IsAdminOrTeacher]
-    # ✅ spectacular uchun bo'sh serializer — bu view request body olmaydi
-    serializer_class = rf_serializers.Serializer
+    serializer_class = rf_serializers.Serializer   # ✅ spectacular uchun — request body yo'q
 
     def delete(self, request, pk=None, sid=None):
         group = self.get_object()
         self.check_object_permissions(request, group)
+
         deleted, _ = GroupStudent.objects.filter(group=group, student_id=sid).delete()
 
         if not deleted:
