@@ -1,24 +1,24 @@
 from rest_framework import generics, permissions, status
 from rest_framework.views import APIView
 from rest_framework.response import Response
+from rest_framework import serializers as rf_serializers      # ✅ FIX import
+
 from .models import Notification, BroadcastNotification
 from .serializers import (
     BroadcastCreateSerializer,
     BroadcastListSerializer,
     MyNotificationSerializer,
 )
-from apps.common.permissions import IsAdmin 
+from apps.common.permissions import IsAdmin
 from .services import send_broadcast
-from drf_spectacular.utils import extend_schema
+from drf_spectacular.utils import extend_schema, inline_serializer  # ✅ FIX import
 
 
 @extend_schema(
-    operation_id='notification_broadcast_create', 
+    # ✅ FIX: operation_id olib tashlandi — GenericAPIView da kerak emas, xato chiqaradi
     tags=['Notification Crud'],
     summary="Admin barcha foydalanuvchilarga xabar yuborish",
-    description="""
-    Admin tomonidan barcha foydalanuvchilar (yoki guruhlar) uchun umumiy xabarnoma yaratiladi va yuboriladi.
-    """
+    description="Admin tomonidan barcha foydalanuvchilar uchun umumiy xabarnoma yaratiladi."
 )
 class BroadcastCreateView(generics.CreateAPIView):
     serializer_class = BroadcastCreateSerializer
@@ -30,10 +30,10 @@ class BroadcastCreateView(generics.CreateAPIView):
 
 
 @extend_schema(
-    operation_id='notification_broadcast_list',
+    # ✅ FIX: operation_id olib tashlandi
     tags=['Notification Crud'],
     summary="Admin yuborgan umumiy xabarnomalar ruyxati",
-    description="""Admin yuborgan barcha umumiy xabarnomalar ro'yxatini ko'rishi mumkin."""
+    description="Admin yuborgan barcha umumiy xabarnomalar ro'yxatini ko'rishi mumkin."
 )
 class BroadcastListView(generics.ListAPIView):
     serializer_class = BroadcastListSerializer
@@ -42,16 +42,18 @@ class BroadcastListView(generics.ListAPIView):
 
 
 @extend_schema(
-    operation_id='my_notifications_list',
+    # ✅ FIX: operation_id olib tashlandi
     tags=['Notification Crud'],
     summary="Teacher va Studentlarni xabarnomalarim ro'yxati",
-    description="Tizimga kirgan foydalanuvchi o'ziga kelgan xabarlarni ko'radi. `is_read=true/false` parametri orqali filtrlash mumkin."
+    description="Tizimga kirgan foydalanuvchi o'ziga kelgan xabarlarni ko'radi."
 )
 class MyNotificationListView(generics.ListAPIView):
     serializer_class = MyNotificationSerializer
     permission_classes = [permissions.IsAuthenticated]
 
     def get_queryset(self):
+        if getattr(self, 'swagger_fake_view', False):   # ✅ FIX: AnonymousUser xatosi
+            return Notification.objects.none()
         qs = Notification.objects.filter(recipient=self.request.user)
         is_read = self.request.query_params.get('is_read')
         if is_read is not None:
@@ -60,10 +62,13 @@ class MyNotificationListView(generics.ListAPIView):
 
 
 @extend_schema(
-    operation_id='notification_mark_read',
+    # ✅ FIX: operation_id olib tashlandi + responses qo'shildi
     tags=['Notification Crud'],
-    summary="Xabarni o'qilgan deb belgilash Teacher va Student",
-    description="Muayyan ID ga ega bo'lgan xabarnomani 'o'qilgan' holatiga o'tkazish."
+    summary="Xabarni o'qilgan deb belgilash",
+    responses={
+        200: inline_serializer('MarkReadOk',       fields={'detail': rf_serializers.CharField()}),
+        404: inline_serializer('MarkReadNotFound', fields={'detail': rf_serializers.CharField()}),
+    }
 )
 class MarkReadView(APIView):
     permission_classes = [permissions.IsAuthenticated]
@@ -76,10 +81,12 @@ class MarkReadView(APIView):
 
 
 @extend_schema(
-    operation_id='notification_mark_all_read',
+    # ✅ FIX: operation_id olib tashlandi + responses qo'shildi
     tags=['Notification Crud'],
-    summary="Barcha xabarlarni o'qilgan deb belgilash . Teacher va Student",
-    description="Foydalanuvchining barcha o'qilmagan xabarlarini bittada 'o'qilgan' holatiga o'tkazadi."
+    summary="Barcha xabarlarni o'qilgan deb belgilash",
+    responses={
+        200: inline_serializer('MarkAllReadOk', fields={'updated': rf_serializers.IntegerField()}),
+    }
 )
 class MarkAllReadView(APIView):
     permission_classes = [permissions.IsAuthenticated]
@@ -90,10 +97,12 @@ class MarkAllReadView(APIView):
 
 
 @extend_schema(
-    operation_id='notification_unread_count',
+    # ✅ FIX: operation_id olib tashlandi + responses qo'shildi
     tags=['Notification Crud'],
-    summary="O'qilmagan xabarlar soni : Teacher va Student",
-    description="Foydalanuvchiga kelgan, lekin hali o'qilmagan xabarlarning umumiy sonini qaytaradi."
+    summary="O'qilmagan xabarlar soni",
+    responses={
+        200: inline_serializer('NotifUnreadCount', fields={'unread_count': rf_serializers.IntegerField()}),
+    }
 )
 class UnreadCountView(APIView):
     permission_classes = [permissions.IsAuthenticated]

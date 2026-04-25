@@ -15,11 +15,11 @@ urlpatterns = [
     path('api/attendance/',include('apps.attendance.urls')),
     path('api/assignments/',include('apps.assignments.urls')),
     path('api/notifications/',include('apps.notifications.urls')),
-    # path('api/messages/',include('apps.messages_app.urls')),
+    path('api/messages/',include('apps.messages_app.urls')),
     
     # Swagger
     path('api/schema/', SpectacularAPIView.as_view(), name='schema'),
-    path('swagger/', SpectacularSwaggerView.as_view(url_name='schema'), name='swagger-ui'),
+    path('swaggerr/', SpectacularSwaggerView.as_view(url_name='schema'), name='swagger-ui'),
     path('api/schema/redoc/', SpectacularRedocView.as_view(url_name='schema'), name='redoc'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
  

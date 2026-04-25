@@ -1,9 +1,5 @@
 from django.urls import path
-from .views import (RegisterView , LoginView,
-                    ForgotPasswordView , VerfiyPasswordView,
-                    ProfileView , ProfileUpdateView,
-                    UserListAdminView
-                    )
+from .views import RegisterView , LoginView,ForgotPasswordView , VerfiyPasswordView,ProfileView , ProfileUpdateView,UserListAdminView
 urlpatterns = [
     # Auth
     path('login/',LoginView.as_view(),name='login'),

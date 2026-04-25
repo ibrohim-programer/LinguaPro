@@ -29,4 +29,29 @@ class IsTeacherOfGroup(BasePermission):
     def has_object_permission(self, request, view, obj):
         return request.user.role == 'admin' or obj.teacher == request.user
     
-    
+from apps.groups.models import GroupStudent
+
+
+def is_group_member(user, group):
+    if not user or not user.is_authenticated:
+        return False
+
+    if getattr(user, 'role', None) == 'admin' or user.is_staff:
+        return True
+
+    if getattr(user, 'role', None) == 'teacher':
+        return group.teacher_id == user.pk
+
+    if getattr(user, 'role', None) == 'student':
+        return GroupStudent.objects.filter(group=group, student=user).exists()
+
+    return False
+
+
+class IsGroupMember(BasePermission):
+    message = "Siz bu guruhning a'zosi emassiz!"
+    def has_permission(self, request, view):
+        return request.user and request.user.is_authenticated
+
+    def has_object_permission(self, request, view, obj):
+        return is_group_member(request.user, obj)

@@ -6192,3 +6192,68 @@ INFO 2026-04-25 03:34:23,482 runserver 5264 4144 [mHTTP GET /swagger/ 200 [0.04
 INFO 2026-04-25 03:34:23,723 runserver 5264 4144 [mHTTP GET /api/schema/ 200 [0.10, 127.0.0.1:53482][0m
 INFO 2026-04-25 03:36:15,485 autoreload 5264 10164 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\config\settings.py changed, reloading.
 INFO 2026-04-25 03:36:16,897 autoreload 9592 5540 Watching for file changes with StatReloader
+INFO 2026-04-25 10:27:10,761 autoreload 9696 9236 Watching for file changes with StatReloader
+WARNING 2026-04-25 10:27:14,901 log 9696 396 Not Found: /
+WARNING 2026-04-25 10:27:14,902 runserver 9696 9412 [33mHTTP GET / 404 [0.03, 127.0.0.1:50935][0m
+WARNING 2026-04-25 10:27:15,054 log 9696 396 Not Found: /favicon.ico
+WARNING 2026-04-25 10:27:15,055 runserver 9696 9412 [33mHTTP GET /favicon.ico 404 [0.02, 127.0.0.1:50935][0m
+INFO 2026-04-25 10:27:18,422 runserver 9696 9412 [mHTTP GET /swagger/ 200 [0.04, 127.0.0.1:50935][0m
+INFO 2026-04-25 10:27:18,786 runserver 9696 9412 [mHTTP GET /api/schema/ 200 [0.21, 127.0.0.1:50935][0m
+INFO 2026-04-25 10:30:31,057 runserver 9696 9412 [mHTTP GET /admin/ 200 [0.19, 127.0.0.1:50973][0m
+INFO 2026-04-25 10:30:31,093 runserver 9696 9412 [36mHTTP GET /static/admin/css/dark_mode.css 304 [0.01, 127.0.0.1:50973][0m
+INFO 2026-04-25 10:30:31,094 runserver 9696 9412 [36mHTTP GET /static/admin/css/base.css 304 [0.01, 127.0.0.1:50975][0m
+INFO 2026-04-25 10:30:31,095 runserver 9696 9412 [36mHTTP GET /static/admin/js/theme.js 304 [0.01, 127.0.0.1:50976][0m
+INFO 2026-04-25 10:30:31,106 runserver 9696 9412 [36mHTTP GET /static/admin/css/nav_sidebar.css 304 [0.00, 127.0.0.1:50976][0m
+INFO 2026-04-25 10:30:31,110 runserver 9696 9412 [36mHTTP GET /static/admin/css/responsive.css 304 [0.01, 127.0.0.1:50973][0m
+INFO 2026-04-25 10:30:31,110 runserver 9696 9412 [36mHTTP GET /static/admin/css/dashboard.css 304 [0.01, 127.0.0.1:50975][0m
+INFO 2026-04-25 10:30:31,114 runserver 9696 9412 [36mHTTP GET /static/admin/js/nav_sidebar.js 304 [0.00, 127.0.0.1:50976][0m
+INFO 2026-04-25 10:30:31,126 runserver 9696 9412 [36mHTTP GET /static/admin/img/icon-addlink.svg 304 [0.00, 127.0.0.1:50976][0m
+INFO 2026-04-25 10:30:31,127 runserver 9696 9412 [36mHTTP GET /static/admin/img/icon-changelink.svg 304 [0.01, 127.0.0.1:50973][0m
+INFO 2026-04-25 10:30:33,946 runserver 9696 9412 [mHTTP GET /swagger/ 200 [0.01, 127.0.0.1:50973][0m
+INFO 2026-04-25 10:30:34,209 runserver 9696 9412 [mHTTP GET /api/schema/ 200 [0.12, 127.0.0.1:50973][0m
+INFO 2026-04-25 10:30:50,946 autoreload 9696 9236 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\config\urls.py changed, reloading.
+INFO 2026-04-25 10:30:52,441 autoreload 3532 9500 Watching for file changes with StatReloader
+WARNING 2026-04-25 10:30:53,158 log 3532 10000 Not Found: /swagger/
+WARNING 2026-04-25 10:30:53,159 runserver 3532 10192 [33mHTTP GET /swagger/ 404 [0.02, 127.0.0.1:50984][0m
+INFO 2026-04-25 10:30:59,926 runserver 3532 10192 [mHTTP GET /swaggerr/ 200 [0.03, 127.0.0.1:50984][0m
+INFO 2026-04-25 10:31:00,142 runserver 3532 10192 [mHTTP GET /api/schema/ 200 [0.15, 127.0.0.1:50984][0m
+INFO 2026-04-25 10:36:59,971 autoreload 3532 9500 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\messages_app\views.py changed, reloading.
+INFO 2026-04-25 10:37:01,418 autoreload 9372 9632 Watching for file changes with StatReloader
+INFO 2026-04-25 10:37:03,566 autoreload 9372 9632 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\messages_app\views.py changed, reloading.
+INFO 2026-04-25 10:37:04,808 autoreload 7240 9788 Watching for file changes with StatReloader
+INFO 2026-04-25 10:37:10,322 autoreload 7240 9788 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\messages_app\views.py changed, reloading.
+INFO 2026-04-25 10:37:11,660 autoreload 9768 9492 Watching for file changes with StatReloader
+INFO 2026-04-25 10:38:06,704 autoreload 9768 9492 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\messages_app\views.py changed, reloading.
+INFO 2026-04-25 10:38:08,063 autoreload 1136 9888 Watching for file changes with StatReloader
+INFO 2026-04-25 10:38:16,802 autoreload 1136 9888 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\messages_app\views.py changed, reloading.
+INFO 2026-04-25 10:38:18,181 autoreload 10188 7376 Watching for file changes with StatReloader
+INFO 2026-04-25 10:38:25,693 autoreload 10188 7376 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\messages_app\views.py changed, reloading.
+INFO 2026-04-25 10:38:26,981 autoreload 9656 9536 Watching for file changes with StatReloader
+INFO 2026-04-25 10:39:04,392 autoreload 9656 9536 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\messages_app\views.py changed, reloading.
+INFO 2026-04-25 10:39:05,935 autoreload 3244 2928 Watching for file changes with StatReloader
+INFO 2026-04-25 10:39:34,528 autoreload 3244 2928 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\messages_app\views.py changed, reloading.
+INFO 2026-04-25 10:39:36,046 autoreload 10216 2652 Watching for file changes with StatReloader
+INFO 2026-04-25 10:39:43,803 autoreload 10216 2652 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\messages_app\views.py changed, reloading.
+INFO 2026-04-25 10:39:45,181 autoreload 10000 9292 Watching for file changes with StatReloader
+INFO 2026-04-25 10:42:38,198 autoreload 10000 9292 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\groups\views.py changed, reloading.
+INFO 2026-04-25 10:42:39,543 autoreload 9592 9456 Watching for file changes with StatReloader
+INFO 2026-04-25 10:43:20,154 autoreload 9592 9456 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\groups\views.py changed, reloading.
+INFO 2026-04-25 10:43:21,556 autoreload 9892 9420 Watching for file changes with StatReloader
+INFO 2026-04-25 10:43:41,527 autoreload 9892 9420 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\messages_app\views.py changed, reloading.
+INFO 2026-04-25 10:43:43,237 autoreload 9432 9912 Watching for file changes with StatReloader
+INFO 2026-04-25 10:44:30,142 autoreload 9432 9912 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\messages_app\views.py changed, reloading.
+INFO 2026-04-25 10:44:31,617 autoreload 1452 8296 Watching for file changes with StatReloader
+INFO 2026-04-25 10:44:36,256 autoreload 1452 8296 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\messages_app\views.py changed, reloading.
+INFO 2026-04-25 10:44:37,955 autoreload 8120 8676 Watching for file changes with StatReloader
+INFO 2026-04-25 10:44:56,214 autoreload 8124 2256 Watching for file changes with StatReloader
+INFO 2026-04-25 10:45:01,405 runserver 8124 1264 [mHTTP GET /swaggerr/ 200 [0.03, 127.0.0.1:51186][0m
+INFO 2026-04-25 10:45:01,649 runserver 8124 1264 [mHTTP GET /api/schema/ 200 [0.15, 127.0.0.1:51186][0m
+INFO 2026-04-25 10:54:02,119 autoreload 8124 2256 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-04-25 10:54:03,581 autoreload 4880 3516 Watching for file changes with StatReloader
+INFO 2026-04-25 10:54:27,328 autoreload 4880 3516 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\assignments\views.py changed, reloading.
+INFO 2026-04-25 10:54:28,738 autoreload 9236 6404 Watching for file changes with StatReloader
+INFO 2026-04-25 10:54:56,336 autoreload 9236 6404 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\attendance\views.py changed, reloading.
+INFO 2026-04-25 10:54:58,006 autoreload 6500 5752 Watching for file changes with StatReloader
+INFO 2026-04-25 10:55:19,210 autoreload 6500 5752 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\notifications\views.py changed, reloading.
+INFO 2026-04-25 10:55:20,730 autoreload 10004 4380 Watching for file changes with StatReloader
+INFO 2026-04-25 10:55:42,189 autoreload 1108 2908 Watching for file changes with StatReloader

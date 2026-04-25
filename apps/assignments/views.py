@@ -4,18 +4,20 @@ from django.shortcuts import get_object_or_404
 from django.contrib.auth import get_user_model
 from .models import Assignment, Submission
 from .serailizers import AssignmentSerializer, SubmissionSerializer, GradeSubmissionSerializer
-from apps.common.permissions import IsAdminOrTeacher , IsStudent ,IsTeacher ,IsAdmin
+from apps.common.permissions import IsAdminOrTeacher, IsStudent, IsTeacher, IsAdmin
 from drf_spectacular.utils import extend_schema
-
 
 User = get_user_model()
 
-@extend_schema(tags=['Assignment Crud'],summary='Admin va Teacher uchun uyga vazifa yatish va kurish bulimi')
+
+@extend_schema(tags=['Assignment Crud'], summary='Admin va Teacher uchun uyga vazifa yaratish va kurish bulimi')
 class AssignmentListCreateView(generics.ListCreateAPIView):
     serializer_class = AssignmentSerializer
     permission_classes = [IsAdminOrTeacher]
 
     def get_queryset(self):
+        if getattr(self, 'swagger_fake_view', False):   # ✅ FIX: AnonymousUser xatosi
+            return Assignment.objects.none()
         user = self.request.user
         if user.role == 'admin':
             return Assignment.objects.all().order_by('-created_at')
@@ -25,13 +27,15 @@ class AssignmentListCreateView(generics.ListCreateAPIView):
         serializer.save(created_by=self.request.user)
 
 
-@extend_schema(tags=['Assignment Crud'],summary='Admin va Teacher uchun uyga vazifa yaratish va uchurish bulimi',
-               description='''
-                — tafsilotlar (hammasi)
-                — tahrirlash (Teacher)
-                — o'chirish (Teacher/Admin)
-               ''')
-
+@extend_schema(
+    tags=['Assignment Crud'],
+    summary='Admin va Teacher uchun uyga vazifa yaratish va uchurish bulimi',
+    description='''
+     — tafsilotlar (hammasi)
+     — tahrirlash (Teacher)
+     — o\'chirish (Teacher/Admin)
+    '''
+)
 class AssignmentDetailView(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = AssignmentSerializer
     http_method_names = ['get', 'put', 'delete']
@@ -40,31 +44,34 @@ class AssignmentDetailView(generics.RetrieveUpdateDestroyAPIView):
         if self.request.method == 'GET':
             return [permissions.IsAuthenticated()]
         return [IsAdminOrTeacher()]
-    
+
     def get_queryset(self):
-        user=self.request.user
+        if getattr(self, 'swagger_fake_view', False):   # ✅ FIX: AnonymousUser xatosi
+            return Assignment.objects.none()
+        user = self.request.user
         if user.role == "admin":
             return Assignment.objects.all().order_by('-created_at')
         return Assignment.objects.filter(created_by=user).order_by('-created_at')
-     
-    
-    
-@extend_schema(tags=['Assignment Crud'],summary="Student o'z vazifalarini ko'radi")
+
+
+@extend_schema(tags=['Assignment Crud'], summary="Student o'z vazifalarini ko'radi")
 class MyAssignmentsView(generics.ListAPIView):
     serializer_class = AssignmentSerializer
     permission_classes = [IsStudent]
 
     def get_queryset(self):
+        if getattr(self, 'swagger_fake_view', False):   # ✅ FIX: user.student_groups xatosi
+            return Assignment.objects.none()
         user = self.request.user
-        student_group_ids = user.student_groups.values_list('group_id' , flat=True)
+        student_group_ids = user.student_groups.values_list('group_id', flat=True)
         return Assignment.objects.filter(group_id__in=student_group_ids).order_by('-created_at')
 
 
-# POST /api/assignments/{id}/submit/  — student vazifa topshiradi
-@extend_schema(tags=['Assignment Crud'],summary=' — student vazifa topshiradi')
+@extend_schema(tags=['Assignment Crud'], summary='Student vazifa topshiradi')
 class SubmitAssignmentView(generics.GenericAPIView):
     serializer_class = SubmissionSerializer
     permission_classes = [IsStudent]
+
     def post(self, request, pk):
         assignment = get_object_or_404(Assignment, pk=pk)
         student = get_object_or_404(User, id=request.user.id)
@@ -82,8 +89,7 @@ class SubmitAssignmentView(generics.GenericAPIView):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
-# PATCH /api/submissions/{id}/grade/  — teacher ball beradi
-@extend_schema(tags=['Assignment Crud'],summary=' — teacher ball beradi')
+@extend_schema(tags=['Assignment Crud'], summary='Teacher ball beradi')
 class GradeSubmissionView(generics.UpdateAPIView):
     queryset = Submission.objects.all()
     serializer_class = GradeSubmissionSerializer
