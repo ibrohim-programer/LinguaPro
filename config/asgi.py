@@ -1,7 +1,9 @@
 import os
 
-# ✅ Bu BIRINCHI bo'lishi shart — barcha import lardan OLDIN
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'config.settings')
+
+import django
+django.setup()
 
 from django.core.asgi import get_asgi_application
 from channels.routing import ProtocolTypeRouter, URLRouter
