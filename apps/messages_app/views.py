@@ -13,7 +13,7 @@ from django.db.models import Max, Count, Q
 from apps.groups.models import Group, GroupStudent
 from .models import GroupMessage
 from .serializers import GroupMessageSerializer, SendMessageSerializer
-from common.permissions import IsGroupMember, is_group_member
+from apps.common.permissions import IsGroupMember, is_group_member
 
 
 # ─────────────────────────────────────────────

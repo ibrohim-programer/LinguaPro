@@ -215,6 +215,14 @@ CHANNEL_LAYERS = {
 CORS_ALLOW_CREDENTIALS = True
 
 CORS_ALLOWED_ORIGINS = [
+    "http://185.190.143.64",      # ✅ production server — bu yo'q edi!
     "http://127.0.0.1:8000",
     "http://localhost:3000",
+    "http://localhost:5173",       # ✅ Vite/React frontend bo'lsa
+]
+CORS_ALLOW_HEADERS = [
+    "accept",
+    "authorization",
+    "content-type",
+    "x-csrftoken",
 ]

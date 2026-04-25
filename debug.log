@@ -6416,3 +6416,11 @@ INFO 2026-04-25 14:19:44,982 autoreload 2560 9804 C:\Users\user\Documents\Loyxal
 INFO 2026-04-25 14:19:46,564 autoreload 11200 4324 Watching for file changes with StatReloader
 INFO 2026-04-25 14:20:18,201 autoreload 11200 4324 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\config\settings.py changed, reloading.
 INFO 2026-04-25 14:20:19,547 autoreload 8224 6608 Watching for file changes with StatReloader
+INFO 2026-04-25 15:22:10,436 autoreload 9948 10592 Watching for file changes with StatReloader
+INFO 2026-04-25 15:22:36,758 autoreload 9948 10592 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\messages_app\views.py changed, reloading.
+INFO 2026-04-25 15:22:37,997 autoreload 6328 7716 Watching for file changes with StatReloader
+INFO 2026-04-25 15:22:43,595 autoreload 11904 11028 Watching for file changes with StatReloader
+WARNING 2026-04-25 15:22:47,529 log 11904 11956 Not Found: /
+WARNING 2026-04-25 15:22:47,530 runserver 11904 9088 [33mHTTP GET / 404 [0.04, 127.0.0.1:54125][0m
+INFO 2026-04-25 15:23:00,082 runserver 11904 9088 [mHTTP GET /swaggerr/ 200 [0.03, 127.0.0.1:54125][0m
+INFO 2026-04-25 15:23:00,473 runserver 11904 9088 [mHTTP GET /api/schema/ 200 [0.12, 127.0.0.1:54125][0m
