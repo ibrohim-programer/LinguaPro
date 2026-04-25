@@ -1,12 +1,11 @@
 from rest_framework.generics import ListAPIView, CreateAPIView, RetrieveUpdateDestroyAPIView, GenericAPIView
 from rest_framework.permissions import IsAuthenticated
-from drf_spectacular.utils import extend_schema, OpenApiResponse, inline_serializer
+from drf_spectacular.utils import extend_schema, inline_serializer
 from rest_framework import serializers as rf_serializers
 from rest_framework.response import Response
-from rest_framework.views import APIView
 
 from django.contrib.auth import get_user_model
-from apps.common.permissions import IsAdmin, IsAdminOrTeacher, IsTeacherOfGroup
+from apps.common.permissions import IsAdmin, IsAdminOrTeacher
 from .models import Group, GroupStudent
 from .serailizers import GroupSerializer, AddStudentSerializer, MyGroupSerializer
 
@@ -48,7 +47,6 @@ class MyGroupsView(ListAPIView):
     permission_classes = [IsAuthenticated]
 
     def get_queryset(self):
-        # ✅ drf-spectacular schema generatsiyada xato chiqmasligi uchun
         if getattr(self, 'swagger_fake_view', False):
             return Group.objects.none()
 

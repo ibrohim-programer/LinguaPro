@@ -6257,3 +6257,162 @@ INFO 2026-04-25 10:54:58,006 autoreload 6500 5752 Watching for file changes with
 INFO 2026-04-25 10:55:19,210 autoreload 6500 5752 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\notifications\views.py changed, reloading.
 INFO 2026-04-25 10:55:20,730 autoreload 10004 4380 Watching for file changes with StatReloader
 INFO 2026-04-25 10:55:42,189 autoreload 1108 2908 Watching for file changes with StatReloader
+INFO 2026-04-25 13:50:33,364 autoreload 11584 3508 Watching for file changes with StatReloader
+WARNING 2026-04-25 13:50:38,358 log 11584 11308 Not Found: /
+WARNING 2026-04-25 13:50:38,359 runserver 11584 11464 [33mHTTP GET / 404 [0.04, 127.0.0.1:52229][0m
+WARNING 2026-04-25 13:50:38,545 log 11584 11308 Not Found: /favicon.ico
+WARNING 2026-04-25 13:50:38,548 runserver 11584 11464 [33mHTTP GET /favicon.ico 404 [0.02, 127.0.0.1:52229][0m
+WARNING 2026-04-25 13:50:48,862 log 11584 11308 Not Found: /swagger/
+WARNING 2026-04-25 13:50:48,863 runserver 11584 11464 [33mHTTP GET /swagger/ 404 [0.02, 127.0.0.1:52229][0m
+INFO 2026-04-25 13:51:07,168 runserver 11584 11464 [mHTTP GET /swaggerr/ 200 [0.04, 127.0.0.1:52229][0m
+INFO 2026-04-25 13:51:07,424 runserver 11584 11464 [mHTTP GET /api/schema/ 200 [0.12, 127.0.0.1:52229][0m
+INFO 2026-04-25 13:55:09,715 autoreload 11584 3508 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\groups\views.py changed, reloading.
+INFO 2026-04-25 13:55:11,030 autoreload 11384 408 Watching for file changes with StatReloader
+INFO 2026-04-25 13:55:14,256 autoreload 11384 408 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\groups\views.py changed, reloading.
+INFO 2026-04-25 13:55:15,510 autoreload 11660 10068 Watching for file changes with StatReloader
+INFO 2026-04-25 13:55:18,804 autoreload 11660 10068 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\groups\views.py changed, reloading.
+INFO 2026-04-25 13:55:20,012 autoreload 10140 8700 Watching for file changes with StatReloader
+INFO 2026-04-25 14:02:27,979 autoreload 10140 8700 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\config\settings.py changed, reloading.
+INFO 2026-04-25 14:02:29,319 autoreload 6540 7380 Watching for file changes with StatReloader
+INFO 2026-04-25 14:02:57,921 autoreload 6540 7380 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\config\settings.py changed, reloading.
+INFO 2026-04-25 14:02:59,154 autoreload 11392 10652 Watching for file changes with StatReloader
+INFO 2026-04-25 14:03:02,329 autoreload 11392 10652 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\config\settings.py changed, reloading.
+INFO 2026-04-25 14:03:03,575 autoreload 10504 9648 Watching for file changes with StatReloader
+INFO 2026-04-25 14:03:12,198 autoreload 10504 9648 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\config\settings.py changed, reloading.
+INFO 2026-04-25 14:03:13,564 autoreload 10936 11040 Watching for file changes with StatReloader
+INFO 2026-04-25 14:03:17,900 autoreload 10936 11040 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\config\settings.py changed, reloading.
+INFO 2026-04-25 14:03:19,261 autoreload 6132 10300 Watching for file changes with StatReloader
+INFO 2026-04-25 14:12:54,168 autoreload 6880 9840 Watching for file changes with StatReloader
+WARNING 2026-04-25 14:12:58,451 log 6880 10280 Not Found: /
+WARNING 2026-04-25 14:12:58,452 runserver 6880 10044 [33mHTTP GET / 404 [0.03, 127.0.0.1:53329][0m
+INFO 2026-04-25 14:13:05,810 runserver 6880 10044 [mHTTP GET /admin/ 200 [0.16, 127.0.0.1:53329][0m
+INFO 2026-04-25 14:13:05,838 runserver 6880 10044 [36mHTTP GET /static/admin/css/base.css 304 [0.00, 127.0.0.1:53329][0m
+INFO 2026-04-25 14:13:05,854 runserver 6880 10044 [36mHTTP GET /static/admin/css/dark_mode.css 304 [0.01, 127.0.0.1:53329][0m
+INFO 2026-04-25 14:13:05,855 runserver 6880 10044 [36mHTTP GET /static/admin/css/responsive.css 304 [0.01, 127.0.0.1:53328][0m
+INFO 2026-04-25 14:13:05,856 runserver 6880 10044 [36mHTTP GET /static/admin/css/nav_sidebar.css 304 [0.01, 127.0.0.1:53332][0m
+INFO 2026-04-25 14:13:05,856 runserver 6880 10044 [36mHTTP GET /static/admin/css/dashboard.css 304 [0.01, 127.0.0.1:53333][0m
+INFO 2026-04-25 14:13:05,857 runserver 6880 10044 [36mHTTP GET /static/admin/js/theme.js 304 [0.01, 127.0.0.1:53334][0m
+INFO 2026-04-25 14:13:05,866 runserver 6880 10044 [36mHTTP GET /static/admin/js/nav_sidebar.js 304 [0.00, 127.0.0.1:53334][0m
+INFO 2026-04-25 14:13:05,874 runserver 6880 10044 [36mHTTP GET /static/admin/img/icon-changelink.svg 304 [0.00, 127.0.0.1:53334][0m
+INFO 2026-04-25 14:13:05,875 runserver 6880 10044 [36mHTTP GET /static/admin/img/icon-addlink.svg 304 [0.00, 127.0.0.1:53332][0m
+INFO 2026-04-25 14:13:10,105 runserver 6880 10044 [mHTTP GET /admin/messages_app/groupmessage/ 200 [0.13, 127.0.0.1:53332][0m
+INFO 2026-04-25 14:13:10,140 runserver 6880 10044 [36mHTTP GET /static/admin/css/changelists.css 304 [0.01, 127.0.0.1:53329][0m
+INFO 2026-04-25 14:13:10,140 runserver 6880 10044 [36mHTTP GET /static/admin/css/nav_sidebar.css 304 [0.01, 127.0.0.1:53328][0m
+INFO 2026-04-25 14:13:10,141 runserver 6880 10044 [36mHTTP GET /static/admin/css/base.css 304 [0.02, 127.0.0.1:53332][0m
+INFO 2026-04-25 14:13:10,141 runserver 6880 10044 [36mHTTP GET /static/admin/js/theme.js 304 [0.01, 127.0.0.1:53333][0m
+INFO 2026-04-25 14:13:10,141 runserver 6880 10044 [36mHTTP GET /static/admin/css/dark_mode.css 304 [0.02, 127.0.0.1:53334][0m
+INFO 2026-04-25 14:13:10,156 runserver 6880 10044 [36mHTTP GET /static/admin/css/responsive.css 304 [0.01, 127.0.0.1:53329][0m
+INFO 2026-04-25 14:13:10,157 runserver 6880 10044 [36mHTTP GET /static/admin/js/core.js 304 [0.01, 127.0.0.1:53332][0m
+INFO 2026-04-25 14:13:10,158 runserver 6880 10044 [36mHTTP GET /static/admin/js/vendor/jquery/jquery.js 304 [0.01, 127.0.0.1:53333][0m
+INFO 2026-04-25 14:13:10,158 runserver 6880 10044 [36mHTTP GET /static/admin/js/admin/RelatedObjectLookups.js 304 [0.01, 127.0.0.1:53334][0m
+INFO 2026-04-25 14:13:10,163 runserver 6880 10044 [36mHTTP GET /static/admin/js/jquery.init.js 304 [0.02, 127.0.0.1:53328][0m
+INFO 2026-04-25 14:13:10,180 runserver 6880 10044 [36mHTTP GET /static/admin/js/actions.js 304 [0.02, 127.0.0.1:53329][0m
+INFO 2026-04-25 14:13:10,180 runserver 6880 10044 [36mHTTP GET /static/admin/js/prepopulate.js 304 [0.01, 127.0.0.1:53333][0m
+INFO 2026-04-25 14:13:10,182 runserver 6880 10044 [36mHTTP GET /static/admin/js/urlify.js 304 [0.02, 127.0.0.1:53332][0m
+INFO 2026-04-25 14:13:10,183 runserver 6880 10044 [36mHTTP GET /static/admin/img/search.svg 304 [0.01, 127.0.0.1:53328][0m
+INFO 2026-04-25 14:13:10,183 runserver 6880 10044 [36mHTTP GET /static/admin/js/vendor/xregexp/xregexp.js 304 [0.02, 127.0.0.1:53334][0m
+INFO 2026-04-25 14:13:10,206 runserver 6880 10044 [36mHTTP GET /static/admin/js/nav_sidebar.js 304 [0.00, 127.0.0.1:53334][0m
+INFO 2026-04-25 14:13:10,214 runserver 6880 10044 [36mHTTP GET /static/admin/js/filters.js 304 [0.00, 127.0.0.1:53334][0m
+INFO 2026-04-25 14:13:10,260 runserver 6880 10044 [mHTTP GET /admin/jsi18n/ 200 [0.13, 127.0.0.1:53336][0m
+INFO 2026-04-25 14:13:10,298 runserver 6880 10044 [36mHTTP GET /static/admin/img/tooltag-add.svg 304 [0.00, 127.0.0.1:53336][0m
+INFO 2026-04-25 14:13:10,299 runserver 6880 10044 [36mHTTP GET /static/admin/img/icon-viewlink.svg 304 [0.00, 127.0.0.1:53334][0m
+INFO 2026-04-25 14:13:12,710 runserver 6880 10044 [mHTTP GET /admin/accounts/customuser/ 200 [0.12, 127.0.0.1:53334][0m
+INFO 2026-04-25 14:13:12,731 runserver 6880 10044 [36mHTTP GET /static/admin/css/base.css 304 [0.00, 127.0.0.1:53334][0m
+INFO 2026-04-25 14:13:12,743 runserver 6880 10044 [36mHTTP GET /static/admin/css/dark_mode.css 304 [0.01, 127.0.0.1:53336][0m
+INFO 2026-04-25 14:13:12,744 runserver 6880 10044 [36mHTTP GET /static/admin/js/theme.js 304 [0.01, 127.0.0.1:53332][0m
+INFO 2026-04-25 14:13:12,744 runserver 6880 10044 [36mHTTP GET /static/admin/css/nav_sidebar.css 304 [0.01, 127.0.0.1:53328][0m
+INFO 2026-04-25 14:13:12,745 runserver 6880 10044 [36mHTTP GET /static/admin/css/changelists.css 304 [0.01, 127.0.0.1:53334][0m
+INFO 2026-04-25 14:13:12,749 runserver 6880 10044 [36mHTTP GET /static/admin/js/vendor/jquery/jquery.js 304 [0.01, 127.0.0.1:53333][0m
+INFO 2026-04-25 14:13:12,759 runserver 6880 10044 [36mHTTP GET /static/admin/css/responsive.css 304 [0.01, 127.0.0.1:53336][0m
+INFO 2026-04-25 14:13:12,762 runserver 6880 10044 [36mHTTP GET /static/admin/js/jquery.init.js 304 [0.01, 127.0.0.1:53332][0m
+INFO 2026-04-25 14:13:12,762 runserver 6880 10044 [36mHTTP GET /static/admin/js/core.js 304 [0.01, 127.0.0.1:53328][0m
+INFO 2026-04-25 14:13:12,763 runserver 6880 10044 [36mHTTP GET /static/admin/js/admin/RelatedObjectLookups.js 304 [0.01, 127.0.0.1:53334][0m
+INFO 2026-04-25 14:13:12,768 runserver 6880 10044 [36mHTTP GET /static/admin/js/actions.js 304 [0.01, 127.0.0.1:53333][0m
+INFO 2026-04-25 14:13:12,778 runserver 6880 10044 [36mHTTP GET /static/admin/js/urlify.js 304 [0.02, 127.0.0.1:53336][0m
+INFO 2026-04-25 14:13:12,781 runserver 6880 10044 [36mHTTP GET /static/admin/img/search.svg 304 [0.01, 127.0.0.1:53334][0m
+INFO 2026-04-25 14:13:12,782 runserver 6880 10044 [36mHTTP GET /static/admin/js/prepopulate.js 304 [0.01, 127.0.0.1:53328][0m
+INFO 2026-04-25 14:13:12,782 runserver 6880 10044 [36mHTTP GET /static/admin/js/vendor/xregexp/xregexp.js 304 [0.01, 127.0.0.1:53332][0m
+INFO 2026-04-25 14:13:12,784 runserver 6880 10044 [36mHTTP GET /static/admin/img/icon-yes.svg 304 [0.01, 127.0.0.1:53333][0m
+INFO 2026-04-25 14:13:12,797 runserver 6880 10044 [36mHTTP GET /static/admin/js/nav_sidebar.js 304 [0.00, 127.0.0.1:53333][0m
+INFO 2026-04-25 14:13:12,802 runserver 6880 10044 [36mHTTP GET /static/admin/js/filters.js 304 [0.00, 127.0.0.1:53333][0m
+INFO 2026-04-25 14:13:12,851 runserver 6880 10044 [mHTTP GET /admin/jsi18n/ 200 [0.11, 127.0.0.1:53329][0m
+INFO 2026-04-25 14:13:12,881 runserver 6880 10044 [36mHTTP GET /static/admin/img/sorting-icons.svg 304 [0.00, 127.0.0.1:53329][0m
+INFO 2026-04-25 14:13:19,797 runserver 6880 10044 [mHTTP GET /admin/messages_app/groupmessage/ 200 [0.10, 127.0.0.1:53329][0m
+INFO 2026-04-25 14:13:19,830 runserver 6880 10044 [36mHTTP GET /static/admin/css/base.css 304 [0.01, 127.0.0.1:53329][0m
+INFO 2026-04-25 14:13:19,831 runserver 6880 10044 [36mHTTP GET /static/admin/js/theme.js 304 [0.01, 127.0.0.1:53332][0m
+INFO 2026-04-25 14:13:19,833 runserver 6880 10044 [36mHTTP GET /static/admin/css/dark_mode.css 304 [0.01, 127.0.0.1:53333][0m
+INFO 2026-04-25 14:13:19,834 runserver 6880 10044 [36mHTTP GET /static/admin/css/changelists.css 304 [0.01, 127.0.0.1:53328][0m
+INFO 2026-04-25 14:13:19,835 runserver 6880 10044 [36mHTTP GET /static/admin/css/nav_sidebar.css 304 [0.01, 127.0.0.1:53334][0m
+INFO 2026-04-25 14:13:19,849 runserver 6880 10044 [36mHTTP GET /static/admin/css/responsive.css 304 [0.02, 127.0.0.1:53329][0m
+INFO 2026-04-25 14:13:19,850 runserver 6880 10044 [36mHTTP GET /static/admin/js/vendor/jquery/jquery.js 304 [0.02, 127.0.0.1:53332][0m
+INFO 2026-04-25 14:13:19,851 runserver 6880 10044 [36mHTTP GET /static/admin/js/core.js 304 [0.01, 127.0.0.1:53328][0m
+INFO 2026-04-25 14:13:19,854 runserver 6880 10044 [36mHTTP GET /static/admin/js/jquery.init.js 304 [0.01, 127.0.0.1:53333][0m
+INFO 2026-04-25 14:13:19,855 runserver 6880 10044 [36mHTTP GET /static/admin/js/admin/RelatedObjectLookups.js 304 [0.01, 127.0.0.1:53334][0m
+INFO 2026-04-25 14:13:19,866 runserver 6880 10044 [36mHTTP GET /static/admin/js/urlify.js 304 [0.01, 127.0.0.1:53328][0m
+INFO 2026-04-25 14:13:19,866 runserver 6880 10044 [36mHTTP GET /static/admin/js/vendor/xregexp/xregexp.js 304 [0.01, 127.0.0.1:53333][0m
+INFO 2026-04-25 14:13:19,867 runserver 6880 10044 [36mHTTP GET /static/admin/js/prepopulate.js 304 [0.01, 127.0.0.1:53332][0m
+INFO 2026-04-25 14:13:19,867 runserver 6880 10044 [36mHTTP GET /static/admin/img/search.svg 304 [0.01, 127.0.0.1:53334][0m
+INFO 2026-04-25 14:13:19,870 runserver 6880 10044 [36mHTTP GET /static/admin/js/actions.js 304 [0.02, 127.0.0.1:53329][0m
+INFO 2026-04-25 14:13:19,876 runserver 6880 10044 [36mHTTP GET /static/admin/js/nav_sidebar.js 304 [0.00, 127.0.0.1:53329][0m
+INFO 2026-04-25 14:13:19,881 runserver 6880 10044 [36mHTTP GET /static/admin/js/filters.js 304 [0.00, 127.0.0.1:53329][0m
+INFO 2026-04-25 14:13:19,935 runserver 6880 10044 [mHTTP GET /admin/jsi18n/ 200 [0.11, 127.0.0.1:53336][0m
+INFO 2026-04-25 14:13:22,891 runserver 6880 10044 [mHTTP GET /admin/messages_app/groupmessage/add/ 200 [0.14, 127.0.0.1:53336][0m
+INFO 2026-04-25 14:13:22,912 runserver 6880 10044 [36mHTTP GET /static/admin/css/base.css 304 [0.00, 127.0.0.1:53336][0m
+INFO 2026-04-25 14:13:22,929 runserver 6880 10044 [36mHTTP GET /static/admin/css/nav_sidebar.css 304 [0.01, 127.0.0.1:53334][0m
+INFO 2026-04-25 14:13:22,930 runserver 6880 10044 [36mHTTP GET /static/admin/js/vendor/jquery/jquery.js 304 [0.01, 127.0.0.1:53333][0m
+INFO 2026-04-25 14:13:22,930 runserver 6880 10044 [36mHTTP GET /static/admin/js/theme.js 304 [0.01, 127.0.0.1:53329][0m
+INFO 2026-04-25 14:13:22,932 runserver 6880 10044 [36mHTTP GET /static/admin/css/forms.css 304 [0.01, 127.0.0.1:53332][0m
+INFO 2026-04-25 14:13:22,933 runserver 6880 10044 [36mHTTP GET /static/admin/css/dark_mode.css 304 [0.02, 127.0.0.1:53336][0m
+INFO 2026-04-25 14:13:22,947 runserver 6880 10044 [36mHTTP GET /static/admin/css/responsive.css 304 [0.02, 127.0.0.1:53334][0m
+INFO 2026-04-25 14:13:22,949 runserver 6880 10044 [36mHTTP GET /static/admin/js/jquery.init.js 304 [0.01, 127.0.0.1:53329][0m
+INFO 2026-04-25 14:13:22,950 runserver 6880 10044 [36mHTTP GET /static/admin/js/core.js 304 [0.01, 127.0.0.1:53333][0m
+INFO 2026-04-25 14:13:22,953 runserver 6880 10044 [36mHTTP GET /static/admin/js/admin/RelatedObjectLookups.js 304 [0.01, 127.0.0.1:53336][0m
+INFO 2026-04-25 14:13:22,953 runserver 6880 10044 [36mHTTP GET /static/admin/js/actions.js 304 [0.01, 127.0.0.1:53332][0m
+INFO 2026-04-25 14:13:22,966 runserver 6880 10044 [36mHTTP GET /static/admin/css/widgets.css 304 [0.02, 127.0.0.1:53334][0m
+INFO 2026-04-25 14:13:22,968 runserver 6880 10044 [36mHTTP GET /static/admin/js/vendor/xregexp/xregexp.js 304 [0.01, 127.0.0.1:53336][0m
+INFO 2026-04-25 14:13:22,971 runserver 6880 10044 [36mHTTP GET /static/admin/js/prepopulate_init.js 304 [0.01, 127.0.0.1:53332][0m
+INFO 2026-04-25 14:13:22,975 runserver 6880 10044 [36mHTTP GET /static/admin/js/prepopulate.js 304 [0.02, 127.0.0.1:53329][0m
+INFO 2026-04-25 14:13:22,977 runserver 6880 10044 [36mHTTP GET /static/admin/js/urlify.js 304 [0.02, 127.0.0.1:53333][0m
+INFO 2026-04-25 14:13:22,983 runserver 6880 10044 [36mHTTP GET /static/admin/js/nav_sidebar.js 304 [0.00, 127.0.0.1:53333][0m
+INFO 2026-04-25 14:13:22,991 runserver 6880 10044 [36mHTTP GET /static/admin/img/icon-changelink.svg 304 [0.00, 127.0.0.1:53333][0m
+INFO 2026-04-25 14:13:22,996 runserver 6880 10044 [36mHTTP GET /static/admin/img/icon-addlink.svg 304 [0.00, 127.0.0.1:53333][0m
+INFO 2026-04-25 14:13:23,004 runserver 6880 10044 [36mHTTP GET /static/admin/img/icon-viewlink.svg 304 [0.00, 127.0.0.1:53333][0m
+INFO 2026-04-25 14:13:23,010 runserver 6880 10044 [36mHTTP GET /static/admin/js/change_form.js 304 [0.00, 127.0.0.1:53333][0m
+INFO 2026-04-25 14:13:23,049 runserver 6880 10044 [mHTTP GET /admin/jsi18n/ 200 [0.13, 127.0.0.1:53328][0m
+INFO 2026-04-25 14:13:35,577 runserver 6880 10044 [32mHTTP POST /admin/messages_app/groupmessage/add/ 302 [0.13, 127.0.0.1:53328][0m
+INFO 2026-04-25 14:13:35,679 runserver 6880 10044 [mHTTP GET /admin/messages_app/groupmessage/ 200 [0.10, 127.0.0.1:53328][0m
+INFO 2026-04-25 14:13:35,708 runserver 6880 10044 [36mHTTP GET /static/admin/css/base.css 304 [0.00, 127.0.0.1:53328][0m
+INFO 2026-04-25 14:13:35,723 runserver 6880 10044 [36mHTTP GET /static/admin/js/vendor/jquery/jquery.js 304 [0.01, 127.0.0.1:53334][0m
+INFO 2026-04-25 14:13:35,724 runserver 6880 10044 [36mHTTP GET /static/admin/css/dark_mode.css 304 [0.01, 127.0.0.1:53328][0m
+INFO 2026-04-25 14:13:35,725 runserver 6880 10044 [36mHTTP GET /static/admin/js/theme.js 304 [0.01, 127.0.0.1:53333][0m
+INFO 2026-04-25 14:13:35,725 runserver 6880 10044 [36mHTTP GET /static/admin/css/changelists.css 304 [0.01, 127.0.0.1:53332][0m
+INFO 2026-04-25 14:13:35,729 runserver 6880 10044 [36mHTTP GET /static/admin/css/nav_sidebar.css 304 [0.02, 127.0.0.1:53329][0m
+INFO 2026-04-25 14:13:35,741 runserver 6880 10044 [36mHTTP GET /static/admin/js/jquery.init.js 304 [0.01, 127.0.0.1:53333][0m
+INFO 2026-04-25 14:13:35,744 runserver 6880 10044 [36mHTTP GET /static/admin/css/responsive.css 304 [0.02, 127.0.0.1:53334][0m
+INFO 2026-04-25 14:13:35,745 runserver 6880 10044 [36mHTTP GET /static/admin/js/core.js 304 [0.01, 127.0.0.1:53328][0m
+INFO 2026-04-25 14:13:35,747 runserver 6880 10044 [36mHTTP GET /static/admin/js/actions.js 304 [0.01, 127.0.0.1:53329][0m
+INFO 2026-04-25 14:13:35,748 runserver 6880 10044 [36mHTTP GET /static/admin/js/admin/RelatedObjectLookups.js 304 [0.02, 127.0.0.1:53332][0m
+INFO 2026-04-25 14:13:35,755 runserver 6880 10044 [36mHTTP GET /static/admin/js/urlify.js 304 [0.01, 127.0.0.1:53333][0m
+INFO 2026-04-25 14:13:35,760 runserver 6880 10044 [36mHTTP GET /static/admin/js/vendor/xregexp/xregexp.js 304 [0.01, 127.0.0.1:53334][0m
+INFO 2026-04-25 14:13:35,760 runserver 6880 10044 [36mHTTP GET /static/admin/js/prepopulate.js 304 [0.01, 127.0.0.1:53328][0m
+INFO 2026-04-25 14:13:35,761 runserver 6880 10044 [36mHTTP GET /static/admin/img/search.svg 304 [0.01, 127.0.0.1:53329][0m
+INFO 2026-04-25 14:13:35,769 runserver 6880 10044 [36mHTTP GET /static/admin/js/nav_sidebar.js 304 [0.00, 127.0.0.1:53329][0m
+INFO 2026-04-25 14:13:35,774 runserver 6880 10044 [36mHTTP GET /static/admin/js/filters.js 304 [0.00, 127.0.0.1:53329][0m
+INFO 2026-04-25 14:13:35,834 runserver 6880 10044 [mHTTP GET /admin/jsi18n/ 200 [0.12, 127.0.0.1:53336][0m
+INFO 2026-04-25 14:13:35,854 runserver 6880 10044 [36mHTTP GET /static/admin/img/icon-yes-dark.svg 304 [0.00, 127.0.0.1:53336][0m
+INFO 2026-04-25 14:13:46,043 runserver 6880 10044 [mHTTP GET /swaggerr/ 200 [0.02, 127.0.0.1:53336][0m
+INFO 2026-04-25 14:13:46,415 runserver 6880 10044 [mHTTP GET /api/schema/ 200 [0.13, 127.0.0.1:53336][0m
+INFO 2026-04-25 14:14:15,778 autoreload 6880 9840 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\config\settings.py changed, reloading.
+INFO 2026-04-25 14:15:59,718 autoreload 4892 32 Watching for file changes with StatReloader
+INFO 2026-04-25 14:16:47,033 autoreload 4892 32 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\config\settings.py changed, reloading.
+INFO 2026-04-25 14:16:48,315 autoreload 8112 9820 Watching for file changes with StatReloader
+INFO 2026-04-25 14:16:56,959 autoreload 8112 9820 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\config\settings.py changed, reloading.
+INFO 2026-04-25 14:16:58,135 autoreload 400 5892 Watching for file changes with StatReloader
+INFO 2026-04-25 14:17:00,262 autoreload 400 5892 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\config\settings.py changed, reloading.
+INFO 2026-04-25 14:17:01,668 autoreload 9300 1340 Watching for file changes with StatReloader
+INFO 2026-04-25 14:17:03,676 autoreload 9300 1340 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\config\settings.py changed, reloading.
+INFO 2026-04-25 14:17:05,101 autoreload 2560 9804 Watching for file changes with StatReloader
+INFO 2026-04-25 14:19:44,982 autoreload 2560 9804 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\config\settings.py changed, reloading.
+INFO 2026-04-25 14:19:46,564 autoreload 11200 4324 Watching for file changes with StatReloader
+INFO 2026-04-25 14:20:18,201 autoreload 11200 4324 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\config\settings.py changed, reloading.
+INFO 2026-04-25 14:20:19,547 autoreload 8224 6608 Watching for file changes with StatReloader

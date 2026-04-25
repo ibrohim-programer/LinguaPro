@@ -1,5 +1,9 @@
 from pathlib import Path
+from datetime import timedelta
 from decouple  import config , Csv
+import os
+
+ 
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -23,7 +27,7 @@ INSTALLED_APPS = [
     
     'rest_framework',             
     'rest_framework_simplejwt',   
-    'corsheaders',                 
+    'corsheaders',                
     'django_filters',              
     'drf_spectacular',            
     'channels', 
@@ -42,6 +46,7 @@ INSTALLED_APPS = [
 AUTH_USER_MODEL = 'accounts.CustomUser'
 
 MIDDLEWARE = [
+    "corsheaders.middleware.CorsMiddleware",
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -49,6 +54,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+   
 ]
 
 ROOT_URLCONF = 'config.urls'
@@ -126,8 +132,6 @@ STATIC_URL  = '/static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 
-from datetime import timedelta
- 
 SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(days=15),   # Access token 15 daqiqa
     'REFRESH_TOKEN_LIFETIME': timedelta(days=30),     # Refresh token 30 kun
@@ -160,7 +164,7 @@ SPECTACULAR_SETTINGS = {
     ],
 }
 
-import os
+
 
 LOGGING = {
     'version': 1,
@@ -206,3 +210,11 @@ CHANNEL_LAYERS = {
         },
     },
 }
+
+
+CORS_ALLOW_CREDENTIALS = True
+
+CORS_ALLOWED_ORIGINS = [
+    "http://127.0.0.1:8000",
+    "http://localhost:3000",
+]
