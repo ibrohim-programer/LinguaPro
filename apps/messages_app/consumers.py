@@ -8,27 +8,6 @@ User = get_user_model()
 
 
 class GroupChatConsumer(AsyncWebsocketConsumer):
-    """
-    WebSocket: ws://domain/ws/chat/{group_id}/
-
-    Event turlari (type field):
-      client → server:
-        { "type": "chat.message", "content": "...", "message_type": "text" }
-        { "type": "chat.read",    "message_id": 5 }
-        { "type": "chat.typing"  }
-
-      server → client:
-        { "type": "chat.message",  ...message data... }
-        { "type": "chat.read",     "message_id": 5, "user_id": 3 }
-        { "type": "chat.typing",   "user_id": 3, "username": "..." }
-        { "type": "chat.error",    "detail": "..." }
-        { "type": "chat.online",   "user_id": 3 }
-        { "type": "chat.offline",  "user_id": 3 }
-    """
-
-    # ──────────────────────────────────────────
-    #  Connect / Disconnect
-    # ──────────────────────────────────────────
     async def connect(self):
         self.group_id   = self.scope['url_route']['kwargs']['group_id']
         self.room_group = f'chat_group_{self.group_id}'
@@ -94,7 +73,7 @@ class GroupChatConsumer(AsyncWebsocketConsumer):
         except json.JSONDecodeError:
             await self._send_error('JSON format xatosi!')
         except Exception as e:
-            await self._send_error(str(e))
+            await self._send_error(f"Server xatosi {str(e)}")
 
     # ──────────────────────────────────────────
     #  Handler: yangi xabar
