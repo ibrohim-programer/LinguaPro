@@ -154,15 +154,7 @@ REST_FRAMEWORK = {
     'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
 }
 
-SPECTACULAR_SETTINGS = {
-    'TITLE': 'LinguaPro API',
-    'DESCRIPTION': 'LinguaPro project API',
-    'VERSION': '1.0.0',
-    'SERVE_INCLUDE_SCHEMA': False,
-    'SERVERS': [
-        {'url': 'http://185.190.143.64', 'description': 'Production server'},
-    ],
-}
+
 
 
 
@@ -195,7 +187,6 @@ LOGGING = {
     },
 }
 
-DRF_API_LOGGER_DATABASE = True
 
 IMGBB_API_KEY = config('IMGBB_API_KEY')
 
@@ -224,15 +215,24 @@ CORS_ALLOW_HEADERS = [
 ]
 
 
-CORS_ALLOW_ALL_ORIGINS = True  
-# CORS_ALLOW_ALL_ORIGINS = False
+CORS_ALLOW_ALL_ORIGINS = False
 
 CORS_ALLOWED_ORIGINS = [
-    # "http://185.190.143.64",
-    "http://127.0.0.1:8000",  
+    "http://185.190.143.64",
+    "http://127.0.0.1:8000",
     "http://localhost:3000",
     "http://localhost:5173",
 ]
 
 
-ALLOWED_HOSTS = ['185.190.143.64', 'localhost', '127.0.0.1']
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'LinguaPro API',
+    'DESCRIPTION': 'LinguaPro project API',
+    'VERSION': '1.0.0',
+    'SERVE_INCLUDE_SCHEMA': False,
+    'SERVERS': [
+        {'url': 'http://127.0.0.1:8000', 'description': 'Local server'}
+        if DEBUG else
+        {'url': 'http://185.190.143.64', 'description': 'Production server'}
+    ],
+}

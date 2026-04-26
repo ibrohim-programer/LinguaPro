@@ -7,3 +7,45 @@ INFO 2026-04-26 09:05:14,624 runserver 5348 4920 [mHTTP GET /swagger/ 200 [0.03
 INFO 2026-04-26 09:05:14,941 runserver 5348 4920 [mHTTP GET /api/schema/ 200 [0.19, 127.0.0.1:50101][0m
 INFO 2026-04-26 09:05:36,464 autoreload 5348 10920 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\config\settings.py changed, reloading.
 INFO 2026-04-26 09:05:37,694 autoreload 5624 7368 Watching for file changes with StatReloader
+INFO 2026-04-26 16:13:54,021 autoreload 11132 900 Watching for file changes with StatReloader
+WARNING 2026-04-26 16:13:58,204 log 11132 4804 Not Found: /
+WARNING 2026-04-26 16:13:58,204 runserver 11132 5340 [33mHTTP GET / 404 [0.02, 127.0.0.1:50611][0m
+INFO 2026-04-26 16:14:03,367 runserver 11132 5340 [mHTTP GET /swagger/ 200 [0.03, 127.0.0.1:50611][0m
+INFO 2026-04-26 16:14:03,583 runserver 11132 5340 [mHTTP GET /api/schema/ 200 [0.10, 127.0.0.1:50611][0m
+INFO 2026-04-26 16:18:27,551 autoreload 11132 900 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\config\settings.py changed, reloading.
+INFO 2026-04-26 16:18:28,860 autoreload 4272 8168 Watching for file changes with StatReloader
+INFO 2026-04-26 16:18:47,395 autoreload 4272 8168 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\config\settings.py changed, reloading.
+INFO 2026-04-26 16:18:48,652 autoreload 2040 8360 Watching for file changes with StatReloader
+INFO 2026-04-26 16:19:17,852 autoreload 10952 240 Watching for file changes with StatReloader
+INFO 2026-04-26 16:47:03,887 autoreload 10812 2424 Watching for file changes with StatReloader
+INFO 2026-04-26 16:47:40,992 autoreload 10560 10732 Watching for file changes with StatReloader
+WARNING 2026-04-26 16:47:56,290 log 10560 7236 Not Found: /
+WARNING 2026-04-26 16:47:56,291 runserver 10560 10672 [33mHTTP GET / 404 [0.03, 127.0.0.1:50907][0m
+INFO 2026-04-26 16:48:02,894 runserver 10560 10672 [mHTTP GET /swagger/ 200 [0.03, 127.0.0.1:50907][0m
+INFO 2026-04-26 16:48:03,110 runserver 10560 10672 [mHTTP GET /api/schema/ 200 [0.10, 127.0.0.1:50907][0m
+WARNING 2026-04-26 16:48:16,589 log 10560 7236 Unauthorized: /api/assignments/1/
+WARNING 2026-04-26 16:48:16,589 runserver 10560 10672 [31;1mHTTP GET /api/assignments/1/ 401 [0.01, 127.0.0.1:50907][0m
+INFO 2026-04-26 16:56:46,865 autoreload 10560 10732 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\config\urls.py changed, reloading.
+INFO 2026-04-26 16:56:48,236 autoreload 8832 10716 Watching for file changes with StatReloader
+INFO 2026-04-26 16:56:53,925 runserver 8832 5760 [mHTTP GET / 200 [0.04, 127.0.0.1:50955][0m
+INFO 2026-04-26 16:56:54,186 runserver 8832 5760 [mHTTP GET /api/schema/ 200 [0.13, 127.0.0.1:50955][0m
+WARNING 2026-04-26 17:18:15,829 log 8832 6064 Unauthorized: /api/auth/user-list/
+WARNING 2026-04-26 17:18:15,830 runserver 8832 5760 [31;1mHTTP GET /api/auth/user-list/ 401 [0.03, 127.0.0.1:51057][0m
+INFO 2026-04-26 17:19:17,232 autoreload 8832 10716 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\config\settings.py changed, reloading.
+INFO 2026-04-26 17:19:18,401 autoreload 9452 4952 Watching for file changes with StatReloader
+INFO 2026-04-26 17:19:28,069 autoreload 9452 4952 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\config\settings.py changed, reloading.
+INFO 2026-04-26 17:19:29,474 autoreload 2040 9640 Watching for file changes with StatReloader
+INFO 2026-04-26 17:19:43,774 autoreload 2040 9640 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\config\settings.py changed, reloading.
+INFO 2026-04-26 17:19:44,869 autoreload 5244 2032 Watching for file changes with StatReloader
+INFO 2026-04-26 17:19:46,947 autoreload 5244 2032 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\config\settings.py changed, reloading.
+INFO 2026-04-26 17:19:48,078 autoreload 11192 1336 Watching for file changes with StatReloader
+INFO 2026-04-26 17:19:50,219 autoreload 11192 1336 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\config\settings.py changed, reloading.
+INFO 2026-04-26 17:19:51,593 autoreload 9428 4312 Watching for file changes with StatReloader
+INFO 2026-04-26 17:19:55,959 autoreload 9428 4312 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\config\settings.py changed, reloading.
+INFO 2026-04-26 17:19:57,377 autoreload 8356 9888 Watching for file changes with StatReloader
+INFO 2026-04-26 17:20:46,519 autoreload 8356 9888 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\config\settings.py changed, reloading.
+INFO 2026-04-26 17:41:30,520 autoreload 7836 8896 Watching for file changes with StatReloader
+INFO 2026-04-26 17:41:41,554 runserver 7836 11204 [mHTTP GET / 200 [0.03, 127.0.0.1:53040][0m
+INFO 2026-04-26 17:41:41,798 runserver 7836 11204 [mHTTP GET /api/schema/ 200 [0.14, 127.0.0.1:53040][0m
+WARNING 2026-04-26 17:41:47,881 log 7836 8272 Unauthorized: /api/auth/user-list/
+WARNING 2026-04-26 17:41:47,882 runserver 7836 11204 [31;1mHTTP GET /api/auth/user-list/ 401 [0.02, 127.0.0.1:53040][0m
