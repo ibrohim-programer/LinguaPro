@@ -133,9 +133,9 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 
 SIMPLE_JWT = {
-    'ACCESS_TOKEN_LIFETIME': timedelta(days=15),   # Access token 15 daqiqa
-    'REFRESH_TOKEN_LIFETIME': timedelta(days=30),     # Refresh token 30 kun
-    'ROTATE_REFRESH_TOKENS': True,                    # Har yangilashda yangi refresh
+    'ACCESS_TOKEN_LIFETIME': timedelta(days=15),   
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=30),    
+    'ROTATE_REFRESH_TOKENS': True,                    
     'AUTH_HEADER_TYPES': ('Bearer',),
 }
  
@@ -147,9 +147,9 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.IsAuthenticated',
     ],
     'DEFAULT_FILTER_BACKENDS': [
-        'django_filters.rest_framework.DjangoFilterBackend',  # Filter uchun
-        'rest_framework.filters.SearchFilter',                 # Qidiruv uchun
-        'rest_framework.filters.OrderingFilter',               # Tartib uchun
+        'django_filters.rest_framework.DjangoFilterBackend',  
+        'rest_framework.filters.SearchFilter',                
+        'rest_framework.filters.OrderingFilter',              
     ],
     'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
 }
@@ -184,12 +184,12 @@ LOGGING = {
         },
     },
     'loggers': {
-        'django': {  # Django uchun logger
-            'handlers': ['file'], # Faqat faylga yozadi
+        'django': {  
+            'handlers': ['file'], 
             'level': 'INFO',
         },
-        'myapp': {  # Sizning appingiz uchun alohida logger
-            'handlers': ['file'], # Faqat faylga yozadi
+        'myapp': {  
+            'handlers': ['file'],
             'level': 'INFO',
         },
     },
@@ -212,17 +212,27 @@ CHANNEL_LAYERS = {
 }
 
 
+
+
 CORS_ALLOW_CREDENTIALS = True
 
-CORS_ALLOWED_ORIGINS = [
-    "http://185.190.143.64",      # ✅ production server — bu yo'q edi!
-    "http://127.0.0.1:8000",
-    "http://localhost:3000",
-    "http://localhost:5173",       # ✅ Vite/React frontend bo'lsa
-]
 CORS_ALLOW_HEADERS = [
     "accept",
     "authorization",
     "content-type",
     "x-csrftoken",
 ]
+
+
+CORS_ALLOW_ALL_ORIGINS = True  
+# CORS_ALLOW_ALL_ORIGINS = False
+
+CORS_ALLOWED_ORIGINS = [
+    # "http://185.190.143.64",
+    "http://127.0.0.1:8000",  
+    "http://localhost:3000",
+    "http://localhost:5173",
+]
+
+
+ALLOWED_HOSTS = ['185.190.143.64', 'localhost', '127.0.0.1']
