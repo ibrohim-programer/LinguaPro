@@ -1,16 +1,14 @@
-from rest_framework import generics, permissions, status
+from rest_framework import generics, status
 from rest_framework.views import APIView
 from rest_framework.response import Response
-from django.shortcuts import get_object_or_404
-from django.db.models import Count, Q
-from django.db import transaction
-
-from .models import Attendance
-from .serializers import AttendanceSerializer, MyAttendanceSerializer, AttendanceStatsSerializer
-from apps.groups.models import Group
 from drf_spectacular.utils import extend_schema
 from drf_spectacular.utils import inline_serializer
 from rest_framework import serializers as rf_serializers
+from django.shortcuts import get_object_or_404
+from django.db import transaction
+from .models import Attendance
+from .serializers import AttendanceSerializer, MyAttendanceSerializer
+from apps.groups.models import Group
 from apps.common.permissions import IsStudent, IsAdminOrTeacher
 
 
@@ -50,10 +48,7 @@ class AttendanceBulkUpdateView(APIView):
             return Response({'detail': "'records' maydoni bo'sh bo'lmasligi kerak."},status=status.HTTP_400_BAD_REQUEST)
 
         ids = [r.get('id') for r in records if r.get('id') is not None]
-        attendance_map = {
-            obj.pk: obj
-            for obj in Attendance.objects.filter(pk__in=ids)
-        }
+        attendance_map = {obj.pk: obj for obj in Attendance.objects.filter(pk__in=ids)}
 
         errors = []
         to_update = []
@@ -109,24 +104,7 @@ class MyAttendanceView(generics.ListAPIView):
     summary='Admin - Teacher uchun — Guruh davomatini saqlash (create or update)',
     request=inline_serializer(
         name='GroupAttendanceSaveRequest',
-        fields={
-            'date': rf_serializers.DateField(),
-            'records': rf_serializers.ListField(
-                child=inline_serializer(
-                    name='GroupAttendanceRecord',
-                    fields={
-                        'student': rf_serializers.IntegerField(),
-                        'status':  rf_serializers.ChoiceField(
-                            choices=['present', 'absent', 'late']
-                        ),
-                        'note':    rf_serializers.CharField(
-                            required=False, allow_blank=True
-                        ),
-                    }
-                )
-            ),
-        }
-    ),
+        fields={'date': rf_serializers.DateField(),'records': rf_serializers.ListField(child=inline_serializer(name='GroupAttendanceRecord',fields={'student': rf_serializers.IntegerField(),'status':  rf_serializers.ChoiceField(choices=['present', 'absent', 'late']),'note':    rf_serializers.CharField( required=False, allow_blank=True),})),}),
     responses={200: AttendanceSerializer(many=True)},
 )
 class AttendanceStatsView(APIView):
@@ -136,15 +114,9 @@ class AttendanceStatsView(APIView):
         date = request.data.get('date')
         records = request.data.get('records', [])
         if not date:
-            return Response(
-                {'detail': "'date' maydoni majburiy."},
-                status=status.HTTP_400_BAD_REQUEST
-            )
+            return Response({'detail': "'date' maydoni majburiy."},status=status.HTTP_400_BAD_REQUEST)
         if not records:
-            return Response(
-                {'detail': "'records' maydoni bo'sh bo'lmasligi kerak."},
-                status=status.HTTP_400_BAD_REQUEST
-            )
+            return Response({'detail': "'records' maydoni bo'sh bo'lmasligi kerak."},status=status.HTTP_400_BAD_REQUEST)
 
         allowed_statuses = [c[0] for c in Attendance.AttendanceStatus.choices]
         errors = []
@@ -153,10 +125,7 @@ class AttendanceStatsView(APIView):
             if 'student' not in item:
                 errors.append({'index': i, 'detail': "'student' maydoni majburiy."})
             if item.get('status') not in allowed_statuses:
-                errors.append({
-                    'index': i,
-                    'detail': f"Noto'g'ri status: '{item.get('status')}'. Ruxsat etilganlar: {allowed_statuses}"
-                })
+                errors.append({'index': i,'detail': f"Noto'g'ri status: '{item.get('status')}'. Ruxsat etilganlar: {allowed_statuses}"})
 
         if errors:
             return Response({'errors': errors}, status=status.HTTP_400_BAD_REQUEST)
@@ -164,12 +133,7 @@ class AttendanceStatsView(APIView):
         student_ids = [item['student'] for item in records]
         existing_map = {
             obj.student_id: obj
-            for obj in Attendance.objects.filter(
-                group=group,
-                date=date,
-                student_id__in=student_ids
-            )
-        }
+            for obj in Attendance.objects.filter(group=group,date=date,student_id__in=student_ids)}
 
         to_create = []
         to_update = []
@@ -186,26 +150,15 @@ class AttendanceStatsView(APIView):
                 obj.marked_by = request.user
                 to_update.append(obj)
             else:
-                to_create.append(Attendance(
-                    student_id=student_id,
-                    group=group,
-                    date=date,
-                    status=item_status,
-                    note=note,
-                    marked_by=request.user,
-                ))
+                to_create.append(Attendance(student_id=student_id,group=group,date=date,status=item_status,note=note,marked_by=request.user,))
 
         with transaction.atomic():
             if to_create:
                 Attendance.objects.bulk_create(to_create)
             if to_update:
-                Attendance.objects.bulk_update(
-                    to_update, fields=['status', 'note', 'marked_by']
-                )
+                Attendance.objects.bulk_update(to_update, fields=['status', 'note', 'marked_by'])
 
-        saved = Attendance.objects.filter(
-            group=group, date=date, student_id__in=student_ids
-        ).select_related('student', 'group', 'marked_by')
-
+        saved = Attendance.objects.filter(group=group, date=date, student_id__in=student_ids).select_related('student', 'group', 'marked_by')
         serializer = AttendanceSerializer(saved, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
+    

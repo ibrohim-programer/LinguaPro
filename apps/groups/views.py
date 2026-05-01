@@ -7,8 +7,7 @@ from drf_spectacular.utils import extend_schema, inline_serializer
 from django.contrib.auth import get_user_model
 from apps.common.permissions import IsAdmin, IsAdminOrTeacher
 from .models import Group, GroupStudent
-from .serailizers import GroupSerializer, AddStudentSerializer, MyGroupSerializer
-
+from .serailizers import GroupSerializer, AddStudentSerializer, MyGroupSerializer , AvailableStudentsSerializer 
 User = get_user_model()
 
 
@@ -48,7 +47,7 @@ class MyGroupsView(ListAPIView):
     permission_classes = [IsAuthenticated]
 
     def get_queryset(self):
-        if getattr(self, 'swagger_fake_view', False):   # ✅ AnonymousUser xatosini oldini oladi
+        if getattr(self, 'swagger_fake_view', False):   
             return Group.objects.none()
 
         user = self.request.user
@@ -85,8 +84,9 @@ class AddStudentView(GenericAPIView):
         serializer = self.get_serializer(data=request.data)
         serializer.is_valid(raise_exception=True)
 
-        student_id = serializer.validated_data['student_id']
-        obj, created = GroupStudent.objects.get_or_create(group=group, student_id=student_id)
+        username = serializer.validated_data['username']
+        student = User.objects.get(username=username , role='student')
+        obj, created = GroupStudent.objects.get_or_create(group=group, student=student)
 
         if not created:
             return Response({'detail': 'Student allaqachon guruhda!'}, status=400)
@@ -103,21 +103,41 @@ class AddStudentView(GenericAPIView):
     """,
     responses={
         200: inline_serializer('RemoveStudentResponse', fields={'detail': rf_serializers.CharField()}),
-        400: inline_serializer('RemoveStudentError',    fields={'detail': rf_serializers.CharField()}),
-    }
-)
+        400: inline_serializer('RemoveStudentError',    fields={'detail': rf_serializers.CharField()}),})
+
 class RemoveStudentView(GenericAPIView):
     queryset = Group.objects.all()
     permission_classes = [IsAdminOrTeacher]
-    serializer_class = rf_serializers.Serializer   # ✅ spectacular uchun — request body yo'q
+    serializer_class = rf_serializers.Serializer   
 
     def delete(self, request, pk=None, sid=None):
         group = self.get_object()
         self.check_object_permissions(request, group)
-
         deleted, _ = GroupStudent.objects.filter(group=group, student_id=sid).delete()
 
         if not deleted:
             return Response({'detail': 'Student guruhda topilmadi!'}, status=400)
-
         return Response({'detail': 'Student guruhdan olib tashlandi!'}, status=200)
+@extend_schema(
+    tags=['Group - Admin - Teacher'],
+    summary="Guruhga qo'shish uchun mavjud studentlar (guruhda yo'qlar)",
+)
+class AvailableStudentsView(ListAPIView):
+    
+    serializer_class = AvailableStudentsSerializer  
+    permission_classes = [IsAdminOrTeacher]
+
+    def get_queryset(self):
+        group_id = self.kwargs['pk']
+        already_in = GroupStudent.objects.filter(group_id=group_id).values_list('student_id', flat=True)
+        return User.objects.filter(role='student').exclude(id__in=already_in)
+        
+@extend_schema(
+    tags=['Group - Admin - Teacher'],
+    summary="Studentlarni Ruyxati ",
+)
+class StudentListView(ListAPIView):
+    serializer_class = AvailableStudentsSerializer
+    permission_classes = [IsAdminOrTeacher]
+    def get_queryset(self):
+        return User.objects.filter(role = "student")

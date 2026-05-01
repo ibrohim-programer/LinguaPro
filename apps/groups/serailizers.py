@@ -2,7 +2,7 @@ from rest_framework import serializers
 from django.contrib.auth import get_user_model
 User = get_user_model()
 
-from .models import Group , GroupStudent
+from .models import Group , GroupStudent 
 
 
 class GroupSerializer(serializers.ModelSerializer):
@@ -20,11 +20,11 @@ class GroupStudentSerializer(serializers.ModelSerializer):
         fields = ['id', 'student', 'joined_at']
         
 class AddStudentSerializer(serializers.Serializer):
-    student_id = serializers.IntegerField()
+    username = serializers.CharField()
     
-    def validate_student_id(self , value):
+    def validate_username(self , value):
         try:
-            user = User.objects.get(id = value , role = 'student')
+            user = User.objects.get(username = value , role = 'student')
         except User.DoesNotExist:
             raise serializers.ValidationError("Bunday student topilmadi!")
         return value
@@ -34,3 +34,11 @@ class MyGroupSerializer(serializers.ModelSerializer):
     class Meta:
         model  = Group
         fields = ['id', 'name', 'course', 'teacher', 'status', 'start_date', 'students']
+        
+        
+class AvailableStudentsSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = ['id' , 'username',"phone","avatar","learning_goal"]
+        
+    
