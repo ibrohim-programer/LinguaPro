@@ -231,7 +231,8 @@ SPECTACULAR_SETTINGS = {
     'VERSION': '1.0.0',
     'SERVE_INCLUDE_SCHEMA': False,
     'SERVERS': [
-        {'url': 'http://127.0.0.1:8000', 'description': 'Production server'}
+        {'url': 'http://127.0.0.1:8000', 'description': 'Localhost server'},
+        {'url': 'http://185.190.143.64:8000/', 'description': 'Production server'}
     ],
 }
 
