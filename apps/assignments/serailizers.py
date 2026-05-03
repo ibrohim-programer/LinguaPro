@@ -7,8 +7,8 @@ class AssignmentSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Assignment
-        fields = ['id','title','description','group','created_by','deadline','max_score','attachment','submission_type','created_at']
-        read_only_fields = ['created_by', 'created_at']
+        fields = ['id','title','description','group','created_by','deadline','max_score','attachment','submission_type',"is_active",'created_at']
+        read_only_fields = ['created_by', 'created_at',"is_active"]
 
 
 class SubmissionSerializer(serializers.ModelSerializer):

@@ -6,8 +6,12 @@ from .models import Assignment, Submission
 from .serailizers import AssignmentSerializer, SubmissionSerializer, GradeSubmissionSerializer
 from apps.common.permissions import IsAdminOrTeacher, IsStudent, IsTeacher, IsAdmin
 from drf_spectacular.utils import extend_schema
-
+from django.utils import timezone
 User = get_user_model()
+
+
+def deactivate_expired_assignments():
+    Assignment.objects.filter(deadline__lt = timezone.now(), is_active=True).update(is_active=False)
 
 
 @extend_schema(tags=['Assignment Crud'], summary='Admin va Teacher uchun uyga vazifa yaratish va kurish bulimi')
@@ -16,8 +20,11 @@ class AssignmentListCreateView(generics.ListCreateAPIView):
     permission_classes = [IsAdminOrTeacher]
 
     def get_queryset(self):
-        if getattr(self, 'swagger_fake_view', False):   # ✅ FIX: AnonymousUser xatosi
+        if getattr(self, 'swagger_fake_view', False):   
             return Assignment.objects.none()
+        
+        deactivate_expired_assignments()
+        
         user = self.request.user
         if user.role == 'admin':
             return Assignment.objects.all().order_by('-created_at')
@@ -46,8 +53,11 @@ class AssignmentDetailView(generics.RetrieveUpdateDestroyAPIView):
         return [IsAdminOrTeacher()]
 
     def get_queryset(self):
-        if getattr(self, 'swagger_fake_view', False):   # ✅ FIX: AnonymousUser xatosi
+        if getattr(self, 'swagger_fake_view', False):   
             return Assignment.objects.none()
+        
+        deactivate_expired_assignments()
+        
         user = self.request.user
         if user.role == "admin":
             return Assignment.objects.all().order_by('-created_at')
@@ -60,8 +70,11 @@ class MyAssignmentsView(generics.ListAPIView):
     permission_classes = [IsStudent]
 
     def get_queryset(self):
-        if getattr(self, 'swagger_fake_view', False):   # ✅ FIX: user.student_groups xatosi
+        if getattr(self, 'swagger_fake_view', False):   
             return Assignment.objects.none()
+        
+        deactivate_expired_assignments()
+        
         user = self.request.user
         student_group_ids = user.student_groups.values_list('group_id', flat=True)
         return Assignment.objects.filter(group_id__in=student_group_ids).order_by('-created_at')
@@ -75,6 +88,14 @@ class SubmitAssignmentView(generics.GenericAPIView):
     def post(self, request, pk):
         assignment = get_object_or_404(Assignment, pk=pk)
         student = get_object_or_404(User, id=request.user.id)
+
+
+        if not assignment.is_active:
+             return Response(
+                {'detail': 'Vazifaning muddati tugagan, topshirib bo\'lmaydi.'},
+                status=status.HTTP_400_BAD_REQUEST
+            )
+
 
         if Submission.objects.filter(assignment=assignment, student=student).exists():
             return Response(

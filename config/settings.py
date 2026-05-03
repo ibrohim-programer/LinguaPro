@@ -9,7 +9,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = config('SECRET_KEY')
 
-DEBUG = config('DEBUG', default=False, cast=bool)
+DEBUG = config('DEBUG', cast=bool)
+
+if DEBUG:
+    CORS_ALLOW_ALL_ORIGINS = True
+else:
+    CORS_ALLOWED_ORIGINS = [
+        "https://yourdomain.com",
+        "https://www.yourdomain.com",
+    ]
 
 ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
 

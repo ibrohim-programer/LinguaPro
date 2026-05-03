@@ -33,7 +33,7 @@ class MyGroupSerializer(serializers.ModelSerializer):
     students = GroupStudentSerializer(source = 'group_students' , many = True , read_only = True)
     class Meta:
         model  = Group
-        fields = ['id', 'name', 'course', 'teacher', 'status', 'start_date', 'students']
+        fields = ['id', 'name', 'course', 'teacher', 'status', 'start_date','start_time','end_time', 'students']
         
         
 class AvailableStudentsSerializer(serializers.ModelSerializer):

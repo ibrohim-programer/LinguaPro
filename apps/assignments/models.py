@@ -1,7 +1,7 @@
 from django.db import models
 from apps.groups.models import Group
 from django.contrib.auth import get_user_model
-
+from django.utils import timezone
 User = get_user_model()
  
 class Assignment(models.Model):
@@ -12,7 +12,13 @@ class Assignment(models.Model):
     deadline = models.DateTimeField(verbose_name='Topshirish muddati')
     max_score = models.PositiveIntegerField(default=100, verbose_name='Maksimal ball')
     attachment = models.FileField(upload_to='assignments/',blank=True,null=True,verbose_name='Fayl')
- 
+    is_active = models.BooleanField(default=True, verbose_name='Holat')
+    
+    def save(self,*args , **kwargs):
+        if self.deadline and self.deadline < timezone.now():
+            self.is_active = False
+        super().save(*args , **kwargs)    
+    
     class SubmissionType(models.TextChoices):
         TEXT = 'text', 'Matn'
         FILE = 'file', 'Fayl'
