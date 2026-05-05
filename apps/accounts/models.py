@@ -9,6 +9,7 @@ class CustomUser(AbstractUser):
 
     role = models.CharField(max_length=10, default=Role.STUDENT , choices=Role.choices,verbose_name='Rol')
     username = models.CharField(max_length=50, unique=True, verbose_name='Foydalanuvchi nomi', error_messages={'unique': "Bu foydalanuvchi nomi band. Boshqa nom tanlang.",})
+    full_name = models.CharField(max_length=50 , verbose_name="Foydalanuvchini tuliq ismi")
     phone = models.CharField(max_length=9,unique=True,blank=True,null=True,verbose_name='Telefon raqami')
     avatar = models.URLField(blank=True,null=True,verbose_name='Profil rasmi')
     timezone = models.CharField(max_length=50,default='Asia/Tashkent',verbose_name='Vaqt zonasi')
@@ -34,10 +35,10 @@ class CustomUser(AbstractUser):
         return f'{self.username} ({self.get_role_display()})'
 
     
-    @property
-    def full_name(self):
-        name = f'{self.first_name} {self.last_name}'.strip()
-        return name if name else self.username
+    # @property
+    # def full_name(self):
+    #     name = f'{self.first_name} {self.last_name}'.strip()
+    #     return name if name else self.username
 
     @property
     def is_admin(self):

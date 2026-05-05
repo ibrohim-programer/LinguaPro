@@ -1,0 +1,379 @@
+INFO 2026-05-05 17:04:48,456 autoreload 2316 9256 Watching for file changes with StatReloader
+INFO 2026-05-05 17:04:51,591 runserver 2316 7256 [mHTTP GET / 200 [0.06, 127.0.0.1:52850][0m
+INFO 2026-05-05 17:04:52,025 runserver 2316 7256 [mHTTP GET /api/schema/ 200 [0.16, 127.0.0.1:52850][0m
+INFO 2026-05-05 17:07:18,339 runserver 2316 7256 [mHTTP POST /api/auth/login/ 200 [1.42, 127.0.0.1:52892][0m
+INFO 2026-05-05 17:07:54,821 runserver 2316 7256 [mHTTP GET /api/auth/my-profile-list/ 200 [0.10, 127.0.0.1:52892][0m
+INFO 2026-05-05 17:09:46,274 autoreload 6072 9680 Watching for file changes with StatReloader
+INFO 2026-05-05 17:09:47,297 runserver 6072 4720 [mHTTP GET / 200 [0.03, 127.0.0.1:52947][0m
+INFO 2026-05-05 17:09:47,552 runserver 6072 4720 [mHTTP GET /api/schema/ 200 [0.13, 127.0.0.1:52947][0m
+INFO 2026-05-05 17:10:05,691 runserver 6072 4720 [mHTTP GET / 200 [0.01, 127.0.0.1:52947][0m
+INFO 2026-05-05 17:10:05,875 runserver 6072 4720 [mHTTP GET /api/schema/ 200 [0.10, 127.0.0.1:52947][0m
+INFO 2026-05-05 17:10:32,340 autoreload 6072 9680 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\serializers.py changed, reloading.
+INFO 2026-05-05 17:10:33,503 autoreload 9880 2720 Watching for file changes with StatReloader
+INFO 2026-05-05 17:10:35,657 autoreload 9880 2720 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\serializers.py changed, reloading.
+INFO 2026-05-05 17:10:36,727 autoreload 4764 4732 Watching for file changes with StatReloader
+INFO 2026-05-05 17:10:40,825 autoreload 4764 4732 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\serializers.py changed, reloading.
+INFO 2026-05-05 17:10:42,088 autoreload 3068 1928 Watching for file changes with StatReloader
+INFO 2026-05-05 17:10:53,057 autoreload 3068 1928 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\serializers.py changed, reloading.
+INFO 2026-05-05 17:10:54,124 autoreload 2920 3588 Watching for file changes with StatReloader
+INFO 2026-05-05 17:11:51,595 autoreload 2920 3588 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\serializers.py changed, reloading.
+INFO 2026-05-05 17:11:52,759 autoreload 7180 4964 Watching for file changes with StatReloader
+INFO 2026-05-05 17:12:00,261 autoreload 7180 4964 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\serializers.py changed, reloading.
+INFO 2026-05-05 17:12:01,630 autoreload 9760 3408 Watching for file changes with StatReloader
+INFO 2026-05-05 17:12:03,592 autoreload 9760 3408 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\serializers.py changed, reloading.
+INFO 2026-05-05 17:12:04,756 autoreload 8900 6808 Watching for file changes with StatReloader
+INFO 2026-05-05 17:12:30,916 runserver 8900 528 [mHTTP GET / 200 [0.03, 127.0.0.1:53013][0m
+INFO 2026-05-05 17:12:31,167 runserver 8900 528 [mHTTP GET /api/schema/ 200 [0.15, 127.0.0.1:53013][0m
+INFO 2026-05-05 17:12:37,556 runserver 8900 528 [mHTTP GET / 200 [0.01, 127.0.0.1:53013][0m
+INFO 2026-05-05 17:12:37,735 runserver 8900 528 [mHTTP GET /api/schema/ 200 [0.10, 127.0.0.1:53013][0m
+INFO 2026-05-05 17:14:52,574 runserver 8900 528 [mHTTP GET / 200 [0.01, 127.0.0.1:53035][0m
+INFO 2026-05-05 17:14:52,765 runserver 8900 528 [mHTTP GET /api/schema/ 200 [0.11, 127.0.0.1:53035][0m
+INFO 2026-05-05 17:15:18,985 autoreload 8900 6808 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\models.py changed, reloading.
+INFO 2026-05-05 17:15:20,267 autoreload 632 9740 Watching for file changes with StatReloader
+INFO 2026-05-05 17:15:22,423 runserver 632 10220 [mHTTP GET / 200 [0.04, 127.0.0.1:53049][0m
+INFO 2026-05-05 17:15:22,642 runserver 632 10220 [mHTTP GET /api/schema/ 200 [0.14, 127.0.0.1:53049][0m
+ERROR 2026-05-05 17:15:42,779 log 632 9908 Internal Server Error: /api/auth/login/
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+psycopg2.errors.UndefinedColumn: column accounts_customuser.full_name does not exist
+LINE 1: ...omuser"."role", "accounts_customuser"."username", "accounts_...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\asgiref\sync.py", line 557, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\asgiref\sync.py", line 557, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\django\core\handlers\base.py", line 254, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+        request, *callback_args, **callback_kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\asgiref\sync.py", line 506, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\concurrent\futures\thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\concurrent\futures\thread.py", line 73, in run
+    return fn(*args, **kwargs)
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\asgiref\sync.py", line 561, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\django\views\generic\base.py", line 106, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py", line 67, in post
+    if not serializer.is_valid():
+           ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\rest_framework\serializers.py", line 225, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+                           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\rest_framework\serializers.py", line 459, in run_validation
+    value = self.validate(value)
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\serializers.py", line 36, in validate
+    user = authenticate(username=username, password=password)
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\django\views\decorators\debug.py", line 75, in sensitive_variables_wrapper
+    return func(*func_args, **func_kwargs)
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\django\contrib\auth\__init__.py", line 114, in authenticate
+    user = backend.authenticate(request, **credentials)
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\django\contrib\auth\backends.py", line 65, in authenticate
+    user = UserModel._default_manager.get_by_natural_key(username)
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\django\contrib\auth\base_user.py", line 37, in get_by_natural_key
+    return self.get(**{self.model.USERNAME_FIELD: username})
+           ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\django\db\models\query.py", line 635, in get
+    num = len(clone)
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\django\db\models\query.py", line 372, in __len__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\django\db\models\query.py", line 2000, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\django\db\models\query.py", line 95, in __iter__
+    results = compiler.execute_sql(
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+    )
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1624, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\django\db\utils.py", line 94, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+django.db.utils.ProgrammingError: column accounts_customuser.full_name does not exist
+LINE 1: ...omuser"."role", "accounts_customuser"."username", "accounts_...
+                                                             ^
+
+ERROR 2026-05-05 17:15:42,792 runserver 632 10220 [35;1mHTTP POST /api/auth/login/ 500 [0.23, 127.0.0.1:53049][0m
+ERROR 2026-05-05 17:15:56,426 log 632 9908 Internal Server Error: /api/auth/login/
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+psycopg2.errors.UndefinedColumn: column accounts_customuser.full_name does not exist
+LINE 1: ...omuser"."role", "accounts_customuser"."username", "accounts_...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\asgiref\sync.py", line 557, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\asgiref\sync.py", line 557, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\django\core\handlers\base.py", line 254, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+        request, *callback_args, **callback_kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\asgiref\sync.py", line 506, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\concurrent\futures\thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\concurrent\futures\thread.py", line 73, in run
+    return fn(*args, **kwargs)
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\asgiref\sync.py", line 561, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\django\views\generic\base.py", line 106, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py", line 67, in post
+    if not serializer.is_valid():
+           ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\rest_framework\serializers.py", line 225, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+                           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\rest_framework\serializers.py", line 459, in run_validation
+    value = self.validate(value)
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\serializers.py", line 36, in validate
+    user = authenticate(username=username, password=password)
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\django\views\decorators\debug.py", line 75, in sensitive_variables_wrapper
+    return func(*func_args, **func_kwargs)
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\django\contrib\auth\__init__.py", line 114, in authenticate
+    user = backend.authenticate(request, **credentials)
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\django\contrib\auth\backends.py", line 65, in authenticate
+    user = UserModel._default_manager.get_by_natural_key(username)
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\django\contrib\auth\base_user.py", line 37, in get_by_natural_key
+    return self.get(**{self.model.USERNAME_FIELD: username})
+           ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\django\db\models\query.py", line 635, in get
+    num = len(clone)
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\django\db\models\query.py", line 372, in __len__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\django\db\models\query.py", line 2000, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\django\db\models\query.py", line 95, in __iter__
+    results = compiler.execute_sql(
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+    )
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1624, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\django\db\utils.py", line 94, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+django.db.utils.ProgrammingError: column accounts_customuser.full_name does not exist
+LINE 1: ...omuser"."role", "accounts_customuser"."username", "accounts_...
+                                                             ^
+
+ERROR 2026-05-05 17:15:56,433 runserver 632 10220 [35;1mHTTP POST /api/auth/login/ 500 [0.12, 127.0.0.1:53049][0m
+INFO 2026-05-05 17:17:41,397 autoreload 9276 7892 Watching for file changes with StatReloader
+INFO 2026-05-05 17:17:48,066 runserver 9276 6288 [mHTTP POST /api/auth/login/ 200 [1.33, 127.0.0.1:53124][0m
+INFO 2026-05-05 17:19:31,982 runserver 9276 6288 [mHTTP POST /api/auth/register/ 201 [1.36, 127.0.0.1:53139][0m
+WARNING 2026-05-05 17:19:59,700 log 9276 5956 Bad Request: /api/auth/my-profile-list/
+WARNING 2026-05-05 17:19:59,700 runserver 9276 6288 [31;1mHTTP GET /api/auth/my-profile-list/ 400 [0.08, 127.0.0.1:53139][0m
+WARNING 2026-05-05 17:20:17,606 log 9276 5956 Bad Request: /api/auth/my-profile-list/
+WARNING 2026-05-05 17:20:17,606 runserver 9276 6288 [31;1mHTTP GET /api/auth/my-profile-list/ 400 [0.08, 127.0.0.1:53139][0m
+INFO 2026-05-05 17:21:24,980 autoreload 9276 7892 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-05 17:21:26,209 autoreload 5012 6560 Watching for file changes with StatReloader
+INFO 2026-05-05 17:21:45,877 autoreload 5012 6560 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-05 17:21:47,258 autoreload 5748 3276 Watching for file changes with StatReloader
+INFO 2026-05-05 17:21:49,448 autoreload 5748 3276 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-05 17:21:50,631 autoreload 10000 10216 Watching for file changes with StatReloader
+INFO 2026-05-05 17:22:33,918 runserver 10000 9816 [mHTTP POST /api/auth/login/ 200 [1.38, 127.0.0.1:53278][0m
+WARNING 2026-05-05 17:23:02,087 log 10000 444 Bad Request: /api/auth/my-profile-list/
+WARNING 2026-05-05 17:23:02,087 runserver 10000 9816 [31;1mHTTP GET /api/auth/my-profile-list/ 400 [0.08, 127.0.0.1:53278][0m
+WARNING 2026-05-05 17:23:47,787 log 10000 444 Forbidden: /api/auth/user-list/
+WARNING 2026-05-05 17:23:47,787 runserver 10000 9816 [31;1mHTTP GET /api/auth/user-list/ 403 [0.10, 127.0.0.1:53278][0m
+WARNING 2026-05-05 17:23:52,047 log 10000 444 Bad Request: /api/auth/my-profile-list/
+WARNING 2026-05-05 17:23:52,048 runserver 10000 9816 [31;1mHTTP GET /api/auth/my-profile-list/ 400 [0.12, 127.0.0.1:53278][0m
+WARNING 2026-05-05 17:24:00,452 log 10000 444 Bad Request: /api/auth/my-profile-update-delete/
+WARNING 2026-05-05 17:24:00,452 runserver 10000 9816 [31;1mHTTP PUT /api/auth/my-profile-update-delete/ 400 [0.09, 127.0.0.1:53278][0m
+INFO 2026-05-05 17:24:15,406 runserver 10000 9816 [mHTTP PUT /api/auth/my-profile-update-delete/ 200 [0.16, 127.0.0.1:53278][0m
+WARNING 2026-05-05 17:24:23,200 log 10000 444 Bad Request: /api/auth/my-profile-list/
+WARNING 2026-05-05 17:24:23,201 runserver 10000 9816 [31;1mHTTP GET /api/auth/my-profile-list/ 400 [0.08, 127.0.0.1:53278][0m
+INFO 2026-05-05 17:25:12,089 autoreload 10000 10216 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\serializers.py changed, reloading.
+INFO 2026-05-05 17:25:13,368 autoreload 8956 5312 Watching for file changes with StatReloader
+WARNING 2026-05-05 17:25:14,107 log 8956 9500 Bad Request: /api/auth/my-profile-list/
+WARNING 2026-05-05 17:25:14,108 runserver 8956 8304 [31;1mHTTP GET /api/auth/my-profile-list/ 400 [0.10, 127.0.0.1:53310][0m
+WARNING 2026-05-05 17:25:16,921 log 8956 9500 Bad Request: /api/auth/my-profile-list/
+WARNING 2026-05-05 17:25:16,922 runserver 8956 8304 [31;1mHTTP GET /api/auth/my-profile-list/ 400 [0.10, 127.0.0.1:53310][0m
+WARNING 2026-05-05 17:25:46,114 log 8956 9500 Bad Request: /api/auth/my-profile-list/
+WARNING 2026-05-05 17:25:46,115 runserver 8956 8304 [31;1mHTTP GET /api/auth/my-profile-list/ 400 [0.10, 127.0.0.1:53310][0m
+INFO 2026-05-05 17:26:01,047 runserver 8956 8304 [mHTTP GET / 200 [0.03, 127.0.0.1:53310][0m
+INFO 2026-05-05 17:26:01,275 runserver 8956 8304 [mHTTP GET /api/schema/ 200 [0.13, 127.0.0.1:53310][0m
+WARNING 2026-05-05 17:26:11,457 log 8956 9500 Bad Request: /api/auth/my-profile-list/
+WARNING 2026-05-05 17:26:11,457 runserver 8956 8304 [31;1mHTTP GET /api/auth/my-profile-list/ 400 [0.19, 127.0.0.1:53310][0m
+INFO 2026-05-05 17:27:29,781 autoreload 8956 5312 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-05 17:27:30,990 autoreload 9212 4568 Watching for file changes with StatReloader
+INFO 2026-05-05 17:27:49,381 autoreload 9212 4568 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-05 17:27:50,805 autoreload 7816 4732 Watching for file changes with StatReloader
+INFO 2026-05-05 17:27:59,419 autoreload 7816 4732 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-05 17:28:00,571 autoreload 6504 4416 Watching for file changes with StatReloader
+INFO 2026-05-05 17:30:57,858 autoreload 6504 4416 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\serializers.py changed, reloading.
+INFO 2026-05-05 17:30:59,170 autoreload 8416 5204 Watching for file changes with StatReloader
+WARNING 2026-05-05 17:37:58,835 log 8416 10932 Bad Request: /api/auth/my-profile-list/
+WARNING 2026-05-05 17:37:58,836 runserver 8416 1080 [31;1mHTTP GET /api/auth/my-profile-list/ 400 [0.12, 127.0.0.1:64999][0m
+WARNING 2026-05-05 17:38:38,790 log 8416 10932 Bad Request: /api/auth/my-profile-list/
+WARNING 2026-05-05 17:38:38,791 runserver 8416 1080 [31;1mHTTP GET /api/auth/my-profile-list/ 400 [0.21, 127.0.0.1:64999][0m
+WARNING 2026-05-05 17:38:56,515 log 8416 10932 Bad Request: /api/auth/my-profile-list/
+WARNING 2026-05-05 17:38:56,515 runserver 8416 1080 [31;1mHTTP GET /api/auth/my-profile-list/ 400 [0.10, 127.0.0.1:64999][0m
+INFO 2026-05-05 17:40:29,240 autoreload 8416 5204 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-05 17:40:30,367 autoreload 10076 11076 Watching for file changes with StatReloader
+INFO 2026-05-05 17:40:34,808 autoreload 10076 11076 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-05 17:40:36,060 autoreload 10404 10392 Watching for file changes with StatReloader
+INFO 2026-05-05 17:40:41,849 runserver 10404 10284 [mHTTP GET / 200 [0.03, 127.0.0.1:65066][0m
+INFO 2026-05-05 17:40:42,098 runserver 10404 10284 [mHTTP GET /api/schema/ 200 [0.14, 127.0.0.1:65066][0m
+WARNING 2026-05-05 17:41:11,283 log 10404 7652 Bad Request: /api/auth/login/
+WARNING 2026-05-05 17:41:11,284 runserver 10404 10284 [31;1mHTTP POST /api/auth/login/ 400 [1.37, 127.0.0.1:65066][0m
+WARNING 2026-05-05 17:46:09,748 log 10404 7652 Bad Request: /api/auth/login/
+WARNING 2026-05-05 17:46:09,748 runserver 10404 10284 [31;1mHTTP POST /api/auth/login/ 400 [1.37, 127.0.0.1:65092][0m
+WARNING 2026-05-05 17:46:36,637 log 10404 7652 Bad Request: /api/auth/login/
+WARNING 2026-05-05 17:46:36,638 runserver 10404 10284 [31;1mHTTP POST /api/auth/login/ 400 [1.35, 127.0.0.1:65092][0m
+INFO 2026-05-05 17:46:52,163 runserver 10404 10284 [mHTTP POST /api/auth/login/ 200 [1.38, 127.0.0.1:65092][0m
+INFO 2026-05-05 17:47:09,671 runserver 10404 10284 [mHTTP GET /api/auth/user-list/ 200 [0.10, 127.0.0.1:65092][0m
+INFO 2026-05-05 17:49:22,105 autoreload 10404 10392 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-05 17:49:23,486 autoreload 8888 10260 Watching for file changes with StatReloader
+INFO 2026-05-05 17:49:29,063 autoreload 8888 10260 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-05 17:49:30,298 autoreload 3776 8416 Watching for file changes with StatReloader
+INFO 2026-05-05 17:49:33,781 autoreload 3776 8416 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-05 17:49:35,187 autoreload 8648 10936 Watching for file changes with StatReloader
+INFO 2026-05-05 17:50:03,543 runserver 8648 10636 [mHTTP POST /api/auth/login/ 200 [1.41, 127.0.0.1:65157][0m
+INFO 2026-05-05 17:51:14,359 runserver 8648 10636 [mHTTP POST /api/auth/register/ 201 [1.33, 127.0.0.1:65166][0m
+INFO 2026-05-05 17:51:33,140 runserver 8648 10636 [mHTTP POST /api/auth/login/ 200 [1.30, 127.0.0.1:65166][0m
+INFO 2026-05-05 17:52:14,423 runserver 8648 10636 [mHTTP GET /api/auth/my-profile-list/ 200 [0.10, 127.0.0.1:65166][0m
+INFO 2026-05-05 17:52:54,167 runserver 8648 10636 [mHTTP GET /api/auth/my-profile-list/ 200 [0.11, 127.0.0.1:65166][0m
+INFO 2026-05-05 17:53:34,839 runserver 8648 10636 [mHTTP GET /api/auth/user-list/ 200 [0.10, 127.0.0.1:65166][0m
+INFO 2026-05-05 17:53:52,564 runserver 8648 10636 [mHTTP POST /api/auth/login/ 200 [1.38, 127.0.0.1:65166][0m
+INFO 2026-05-05 17:54:12,869 runserver 8648 10636 [mHTTP GET /api/auth/my-profile-list/ 200 [0.08, 127.0.0.1:65166][0m
+INFO 2026-05-05 17:54:30,179 runserver 8648 10636 [mHTTP POST /api/auth/login/ 200 [1.37, 127.0.0.1:65166][0m
+INFO 2026-05-05 17:54:52,205 runserver 8648 10636 [mHTTP GET /api/auth/my-profile-list/ 200 [0.11, 127.0.0.1:65166][0m
+WARNING 2026-05-05 17:55:35,611 log 8648 3176 Bad Request: /api/auth/my-profile-update-delete/
+WARNING 2026-05-05 17:55:35,612 runserver 8648 10636 [31;1mHTTP PUT /api/auth/my-profile-update-delete/ 400 [0.09, 127.0.0.1:65166][0m
+WARNING 2026-05-05 17:55:45,383 log 8648 3176 Bad Request: /api/auth/my-profile-update-delete/
+WARNING 2026-05-05 17:55:45,383 runserver 8648 10636 [31;1mHTTP PUT /api/auth/my-profile-update-delete/ 400 [0.09, 127.0.0.1:65166][0m
+INFO 2026-05-05 17:56:05,262 runserver 8648 10636 [mHTTP PUT /api/auth/my-profile-update-delete/ 200 [0.13, 127.0.0.1:65166][0m
+INFO 2026-05-05 17:56:15,298 runserver 8648 10636 [mHTTP GET /api/auth/my-profile-list/ 200 [0.08, 127.0.0.1:65166][0m
+INFO 2026-05-05 18:20:57,374 autoreload 8648 10936 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\assignments\models.py changed, reloading.
+INFO 2026-05-05 18:20:59,382 autoreload 9468 10660 Watching for file changes with StatReloader
+INFO 2026-05-05 18:21:02,907 autoreload 9468 10660 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\assignments\models.py changed, reloading.
+INFO 2026-05-05 18:21:04,390 autoreload 1932 3196 Watching for file changes with StatReloader
+INFO 2026-05-05 18:21:07,275 autoreload 1932 3196 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\assignments\models.py changed, reloading.
+INFO 2026-05-05 18:21:08,493 autoreload 8048 9004 Watching for file changes with StatReloader
+INFO 2026-05-05 18:21:11,273 autoreload 8048 9004 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\assignments\models.py changed, reloading.
+INFO 2026-05-05 18:21:12,490 autoreload 9944 10792 Watching for file changes with StatReloader
+INFO 2026-05-05 18:21:14,150 autoreload 9944 10792 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\assignments\models.py changed, reloading.
+INFO 2026-05-05 18:21:15,569 autoreload 4348 8432 Watching for file changes with StatReloader
+INFO 2026-05-05 18:21:19,429 autoreload 4348 8432 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\assignments\models.py changed, reloading.
+INFO 2026-05-05 18:21:20,587 autoreload 4256 9620 Watching for file changes with StatReloader
+INFO 2026-05-05 18:21:26,383 autoreload 4256 9620 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\assignments\models.py changed, reloading.
+INFO 2026-05-05 18:21:27,619 autoreload 7640 6716 Watching for file changes with StatReloader
+INFO 2026-05-05 18:21:33,445 autoreload 7640 6716 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\assignments\models.py changed, reloading.
+INFO 2026-05-05 18:21:34,686 autoreload 10528 9232 Watching for file changes with StatReloader
+INFO 2026-05-05 18:21:41,636 autoreload 10528 9232 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\assignments\models.py changed, reloading.
+INFO 2026-05-05 18:21:42,923 autoreload 8500 7928 Watching for file changes with StatReloader
+INFO 2026-05-05 18:21:46,394 autoreload 8500 7928 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\assignments\models.py changed, reloading.
+INFO 2026-05-05 18:21:47,678 autoreload 10372 740 Watching for file changes with StatReloader
+INFO 2026-05-05 18:32:04,221 autoreload 9468 9160 Watching for file changes with StatReloader
+INFO 2026-05-05 18:32:23,354 runserver 9468 9836 [mHTTP GET / 200 [0.04, 127.0.0.1:49306][0m
+INFO 2026-05-05 18:32:23,636 runserver 9468 9836 [mHTTP GET /api/schema/ 200 [0.16, 127.0.0.1:49306][0m
+INFO 2026-05-05 18:32:24,728 runserver 9468 9836 [mHTTP GET / 200 [0.01, 127.0.0.1:49306][0m
+INFO 2026-05-05 18:32:24,913 runserver 9468 9836 [mHTTP GET /api/schema/ 200 [0.12, 127.0.0.1:49306][0m
+WARNING 2026-05-05 18:32:50,702 log 9468 7792 Bad Request: /api/auth/login/
+WARNING 2026-05-05 18:32:50,704 runserver 9468 9836 [31;1mHTTP POST /api/auth/login/ 400 [1.51, 127.0.0.1:49306][0m
+INFO 2026-05-05 18:33:13,716 runserver 9468 9836 [mHTTP POST /api/auth/login/ 200 [1.55, 127.0.0.1:49306][0m
+INFO 2026-05-05 18:33:36,482 runserver 9468 9836 [mHTTP POST /api/auth/login/ 200 [1.53, 127.0.0.1:49306][0m
+INFO 2026-05-05 18:34:47,093 runserver 9468 9836 [mHTTP GET /api/assignments/1/ 200 [0.25, 127.0.0.1:49316][0m
+WARNING 2026-05-05 18:40:01,202 log 9468 7792 Bad Request: /api/assignments/1/
+WARNING 2026-05-05 18:40:01,203 runserver 9468 9836 [31;1mHTTP PUT /api/assignments/1/ 400 [0.14, 127.0.0.1:49402][0m
+INFO 2026-05-05 18:40:09,722 runserver 9468 9836 [mHTTP PUT /api/assignments/1/ 200 [0.15, 127.0.0.1:49402][0m
+INFO 2026-05-05 18:40:19,783 runserver 9468 9836 [mHTTP GET /api/assignments/1/ 200 [0.14, 127.0.0.1:49402][0m

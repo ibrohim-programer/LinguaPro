@@ -17,6 +17,8 @@ class Assignment(models.Model):
     def save(self,*args , **kwargs):
         if self.deadline and self.deadline < timezone.now():
             self.is_active = False
+        if self.deadline and self.deadline > timezone.now():
+            self.is_active = True
         super().save(*args , **kwargs)    
     
     class SubmissionType(models.TextChoices):

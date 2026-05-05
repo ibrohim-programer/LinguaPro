@@ -22,7 +22,7 @@ def get_tokens_for_user(user):
 
 
 @extend_schema(
-    tags=["Auth - Register - Login - OTP"],
+    tags=["Auth - Register - Login"],
     summary="Foydalanuvchini ro'yxatdan o'tkazish",
     description="""
     Bu endpoint quyidagi amallarni bajaradi:
@@ -50,7 +50,7 @@ class RegisterView(GenericAPIView):
 
 
 @extend_schema(
-    tags=["Auth - Register - Login - OTP"],
+    tags=["Auth - Register - Login"],
     summary="Tizimga kirish",
     description="""
     Bu endpoint quyidagi amallarni bajaradi:
@@ -79,17 +79,16 @@ class LoginView(GenericAPIView):
     tags=["Profile - Crud"],
     summary="My Profile",
     description="Barcha malumotlarningizni kurung.",
-    responses={200: ProfileSerealizers},  # ✅ FIX: spectacular uchun response ko'rsatildi
+    responses={200: ProfileSerealizers}, 
 )
-class ProfileView(GenericAPIView):              # ✅ FIX: ListAPIView → GenericAPIView
-    serializer_class = ProfileSerealizers       #         (get_queryset kerak emas edi)
+class ProfileView(GenericAPIView):              
+    serializer_class = ProfileSerealizers       
     permission_classes = [IsAuthenticated]
 
     def get(self, request, *args, **kwargs):
         user = self.request.user
-        serealizer = ProfileSerealizers(user, data=request.data)
-        serealizer.is_valid(raise_exception=True)
-        return Response({"User Data": serealizer.data}, status=200)
+        serializer = ProfileSerealizers(user) 
+        return Response({"User Data": serializer.data}, status=200)
 
 
 @extend_schema(
@@ -120,7 +119,7 @@ class ProfileUpdateView(UpdateAPIView):
     summary="Forgot - Password Amal : 1",
     description="""
     Passwordingizni unitdingizmi !
-     - Email va Usernameingizni kiriting.
+     - Username va phoneingizni kiriting.
     """
 )
 class ForgotPasswordView(GenericAPIView):
@@ -144,7 +143,6 @@ class ForgotPasswordView(GenericAPIView):
     Passwordingizni unitdingizmi !
      - Email
      - Username
-     - Otp
      - new_password : Yangi parolingiz
      - confirm_password : Parolingizni takror yozing.
     """

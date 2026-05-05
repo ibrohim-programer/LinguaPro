@@ -8,8 +8,9 @@ class RegisterSerializer(serializers.ModelSerializer):
     password2 = serializers.CharField(write_only=True,label='Parolni tasdiqlang')
     class Meta:
         model = User
-        fields = ['username',"phone",'password','password2','role',]
+        fields = ['username',"full_name","phone",'password','password2','role',]
         extra_kwargs = {'password': {'write_only': True, 'min_length': 8},}
+        
     def validate_username(self, value):
         value = value.lower()
         if not re.match(r'^[a-z0-9_]+$', value):
@@ -48,13 +49,13 @@ class ProfileSerealizers(serializers.ModelSerializer):
     username = serializers.CharField(read_only = True)
     class Meta:
         model = User
-        fields = ["id","role","username","phone","avatar","timezone","bio","learning_goal","created_at","updated_at", ]
+        fields = ["id","role","username","full_name","phone","avatar","timezone","bio","learning_goal","created_at","updated_at", ]
         read_only_fields = ['id' , 'email' , 'role' ]
         
 class ProfileUpdateSerealizers(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ["id","username","avatar","timezone","bio","learning_goal", ]
+        fields = ["id","username","full_name","avatar","timezone","bio","learning_goal", ]
         read_only_fields = ['id']
 
     def validate_phone(self, value):
@@ -65,7 +66,7 @@ class ProfileUpdateSerealizers(serializers.ModelSerializer):
         return value
         
 class UserListSerializer(serializers.ModelSerializer):
-    full_name = serializers.CharField( read_only=True)
+    # full_name = serializers.CharField( read_only=True)
     role_display = serializers.CharField( read_only=True)
     class Meta:
         model = User
