@@ -2,9 +2,11 @@ from rest_framework import generics, permissions, status
 from rest_framework.response import Response
 from django.shortcuts import get_object_or_404
 from django.contrib.auth import get_user_model
+
+
 from .models import Assignment, Submission
-from .serailizers import AssignmentSerializer, SubmissionSerializer, GradeSubmissionSerializer
-from apps.common.permissions import IsAdminOrTeacher, IsStudent, IsTeacher, IsAdmin
+from .serailizers import AssignmentSerializer, SubmissionSerializer, GradeSubmissionSerializer ,StudentSubmissionStatusSerializer
+from apps.common.permissions import IsAdminOrTeacher, IsStudent
 from drf_spectacular.utils import extend_schema
 from django.utils import timezone
 User = get_user_model()
@@ -40,7 +42,7 @@ class AssignmentListCreateView(generics.ListCreateAPIView):
     description='''
      — tafsilotlar (hammasi)
      — tahrirlash (Teacher)
-     — o\'chirish (Teacher/Admin)
+     — o'chirish (Teacher/Admin)
     '''
 )
 class AssignmentDetailView(generics.RetrieveUpdateDestroyAPIView):
@@ -116,3 +118,39 @@ class GradeSubmissionView(generics.UpdateAPIView):
     serializer_class = GradeSubmissionSerializer
     permission_classes = [IsAdminOrTeacher]
     http_method_names = ['put']
+    
+@extend_schema(
+    tags=['Assignment Crud'],
+    summary='Vazifani topshirgan va topshirmagan o\'quvchilar ro\'yxati'
+)
+class AssignmentSubmissionStatusView(generics.GenericAPIView):
+    permission_classes = [IsAdminOrTeacher]
+    serializer_class = StudentSubmissionStatusSerializer
+
+    def get(self , request ,pk):
+        assignment = get_object_or_404(Assignment , pk=pk)
+        group = assignment.group
+        group_students = group.group_students.select_related('student').all()
+        
+        submissions = Submission.objects.filter(assignment=assignment).select_related('student')
+        
+        submission_map = {sub.student_id: sub for sub in submissions}
+        
+        result =[]
+        for gs in group_students:
+            student = gs.student 
+            submission = submission_map.get(student.id)
+            
+            result.append({
+                'student_id':student.id,
+                'username':student.username,
+                'full_name':getattr(student,'full_name', '') or student.get_full_name(),
+                'status': 'topshirgan' if submission else 'topshirmagan',
+                'submitted_at':submission.submitted_at if submission else None,
+                'score': submission.score if submission else None,
+                'text_answer' : submission.text_answer  if submission else None,
+                'file_answer' : submission.file_answer.url if (submission and submission.file_answer) else None,
+            })
+
+        serializer = self.get_serializer(result, many=True)
+        return Response(serializer.data)

@@ -29,16 +29,32 @@ class AddStudentSerializer(serializers.Serializer):
             raise serializers.ValidationError("Bunday student topilmadi!")
         return value
 
+# Student ma'lumotlarini chiqaruvchi serializer
+class StudentInfoSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User  # yoki Student model
+        fields = ['id', 'username', 'full_name']
+
+
+# GroupStudent serializer
+class GroupStudentSerializer(serializers.ModelSerializer):
+    username  = serializers.CharField(source='student.username',  read_only=True)
+    full_name = serializers.CharField(source='student.full_name', read_only=True)
+
+    class Meta:
+        model  = GroupStudent
+        fields = ['id', 'student', 'username', 'full_name', 'joined_at']    
 class MyGroupSerializer(serializers.ModelSerializer):
-    students = GroupStudentSerializer(source = 'group_students' , many = True , read_only = True)
+    students = GroupStudentSerializer( source = 'group_students' , many = True , read_only = True)
     class Meta:
         model  = Group
-        fields = ['id', 'name', 'course', 'teacher', 'status', 'start_date','start_time','end_time', 'students']
-        
+        fields = ['id', 'name', 'course', 'teacher', 'status', 'start_date','start_time','end_time', 'students', ]
+  
+    
         
 class AvailableStudentsSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ['id' , 'username',"phone","avatar","learning_goal"]
+        fields = ['id' , 'username',"full_name","phone","avatar","learning_goal"]
         
     

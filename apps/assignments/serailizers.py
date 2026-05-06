@@ -25,3 +25,16 @@ class GradeSubmissionSerializer(serializers.ModelSerializer):
     class Meta:
         model = Submission
         fields = ['score']
+        
+        
+# Mavjud kodga QO'SHILADI (oxiriga)
+
+class StudentSubmissionStatusSerializer(serializers.Serializer):
+    student_id = serializers.IntegerField()
+    username = serializers.CharField()
+    full_name = serializers.CharField()
+    status = serializers.CharField()   
+    submitted_at = serializers.DateTimeField(allow_null=True)
+    score = serializers.IntegerField(allow_null=True)
+    text_answer = serializers.CharField(allow_null=True)
+    file_answer = serializers.FileField(allow_null=True)

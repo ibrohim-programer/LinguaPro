@@ -7,4 +7,5 @@ urlpatterns = [
     path('<int:pk>/', views.AssignmentDetailView.as_view()),
     path('<int:pk>/submit/', views.SubmitAssignmentView.as_view()),
     path('<int:pk>/grade/', views.GradeSubmissionView.as_view()),
+    path('<int:pk>/status/', views.AssignmentSubmissionStatusView.as_view()),
 ]
