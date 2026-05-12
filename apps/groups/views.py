@@ -5,9 +5,10 @@ from rest_framework import serializers as rf_serializers
 from drf_spectacular.utils import extend_schema, inline_serializer
 
 from django.contrib.auth import get_user_model
+from django.utils import timezone
 from apps.common.permissions import IsAdmin, IsAdminOrTeacher
 from .models import Group, GroupStudent
-from .serailizers import GroupSerializer, AddStudentSerializer, MyGroupSerializer , AvailableStudentsSerializer 
+from .serailizers import GroupSerializer, AddStudentSerializer, MyGroupSerializer , AvailableStudentsSerializer, TodayScheduleSerializer
 User = get_user_model()
 
 
@@ -141,3 +142,127 @@ class StudentListView(ListAPIView):
     permission_classes = [IsAdminOrTeacher]
     def get_queryset(self):
         return User.objects.filter(role = "student")
+
+
+@extend_schema(
+    tags=['Group - Teacher Dashboard'],
+    summary="Bugungi darslar jadvali (vaqt statuslari bilan)",
+    description="""
+    Teacher o'z bugungi darslarini ko'radi.
+    Har bir dars uchun vaqtga qarab status qaytariladi:
+    - **upcoming** (Kutilmoqda): Dars hali boshlanmagan
+    - **ongoing** (Darsda): Dars ayni damda bo'layapti
+    - **completed** (Tugadi): Dars o'tib ketgan
+    """,
+)
+class TodayScheduleView(ListAPIView):
+    serializer_class = TodayScheduleSerializer
+    permission_classes = [IsAuthenticated]
+
+    def get_queryset(self):
+        if getattr(self, 'swagger_fake_view', False):
+            return Group.objects.none()
+
+        user = self.request.user
+        now = timezone.localtime(timezone.now())
+        today_weekday = str(now.weekday())  # 0=Dushanba, 6=Yakshanba
+
+        if user.role == 'teacher':
+            qs = Group.objects.filter(teacher=user)
+        elif user.role == 'student':
+            qs = Group.objects.filter(group_students__student=user)
+        else:
+            return Group.objects.none()
+
+        # Bugun dars bor guruhlarni filtr qilamiz
+        result = []
+        for group in qs:
+            week_days = group.week_days or []
+            # week_days list bo'lib saqlangan bo'lishi kerak, masalan [0,2,4]
+            if today_weekday in [str(d) for d in week_days] or today_weekday in week_days:
+                result.append(group.id)
+
+        return qs.filter(id__in=result)
+
+    def get_serializer_context(self):
+        context = super().get_serializer_context()
+        context['now'] = timezone.localtime(timezone.now()).time()
+        return context
+
+@extend_schema(
+    tags=['Group - Teacher Dashboard'],
+    summary="Berilgan sanada darslar jadvali",
+    description="""
+    Query param orqali sana kiritiladi: `?date=2025-05-10`
+
+    O'sha sananing hafta kuniga qarab dars bo'ladigan guruhlar ro'yxati chiqadi.
+
+    Statuslar:
+    - Bugungi sana bo'lsa → haqiqiy vaqtga qarab (upcoming/ongoing/completed)
+    - O'tgan sana bo'lsa → barcha darslar **completed**
+    - Kelgusi sana bo'lsa → barcha darslar **upcoming**
+
+    Sana kiritilmasa, bugungi sana ishlatiladi.
+    """,
+    parameters=[
+        {
+            'name': 'date',
+            'in': 'query',
+            'required': False,
+            'description': 'Sana formati: YYYY-MM-DD (masalan: 2025-05-10)',
+            'schema': {'type': 'string', 'format': 'date'},
+        }
+    ],
+)
+class ScheduleByDateView(ListAPIView):
+    serializer_class = TodayScheduleSerializer
+    permission_classes = [IsAuthenticated]
+
+    def _get_target_date(self):
+        import datetime
+        date_str = self.request.query_params.get('date')
+        if date_str:
+            try:
+                return datetime.date.fromisoformat(date_str)
+            except ValueError:
+                return timezone.localtime(timezone.now()).date()
+        return timezone.localtime(timezone.now()).date()
+
+    def get_queryset(self):
+        if getattr(self, 'swagger_fake_view', False):
+            return Group.objects.none()
+
+        user = self.request.user
+        target_date = self._get_target_date()
+        target_weekday = str(target_date.weekday())
+
+        if user.role == 'teacher':
+            qs = Group.objects.filter(teacher=user)
+        elif user.role == 'student':
+            qs = Group.objects.filter(group_students__student=user)
+        else:
+            return Group.objects.none()
+
+        result = []
+        for group in qs:
+            week_days = group.week_days or []
+            if target_weekday in [str(d) for d in week_days] or target_weekday in week_days:
+                result.append(group.id)
+
+        return qs.filter(id__in=result)
+
+    def get_serializer_context(self):
+        context = super().get_serializer_context()
+        now_local = timezone.localtime(timezone.now())
+        today = now_local.date()
+        target_date = self._get_target_date()
+
+        if target_date == today:
+            context['now'] = now_local.time()
+            context['date_mode'] = 'today'
+        elif target_date < today:
+            context['date_mode'] = 'past'
+        else:
+            context['date_mode'] = 'future'
+
+        return context

@@ -12,6 +12,12 @@ urlpatterns = [
     
     path('<int:pk>/available-students/', AvailableStudentsView.as_view(), name='available-students'),
     path('students-list/', StudentListView.as_view(), name='students-list'),
+
+    # Teacher Dashboard - Bugungi darslar
+    path('today-schedule/', TodayScheduleView.as_view(), name='today-schedule'),
+
+    # Teacher Dashboard - Sanaga qarab darslar
+    path('schedule/', ScheduleByDateView.as_view(), name='schedule-by-date'),
 ]
 
 
