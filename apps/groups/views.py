@@ -2,13 +2,14 @@ from rest_framework.generics import ListAPIView, CreateAPIView, RetrieveUpdateDe
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework import serializers as rf_serializers
-from drf_spectacular.utils import extend_schema, inline_serializer
+from drf_spectacular.utils import extend_schema, inline_serializer, OpenApiParameter  # ← OpenApiParameter qo'shildi
+from drf_spectacular.types import OpenApiTypes                                         # ← OpenApiTypes qo'shildi
 
 from django.contrib.auth import get_user_model
 from django.utils import timezone
 from apps.common.permissions import IsAdmin, IsAdminOrTeacher
 from .models import Group, GroupStudent
-from .serailizers import GroupSerializer, AddStudentSerializer, MyGroupSerializer , AvailableStudentsSerializer, TodayScheduleSerializer
+from .serailizers import GroupSerializer, AddStudentSerializer, MyGroupSerializer, AvailableStudentsSerializer, TodayScheduleSerializer, StudentMyGroupSerializer
 User = get_user_model()
 
 
@@ -104,8 +105,9 @@ class AddStudentView(GenericAPIView):
     """,
     responses={
         200: inline_serializer('RemoveStudentResponse', fields={'detail': rf_serializers.CharField()}),
-        400: inline_serializer('RemoveStudentError',    fields={'detail': rf_serializers.CharField()}),})
-
+        400: inline_serializer('RemoveStudentError',    fields={'detail': rf_serializers.CharField()}),
+    }
+)
 class RemoveStudentView(GenericAPIView):
     queryset = Group.objects.all()
     permission_classes = [IsAdminOrTeacher]
@@ -119,12 +121,13 @@ class RemoveStudentView(GenericAPIView):
         if not deleted:
             return Response({'detail': 'Student guruhda topilmadi!'}, status=400)
         return Response({'detail': 'Student guruhdan olib tashlandi!'}, status=200)
+
+
 @extend_schema(
     tags=['Group - Admin - Teacher'],
     summary="Guruhga qo'shish uchun mavjud studentlar (guruhda yo'qlar)",
 )
 class AvailableStudentsView(ListAPIView):
-    
     serializer_class = AvailableStudentsSerializer  
     permission_classes = [IsAdminOrTeacher]
 
@@ -132,7 +135,8 @@ class AvailableStudentsView(ListAPIView):
         group_id = self.kwargs['pk']
         already_in = GroupStudent.objects.filter(group_id=group_id).values_list('student_id', flat=True)
         return User.objects.filter(role='student').exclude(id__in=already_in)
-        
+
+
 @extend_schema(
     tags=['Group - Admin - Teacher'],
     summary="Studentlarni Ruyxati ",
@@ -140,8 +144,9 @@ class AvailableStudentsView(ListAPIView):
 class StudentListView(ListAPIView):
     serializer_class = AvailableStudentsSerializer
     permission_classes = [IsAdminOrTeacher]
+
     def get_queryset(self):
-        return User.objects.filter(role = "student")
+        return User.objects.filter(role="student")
 
 
 @extend_schema(
@@ -165,7 +170,7 @@ class TodayScheduleView(ListAPIView):
 
         user = self.request.user
         now = timezone.localtime(timezone.now())
-        today_weekday = str(now.weekday())  # 0=Dushanba, 6=Yakshanba
+        today_weekday = str(now.weekday())
 
         if user.role == 'teacher':
             qs = Group.objects.filter(teacher=user)
@@ -174,11 +179,9 @@ class TodayScheduleView(ListAPIView):
         else:
             return Group.objects.none()
 
-        # Bugun dars bor guruhlarni filtr qilamiz
         result = []
         for group in qs:
             week_days = group.week_days or []
-            # week_days list bo'lib saqlangan bo'lishi kerak, masalan [0,2,4]
             if today_weekday in [str(d) for d in week_days] or today_weekday in week_days:
                 result.append(group.id)
 
@@ -189,29 +192,29 @@ class TodayScheduleView(ListAPIView):
         context['now'] = timezone.localtime(timezone.now()).time()
         return context
 
+
+# ===================== TUZATILGAN QISM =====================
 @extend_schema(
     tags=['Group - Teacher Dashboard'],
     summary="Berilgan sanada darslar jadvali",
     description="""
-    Query param orqali sana kiritiladi: `?date=2025-05-10`
-
-    O'sha sananing hafta kuniga qarab dars bo'ladigan guruhlar ro'yxati chiqadi.
+    Kalendar orqali sana tanlanadi va o'sha kungi darslar ro'yxati chiqadi.
 
     Statuslar:
-    - Bugungi sana bo'lsa → haqiqiy vaqtga qarab (upcoming/ongoing/completed)
-    - O'tgan sana bo'lsa → barcha darslar **completed**
-    - Kelgusi sana bo'lsa → barcha darslar **upcoming**
+    - Bugungi sana → haqiqiy vaqtga qarab (upcoming / ongoing / completed)
+    - O'tgan sana  → barcha darslar **completed**
+    - Kelgusi sana → barcha darslar **upcoming**
 
     Sana kiritilmasa, bugungi sana ishlatiladi.
     """,
     parameters=[
-        {
-            'name': 'date',
-            'in': 'query',
-            'required': False,
-            'description': 'Sana formati: YYYY-MM-DD (masalan: 2025-05-10)',
-            'schema': {'type': 'string', 'format': 'date'},
-        }
+        OpenApiParameter(
+            name='date',
+            type=OpenApiTypes.DATE,          # ← frontend date-picker bilan mos: YYYY-MM-DD
+            location=OpenApiParameter.QUERY,
+            required=False,
+            description='Sana formati: YYYY-MM-DD  (masalan: 2026-05-13)',
+        )
     ],
 )
 class ScheduleByDateView(ListAPIView):
@@ -225,7 +228,7 @@ class ScheduleByDateView(ListAPIView):
             try:
                 return datetime.date.fromisoformat(date_str)
             except ValueError:
-                return timezone.localtime(timezone.now()).date()
+                pass
         return timezone.localtime(timezone.now()).date()
 
     def get_queryset(self):
@@ -266,3 +269,46 @@ class ScheduleByDateView(ListAPIView):
             context['date_mode'] = 'future'
 
         return context
+# ===========================================================
+
+
+@extend_schema(
+    tags=['Group - Student Dashboard'],
+    summary="Student o'z guruhlarini ko'radi",
+    description="""
+    Faqat **Student** role uchun.
+
+    Student o'zi a'zo bo'lgan barcha guruhlarni ko'radi:
+    - Guruh nomi, kursi, o'qituvchisi
+    - Dars vaqti (start_time, end_time)
+    - Hafta kunlari
+    - Guruhдagi umumiy talabalar soni
+    - Guruh holati (active / inactive / finished)
+
+    Boshqa studentlarning ma'lumotlari ko'rsatilmaydi.
+    """,
+    responses={403: inline_serializer('StudentOnlyError', fields={'detail': rf_serializers.CharField()})},
+)
+class StudentMyGroupsView(ListAPIView):
+    serializer_class = StudentMyGroupSerializer
+    permission_classes = [IsAuthenticated]
+
+    def get_queryset(self):
+        if getattr(self, 'swagger_fake_view', False):
+            return Group.objects.none()
+
+        user = self.request.user
+        if user.role != 'student':
+            return Group.objects.none()
+
+        return Group.objects.filter(
+            group_students__student=user
+        ).select_related('course', 'teacher').prefetch_related('group_students')
+
+    def list(self, request, *args, **kwargs):
+        if request.user.role != 'student':
+            return Response(
+                {'detail': 'Bu endpoint faqat studentlar uchun.'},
+                status=403
+            )
+        return super().list(request, *args, **kwargs)

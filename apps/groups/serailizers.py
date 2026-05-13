@@ -135,4 +135,34 @@ class TodayScheduleSerializer(serializers.ModelSerializer):
         elif start <= now <= end:
             return 'ongoing'
         else:
-            return 'completed' 
+            return 'completed'  
+
+class StudentMyGroupSerializer(serializers.ModelSerializer):
+    """Student o'z guruhini ko'radi — boshqa studentlar ko'rsatilmaydi"""
+    course_name    = serializers.CharField(source='course.name', read_only=True)
+    teacher_name   = serializers.CharField(source='teacher.full_name', read_only=True)
+    student_count  = serializers.SerializerMethodField()
+    week_days_label = serializers.SerializerMethodField()
+
+    class Meta:
+        model  = Group
+        fields = [
+            'id', 'name',
+            'course_name', 'teacher_name',
+            'start_time', 'end_time',
+            'week_days', 'week_days_label',
+            'status', 'start_date', 'end_date',
+            'student_count',
+        ]
+
+    def get_student_count(self, obj):
+        return obj.group_students.count()
+
+    def get_week_days_label(self, obj):
+        days = sorted(obj.week_days or [])
+        labels = {
+            (0, 2, 4): 'Toq kunlar (Du, Ch, Ju)',
+            (1, 3, 5): 'Juft kunlar (Se, Pa, Sh)',
+            (0, 1, 2, 3, 4, 5, 6): 'Har kuni',
+        }
+        return labels.get(tuple(days), 'Maxsus')

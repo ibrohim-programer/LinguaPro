@@ -18,6 +18,9 @@ urlpatterns = [
 
     # Teacher Dashboard - Sanaga qarab darslar
     path('schedule/', ScheduleByDateView.as_view(), name='schedule-by-date'),
+
+    # Student Dashboard - O'z guruhlari
+    path('my-groups/', StudentMyGroupsView.as_view(), name='student-my-groups'),
 ]
 
 

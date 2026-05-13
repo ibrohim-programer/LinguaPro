@@ -1293,3 +1293,700 @@ INFO 2026-05-12 13:01:41,470 runserver 6068 4488 [mHTTP POST /api/auth/login/ 2
 INFO 2026-05-12 13:02:31,213 runserver 6068 4488 [mHTTP GET /api/groups/schedule/ 200 [0.11, 127.0.0.1:64855][0m
 INFO 2026-05-12 13:02:56,217 runserver 6068 4488 [mHTTP GET /api/groups/schedule/?date=2025-05-10 200 [0.19, 127.0.0.1:64855][0m
 INFO 2026-05-12 13:03:43,138 runserver 6068 4488 [mHTTP GET /api/groups/schedule/?search=%3Fdate%3D2025-05-10 200 [0.09, 127.0.0.1:64878][0m
+INFO 2026-05-12 19:35:14,157 autoreload 1788 4048 Watching for file changes with StatReloader
+INFO 2026-05-12 19:35:19,145 runserver 1788 8040 [mHTTP GET / 200 [0.05, 127.0.0.1:58453][0m
+INFO 2026-05-12 19:35:19,643 runserver 1788 8040 [mHTTP GET /api/schema/ 200 [0.25, 127.0.0.1:58453][0m
+INFO 2026-05-12 19:36:30,400 runserver 1788 8040 [mHTTP POST /api/auth/login/ 200 [1.48, 127.0.0.1:58479][0m
+INFO 2026-05-12 19:37:14,547 runserver 1788 8040 [mHTTP GET /api/groups/my-groups/student/ 200 [0.11, 127.0.0.1:58479][0m
+INFO 2026-05-13 10:34:16,477 autoreload 7396 6136 Watching for file changes with StatReloader
+INFO 2026-05-13 10:34:21,887 runserver 7396 2704 [mHTTP GET / 200 [0.05, 127.0.0.1:55872][0m
+INFO 2026-05-13 10:34:22,305 runserver 7396 2704 [mHTTP GET /api/schema/ 200 [0.17, 127.0.0.1:55872][0m
+INFO 2026-05-13 10:35:04,786 autoreload 7396 6136 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\groups\urls.py changed, reloading.
+INFO 2026-05-13 10:35:05,929 autoreload 4620 4360 Watching for file changes with StatReloader
+INFO 2026-05-13 10:35:30,269 autoreload 4620 4360 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 10:35:31,561 autoreload 5464 2312 Watching for file changes with StatReloader
+INFO 2026-05-13 10:35:36,873 autoreload 5464 2312 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 10:35:38,364 autoreload 5140 7604 Watching for file changes with StatReloader
+INFO 2026-05-13 10:35:42,762 autoreload 5140 7604 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 10:35:43,838 autoreload 1808 1112 Watching for file changes with StatReloader
+INFO 2026-05-13 10:37:51,363 autoreload 1808 1112 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 10:37:53,115 autoreload 4356 1968 Watching for file changes with StatReloader
+INFO 2026-05-13 10:37:56,156 autoreload 4356 1968 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 10:37:57,576 autoreload 7672 3672 Watching for file changes with StatReloader
+INFO 2026-05-13 10:37:59,771 autoreload 7672 3672 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 10:38:00,948 autoreload 6480 5044 Watching for file changes with StatReloader
+INFO 2026-05-13 10:38:07,442 autoreload 6480 5044 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 10:38:08,950 autoreload 3776 3428 Watching for file changes with StatReloader
+INFO 2026-05-13 10:38:13,288 autoreload 3776 3428 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 10:38:14,519 autoreload 5908 1072 Watching for file changes with StatReloader
+INFO 2026-05-13 10:38:22,043 autoreload 5908 1072 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 10:38:23,371 autoreload 1888 176 Watching for file changes with StatReloader
+INFO 2026-05-13 10:38:25,344 autoreload 1888 176 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 10:38:26,659 autoreload 6796 5452 Watching for file changes with StatReloader
+INFO 2026-05-13 10:38:29,791 autoreload 6796 5452 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 10:38:30,944 autoreload 7928 8176 Watching for file changes with StatReloader
+INFO 2026-05-13 10:38:35,184 autoreload 7928 8176 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 10:38:36,337 autoreload 4364 4568 Watching for file changes with StatReloader
+INFO 2026-05-13 10:38:39,395 autoreload 4364 4568 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 10:38:40,769 autoreload 7828 5040 Watching for file changes with StatReloader
+INFO 2026-05-13 10:38:42,734 autoreload 7828 5040 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 10:38:44,051 autoreload 7428 6272 Watching for file changes with StatReloader
+INFO 2026-05-13 10:38:47,146 autoreload 7428 6272 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 10:38:48,853 autoreload 244 7124 Watching for file changes with StatReloader
+INFO 2026-05-13 10:38:52,120 autoreload 244 7124 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 10:38:53,236 autoreload 5024 4924 Watching for file changes with StatReloader
+INFO 2026-05-13 10:39:02,739 autoreload 5024 4924 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 10:39:04,090 autoreload 1988 7472 Watching for file changes with StatReloader
+INFO 2026-05-13 10:39:08,400 autoreload 1988 7472 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 10:39:09,656 autoreload 6160 3048 Watching for file changes with StatReloader
+INFO 2026-05-13 10:39:12,719 autoreload 6160 3048 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 10:39:13,990 autoreload 5852 5220 Watching for file changes with StatReloader
+INFO 2026-05-13 10:39:15,972 autoreload 5852 5220 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 10:39:17,072 autoreload 2432 4836 Watching for file changes with StatReloader
+INFO 2026-05-13 10:39:55,472 autoreload 2432 4836 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\urls.py changed, reloading.
+INFO 2026-05-13 10:39:56,610 autoreload 7828 7568 Watching for file changes with StatReloader
+INFO 2026-05-13 10:40:00,928 autoreload 7828 7568 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\urls.py changed, reloading.
+INFO 2026-05-13 10:40:02,299 autoreload 7496 2696 Watching for file changes with StatReloader
+INFO 2026-05-13 10:40:05,381 autoreload 7496 2696 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\urls.py changed, reloading.
+INFO 2026-05-13 10:40:06,691 autoreload 6796 7680 Watching for file changes with StatReloader
+INFO 2026-05-13 10:40:08,889 autoreload 6796 7680 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\urls.py changed, reloading.
+INFO 2026-05-13 10:40:10,155 autoreload 5064 3384 Watching for file changes with StatReloader
+INFO 2026-05-13 10:40:15,430 autoreload 5064 3384 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\urls.py changed, reloading.
+INFO 2026-05-13 10:40:16,702 autoreload 6204 7684 Watching for file changes with StatReloader
+INFO 2026-05-13 10:40:18,842 autoreload 6204 7684 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\urls.py changed, reloading.
+INFO 2026-05-13 10:40:19,959 autoreload 4588 7768 Watching for file changes with StatReloader
+INFO 2026-05-13 10:40:33,859 autoreload 4588 7768 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\urls.py changed, reloading.
+INFO 2026-05-13 10:40:35,015 autoreload 6808 7628 Watching for file changes with StatReloader
+INFO 2026-05-13 10:40:36,914 autoreload 6808 7628 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\urls.py changed, reloading.
+INFO 2026-05-13 10:40:38,250 autoreload 2932 6116 Watching for file changes with StatReloader
+INFO 2026-05-13 10:40:43,439 autoreload 2932 6116 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\urls.py changed, reloading.
+INFO 2026-05-13 10:40:44,632 autoreload 3428 7728 Watching for file changes with StatReloader
+INFO 2026-05-13 10:40:50,358 runserver 3428 2688 [mHTTP GET / 200 [0.04, 127.0.0.1:56111][0m
+INFO 2026-05-13 10:40:50,765 runserver 3428 2688 [mHTTP GET /api/schema/ 200 [0.15, 127.0.0.1:56111][0m
+WARNING 2026-05-13 10:41:00,743 log 3428 4460 Unauthorized: /api/auth/my-profile-delete/
+WARNING 2026-05-13 10:41:00,744 runserver 3428 2688 [31;1mHTTP DELETE /api/auth/my-profile-delete/ 401 [0.02, 127.0.0.1:56111][0m
+INFO 2026-05-13 10:41:34,096 runserver 3428 2688 [mHTTP POST /api/auth/login/ 200 [1.47, 127.0.0.1:56111][0m
+ERROR 2026-05-13 10:41:52,800 log 3428 4460 Internal Server Error: /api/auth/my-profile-delete/
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\asgiref\sync.py", line 557, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\asgiref\sync.py", line 557, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\django\core\handlers\base.py", line 254, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+        request, *callback_args, **callback_kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\asgiref\sync.py", line 506, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\concurrent\futures\thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\concurrent\futures\thread.py", line 73, in run
+    return fn(*args, **kwargs)
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\asgiref\sync.py", line 561, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\django\views\generic\base.py", line 106, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\rest_framework\generics.py", line 221, in delete
+    return self.destroy(request, *args, **kwargs)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\rest_framework\mixins.py", line 90, in destroy
+    instance = self.get_object()
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\rest_framework\generics.py", line 87, in get_object
+    queryset = self.filter_queryset(self.get_queryset())
+                                    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\rest_framework\generics.py", line 67, in get_queryset
+    assert self.queryset is not None, (
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'ProfileDelete' should either include a `queryset` attribute, or override the `get_queryset()` method.
+ERROR 2026-05-13 10:41:52,810 runserver 3428 2688 [35;1mHTTP DELETE /api/auth/my-profile-delete/ 500 [0.14, 127.0.0.1:56111][0m
+INFO 2026-05-13 10:42:41,309 autoreload 3428 7728 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 10:42:42,534 autoreload 8156 6380 Watching for file changes with StatReloader
+INFO 2026-05-13 10:42:49,875 autoreload 8156 6380 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 10:42:51,183 autoreload 4820 5472 Watching for file changes with StatReloader
+ERROR 2026-05-13 10:42:53,493 log 4820 1472 Internal Server Error: /api/auth/my-profile-delete/
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\asgiref\sync.py", line 557, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\asgiref\sync.py", line 557, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\django\core\handlers\base.py", line 254, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+        request, *callback_args, **callback_kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\asgiref\sync.py", line 506, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\concurrent\futures\thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\concurrent\futures\thread.py", line 73, in run
+    return fn(*args, **kwargs)
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\asgiref\sync.py", line 561, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\django\views\generic\base.py", line 106, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\rest_framework\generics.py", line 221, in delete
+    return self.destroy(request, *args, **kwargs)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\rest_framework\mixins.py", line 90, in destroy
+    instance = self.get_object()
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\rest_framework\generics.py", line 87, in get_object
+    queryset = self.filter_queryset(self.get_queryset())
+                                    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\rest_framework\generics.py", line 67, in get_queryset
+    assert self.queryset is not None, (
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'ProfileDelete' should either include a `queryset` attribute, or override the `get_queryset()` method.
+ERROR 2026-05-13 10:42:53,500 runserver 4820 3440 [35;1mHTTP DELETE /api/auth/my-profile-delete/ 500 [0.14, 127.0.0.1:56140][0m
+ERROR 2026-05-13 10:43:06,261 log 4820 1472 Internal Server Error: /api/auth/my-profile-delete/
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\asgiref\sync.py", line 557, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\asgiref\sync.py", line 557, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\django\core\handlers\base.py", line 254, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+        request, *callback_args, **callback_kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\asgiref\sync.py", line 506, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\concurrent\futures\thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\concurrent\futures\thread.py", line 73, in run
+    return fn(*args, **kwargs)
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\asgiref\sync.py", line 561, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\django\views\generic\base.py", line 106, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\rest_framework\generics.py", line 221, in delete
+    return self.destroy(request, *args, **kwargs)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\rest_framework\mixins.py", line 90, in destroy
+    instance = self.get_object()
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\rest_framework\generics.py", line 87, in get_object
+    queryset = self.filter_queryset(self.get_queryset())
+                                    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\rest_framework\generics.py", line 67, in get_queryset
+    assert self.queryset is not None, (
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'ProfileDelete' should either include a `queryset` attribute, or override the `get_queryset()` method.
+ERROR 2026-05-13 10:43:06,268 runserver 4820 3440 [35;1mHTTP DELETE /api/auth/my-profile-delete/ 500 [0.12, 127.0.0.1:56140][0m
+ERROR 2026-05-13 10:43:08,544 log 4820 1472 Internal Server Error: /api/auth/my-profile-delete/
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\asgiref\sync.py", line 557, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\asgiref\sync.py", line 557, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\django\core\handlers\base.py", line 254, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+        request, *callback_args, **callback_kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\asgiref\sync.py", line 506, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\concurrent\futures\thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\concurrent\futures\thread.py", line 73, in run
+    return fn(*args, **kwargs)
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\asgiref\sync.py", line 561, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\django\views\generic\base.py", line 106, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\rest_framework\generics.py", line 221, in delete
+    return self.destroy(request, *args, **kwargs)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\rest_framework\mixins.py", line 90, in destroy
+    instance = self.get_object()
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\rest_framework\generics.py", line 87, in get_object
+    queryset = self.filter_queryset(self.get_queryset())
+                                    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\rest_framework\generics.py", line 67, in get_queryset
+    assert self.queryset is not None, (
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'ProfileDelete' should either include a `queryset` attribute, or override the `get_queryset()` method.
+ERROR 2026-05-13 10:43:08,549 runserver 4820 3440 [35;1mHTTP DELETE /api/auth/my-profile-delete/ 500 [0.19, 127.0.0.1:56140][0m
+INFO 2026-05-13 10:47:27,236 autoreload 4820 5472 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 10:47:28,737 autoreload 7868 4760 Watching for file changes with StatReloader
+INFO 2026-05-13 10:47:32,018 autoreload 7868 4760 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 10:47:33,411 autoreload 5860 4768 Watching for file changes with StatReloader
+INFO 2026-05-13 10:47:39,783 autoreload 5860 4768 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 10:47:41,142 autoreload 1724 5716 Watching for file changes with StatReloader
+INFO 2026-05-13 10:48:57,737 autoreload 1724 5716 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 10:48:59,288 autoreload 1612 2908 Watching for file changes with StatReloader
+INFO 2026-05-13 10:49:02,548 autoreload 1612 2908 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 10:49:03,932 autoreload 5340 2116 Watching for file changes with StatReloader
+INFO 2026-05-13 10:49:11,518 autoreload 5340 2116 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 10:49:13,120 autoreload 6160 7928 Watching for file changes with StatReloader
+INFO 2026-05-13 10:49:16,221 autoreload 6160 7928 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 10:49:17,505 autoreload 2908 2228 Watching for file changes with StatReloader
+INFO 2026-05-13 10:49:20,666 autoreload 2908 2228 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 10:49:21,760 autoreload 3016 3816 Watching for file changes with StatReloader
+INFO 2026-05-13 10:49:27,119 autoreload 3016 3816 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 10:49:28,287 autoreload 5064 916 Watching for file changes with StatReloader
+INFO 2026-05-13 10:49:34,889 autoreload 5064 916 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 10:49:36,112 autoreload 808 460 Watching for file changes with StatReloader
+INFO 2026-05-13 10:49:47,916 autoreload 808 460 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 10:49:49,030 autoreload 7960 7084 Watching for file changes with StatReloader
+INFO 2026-05-13 10:49:57,655 autoreload 7960 7084 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 10:49:58,799 autoreload 4768 1256 Watching for file changes with StatReloader
+INFO 2026-05-13 10:50:00,726 autoreload 4768 1256 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 10:50:02,011 autoreload 624 6856 Watching for file changes with StatReloader
+ERROR 2026-05-13 10:50:14,244 log 624 972 Internal Server Error: /api/auth/my-profile-delete/
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\asgiref\sync.py", line 557, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\asgiref\sync.py", line 557, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\django\core\handlers\base.py", line 254, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+        request, *callback_args, **callback_kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\asgiref\sync.py", line 506, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\concurrent\futures\thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\concurrent\futures\thread.py", line 73, in run
+    return fn(*args, **kwargs)
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\asgiref\sync.py", line 561, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\django\views\generic\base.py", line 106, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\rest_framework\generics.py", line 221, in delete
+    return self.destroy(request, *args, **kwargs)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\rest_framework\mixins.py", line 90, in destroy
+    instance = self.get_object()
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py", line 127, in get_object
+    return self.request.user.profile
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'CustomUser' object has no attribute 'profile'
+ERROR 2026-05-13 10:50:14,256 runserver 624 7876 [35;1mHTTP DELETE /api/auth/my-profile-delete/ 500 [0.28, 127.0.0.1:56328][0m
+INFO 2026-05-13 10:50:29,202 autoreload 624 6856 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 10:50:30,634 autoreload 4716 8036 Watching for file changes with StatReloader
+ERROR 2026-05-13 10:50:31,430 log 4716 1724 Internal Server Error: /api/auth/my-profile-delete/
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\asgiref\sync.py", line 557, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\asgiref\sync.py", line 557, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\django\core\handlers\base.py", line 254, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+        request, *callback_args, **callback_kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\asgiref\sync.py", line 506, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\concurrent\futures\thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\concurrent\futures\thread.py", line 73, in run
+    return fn(*args, **kwargs)
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\asgiref\sync.py", line 561, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\django\views\generic\base.py", line 106, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\rest_framework\generics.py", line 221, in delete
+    return self.destroy(request, *args, **kwargs)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\rest_framework\mixins.py", line 90, in destroy
+    instance = self.get_object()
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\rest_framework\generics.py", line 92, in get_object
+    assert lookup_url_kwarg in self.kwargs, (
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Expected view ProfileDelete to be called with a URL keyword argument named "pk". Fix your URL conf, or set the `.lookup_field` attribute on the view correctly.
+ERROR 2026-05-13 10:50:31,439 runserver 4716 7912 [35;1mHTTP DELETE /api/auth/my-profile-delete/ 500 [0.21, 127.0.0.1:56336][0m
+INFO 2026-05-13 10:50:41,215 runserver 4716 7912 [mHTTP GET /api/auth/my-profile-list/ 200 [0.08, 127.0.0.1:56336][0m
+ERROR 2026-05-13 10:51:06,739 log 4716 1724 Internal Server Error: /api/auth/my-profile-delete/
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\asgiref\sync.py", line 557, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\asgiref\sync.py", line 557, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\django\core\handlers\base.py", line 254, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+        request, *callback_args, **callback_kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\asgiref\sync.py", line 506, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\concurrent\futures\thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\concurrent\futures\thread.py", line 73, in run
+    return fn(*args, **kwargs)
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\asgiref\sync.py", line 561, in thread_handler
+    return func(*args, **kwargs)
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\django\views\generic\base.py", line 106, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\rest_framework\generics.py", line 221, in delete
+    return self.destroy(request, *args, **kwargs)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\rest_framework\mixins.py", line 90, in destroy
+    instance = self.get_object()
+  File "C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\venv\Lib\site-packages\rest_framework\generics.py", line 92, in get_object
+    assert lookup_url_kwarg in self.kwargs, (
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Expected view ProfileDelete to be called with a URL keyword argument named "pk". Fix your URL conf, or set the `.lookup_field` attribute on the view correctly.
+ERROR 2026-05-13 10:51:06,745 runserver 4716 7912 [35;1mHTTP DELETE /api/auth/my-profile-delete/ 500 [0.10, 127.0.0.1:56336][0m
+INFO 2026-05-13 10:52:13,602 autoreload 4716 8036 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 10:52:14,882 autoreload 8676 4820 Watching for file changes with StatReloader
+INFO 2026-05-13 10:52:20,257 autoreload 8676 4820 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 10:52:21,918 autoreload 9028 8696 Watching for file changes with StatReloader
+INFO 2026-05-13 10:52:24,089 runserver 9028 9200 [mHTTP DELETE /api/auth/my-profile-delete/ 200 [0.24, 127.0.0.1:56592][0m
+WARNING 2026-05-13 10:52:34,307 log 9028 8772 Unauthorized: /api/auth/my-profile-list/
+WARNING 2026-05-13 10:52:34,308 runserver 9028 9200 [31;1mHTTP GET /api/auth/my-profile-list/ 401 [0.19, 127.0.0.1:56592][0m
+WARNING 2026-05-13 10:52:46,540 log 9028 8772 Unauthorized: /api/auth/login/
+WARNING 2026-05-13 10:52:46,541 runserver 9028 9200 [31;1mHTTP POST /api/auth/login/ 401 [0.08, 127.0.0.1:56592][0m
+INFO 2026-05-13 10:53:12,029 autoreload 9028 8696 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 10:53:13,200 autoreload 9204 9140 Watching for file changes with StatReloader
+INFO 2026-05-13 10:53:16,301 autoreload 9204 9140 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 10:53:17,714 autoreload 2696 9124 Watching for file changes with StatReloader
+WARNING 2026-05-13 10:53:27,437 log 2696 5472 Unauthorized: /api/auth/login/
+WARNING 2026-05-13 10:53:27,438 runserver 2696 4848 [31;1mHTTP POST /api/auth/login/ 401 [0.11, 127.0.0.1:56627][0m
+WARNING 2026-05-13 10:53:34,527 log 2696 5472 Unauthorized: /api/auth/login/
+WARNING 2026-05-13 10:53:34,528 runserver 2696 4848 [31;1mHTTP POST /api/auth/login/ 401 [0.10, 127.0.0.1:56627][0m
+INFO 2026-05-13 10:53:43,408 runserver 2696 4848 [mHTTP GET / 200 [0.04, 127.0.0.1:56627][0m
+INFO 2026-05-13 10:53:43,688 runserver 2696 4848 [mHTTP GET /api/schema/ 200 [0.13, 127.0.0.1:56627][0m
+INFO 2026-05-13 10:53:45,260 runserver 2696 4848 [mHTTP GET /admin/ 200 [0.12, 127.0.0.1:56627][0m
+WARNING 2026-05-13 10:53:45,433 log 2696 5472 Not Found: /favicon.ico
+WARNING 2026-05-13 10:53:45,433 runserver 2696 4848 [33mHTTP GET /favicon.ico 404 [0.02, 127.0.0.1:56627][0m
+INFO 2026-05-13 10:53:47,632 runserver 2696 4848 [mHTTP GET /admin/accounts/customuser/ 200 [0.24, 127.0.0.1:56627][0m
+INFO 2026-05-13 10:53:47,778 runserver 2696 4848 [mHTTP GET /static/admin/js/jquery.init.js 200 [0.12, 127.0.0.1:56641][0m
+INFO 2026-05-13 10:53:47,785 runserver 2696 4848 [mHTTP GET /static/admin/css/changelists.css 200 [0.13, 127.0.0.1:56627][0m
+INFO 2026-05-13 10:53:47,789 runserver 2696 4848 [mHTTP GET /static/admin/js/admin/RelatedObjectLookups.js 200 [0.12, 127.0.0.1:56643][0m
+INFO 2026-05-13 10:53:47,798 runserver 2696 4848 [mHTTP GET /static/admin/js/vendor/jquery/jquery.js 200 [0.14, 127.0.0.1:56640][0m
+INFO 2026-05-13 10:53:47,802 runserver 2696 4848 [mHTTP GET /static/admin/js/core.js 200 [0.14, 127.0.0.1:56642][0m
+INFO 2026-05-13 10:53:47,810 runserver 2696 4848 [mHTTP GET /static/admin/js/urlify.js 200 [0.01, 127.0.0.1:56627][0m
+INFO 2026-05-13 10:53:47,812 runserver 2696 4848 [mHTTP GET /static/admin/js/prepopulate.js 200 [0.02, 127.0.0.1:56643][0m
+INFO 2026-05-13 10:53:47,818 runserver 2696 4848 [mHTTP GET /static/admin/js/actions.js 200 [0.03, 127.0.0.1:56641][0m
+INFO 2026-05-13 10:53:47,826 runserver 2696 4848 [mHTTP GET /static/admin/js/vendor/xregexp/xregexp.js 200 [0.02, 127.0.0.1:56640][0m
+INFO 2026-05-13 10:53:47,826 runserver 2696 4848 [mHTTP GET /static/admin/img/search.svg 200 [0.01, 127.0.0.1:56642][0m
+INFO 2026-05-13 10:53:47,835 runserver 2696 4848 [mHTTP GET /admin/jsi18n/ 200 [0.18, 127.0.0.1:56637][0m
+INFO 2026-05-13 10:53:47,836 runserver 2696 4848 [mHTTP GET /static/admin/img/icon-yes.svg 200 [0.02, 127.0.0.1:56627][0m
+INFO 2026-05-13 10:53:47,846 runserver 2696 4848 [mHTTP GET /static/admin/js/filters.js 200 [0.00, 127.0.0.1:56627][0m
+INFO 2026-05-13 10:53:47,883 runserver 2696 4848 [mHTTP GET /static/admin/img/tooltag-add.svg 200 [0.01, 127.0.0.1:56627][0m
+INFO 2026-05-13 10:53:47,884 runserver 2696 4848 [mHTTP GET /static/admin/img/sorting-icons.svg 200 [0.01, 127.0.0.1:56640][0m
+INFO 2026-05-13 10:53:47,884 runserver 2696 4848 [mHTTP GET /static/admin/img/icon-viewlink.svg 200 [0.01, 127.0.0.1:56637][0m
+WARNING 2026-05-13 10:54:02,511 log 2696 7004 Unauthorized: /api/auth/login/
+WARNING 2026-05-13 10:54:02,511 runserver 2696 4848 [31;1mHTTP POST /api/auth/login/ 401 [0.09, 127.0.0.1:56637][0m
+WARNING 2026-05-13 10:54:17,666 log 2696 5472 Unauthorized: /api/auth/login/
+WARNING 2026-05-13 10:54:17,667 runserver 2696 4848 [31;1mHTTP POST /api/auth/login/ 401 [0.09, 127.0.0.1:56637][0m
+INFO 2026-05-13 10:54:29,686 runserver 2696 4848 [mHTTP POST /api/auth/login/ 200 [1.36, 127.0.0.1:56637][0m
+WARNING 2026-05-13 10:54:58,656 log 2696 8424 Forbidden: /api/auth/my-profile-delete/
+WARNING 2026-05-13 10:54:58,657 runserver 2696 4848 [31;1mHTTP DELETE /api/auth/my-profile-delete/ 403 [0.19, 127.0.0.1:56637][0m
+INFO 2026-05-13 10:55:13,082 autoreload 2696 9124 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 10:55:14,620 autoreload 8668 972 Watching for file changes with StatReloader
+INFO 2026-05-13 10:55:16,745 autoreload 8668 972 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 10:55:18,084 autoreload 4756 9096 Watching for file changes with StatReloader
+INFO 2026-05-13 10:55:25,631 autoreload 4756 9096 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 10:55:27,245 autoreload 2484 9092 Watching for file changes with StatReloader
+INFO 2026-05-13 10:55:29,383 autoreload 2484 9092 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 10:55:30,576 autoreload 5024 1392 Watching for file changes with StatReloader
+INFO 2026-05-13 10:55:35,976 autoreload 5024 1392 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 10:55:37,158 autoreload 4748 4320 Watching for file changes with StatReloader
+INFO 2026-05-13 10:55:42,653 autoreload 4748 4320 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 10:55:44,281 autoreload 7540 8544 Watching for file changes with StatReloader
+INFO 2026-05-13 10:55:44,990 runserver 7540 7260 [mHTTP GET / 200 [0.03, 127.0.0.1:56711][0m
+INFO 2026-05-13 10:55:45,235 runserver 7540 7260 [mHTTP GET /api/schema/ 200 [0.16, 127.0.0.1:56711][0m
+INFO 2026-05-13 10:58:04,938 autoreload 7540 8544 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 10:58:06,346 autoreload 2484 8168 Watching for file changes with StatReloader
+INFO 2026-05-13 10:58:31,525 autoreload 2484 8168 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 10:58:32,828 autoreload 9036 2696 Watching for file changes with StatReloader
+INFO 2026-05-13 10:58:34,839 autoreload 9036 2696 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 10:58:36,382 autoreload 4820 7736 Watching for file changes with StatReloader
+INFO 2026-05-13 10:58:41,707 autoreload 4820 7736 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 10:58:43,147 autoreload 136 2208 Watching for file changes with StatReloader
+INFO 2026-05-13 10:58:47,379 autoreload 136 2208 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 10:58:48,717 autoreload 4468 9160 Watching for file changes with StatReloader
+INFO 2026-05-13 10:58:52,962 autoreload 4468 9160 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 10:58:54,026 autoreload 7084 4904 Watching for file changes with StatReloader
+INFO 2026-05-13 10:58:59,185 autoreload 7084 4904 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 10:59:00,572 autoreload 8588 7116 Watching for file changes with StatReloader
+INFO 2026-05-13 10:59:05,729 autoreload 8588 7116 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 10:59:07,080 autoreload 5508 9140 Watching for file changes with StatReloader
+INFO 2026-05-13 10:59:16,519 autoreload 5508 9140 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 10:59:17,594 autoreload 7628 3504 Watching for file changes with StatReloader
+INFO 2026-05-13 10:59:22,924 autoreload 7628 3504 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 10:59:24,120 autoreload 872 8764 Watching for file changes with StatReloader
+INFO 2026-05-13 10:59:27,294 autoreload 872 8764 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 10:59:28,683 autoreload 6652 8680 Watching for file changes with StatReloader
+INFO 2026-05-13 10:59:41,596 autoreload 6652 8680 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 10:59:42,954 autoreload 4780 8432 Watching for file changes with StatReloader
+INFO 2026-05-13 10:59:45,957 autoreload 4780 8432 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 10:59:47,194 autoreload 9204 9196 Watching for file changes with StatReloader
+INFO 2026-05-13 10:59:51,348 autoreload 9204 9196 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 10:59:52,782 autoreload 9000 7592 Watching for file changes with StatReloader
+INFO 2026-05-13 10:59:57,248 autoreload 9000 7592 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 10:59:58,612 autoreload 8816 3688 Watching for file changes with StatReloader
+INFO 2026-05-13 11:00:02,885 autoreload 8816 3688 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 11:00:04,035 autoreload 8680 5708 Watching for file changes with StatReloader
+INFO 2026-05-13 11:00:07,093 autoreload 8680 5708 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 11:00:08,465 autoreload 8992 9172 Watching for file changes with StatReloader
+INFO 2026-05-13 11:00:15,330 autoreload 8992 9172 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 11:00:16,914 autoreload 9064 904 Watching for file changes with StatReloader
+INFO 2026-05-13 11:00:20,100 autoreload 9064 904 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 11:00:21,386 autoreload 6728 7472 Watching for file changes with StatReloader
+INFO 2026-05-13 11:00:29,912 autoreload 6728 7472 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 11:00:31,558 autoreload 9196 9024 Watching for file changes with StatReloader
+INFO 2026-05-13 11:00:33,794 autoreload 9196 9024 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 11:00:35,101 autoreload 892 4468 Watching for file changes with StatReloader
+INFO 2026-05-13 11:00:38,476 autoreload 892 4468 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 11:00:39,792 autoreload 9168 2484 Watching for file changes with StatReloader
+INFO 2026-05-13 11:00:41,754 autoreload 9168 2484 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 11:00:43,211 autoreload 7504 8848 Watching for file changes with StatReloader
+INFO 2026-05-13 11:00:45,501 autoreload 7504 8848 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 11:00:46,712 autoreload 8616 8468 Watching for file changes with StatReloader
+INFO 2026-05-13 11:00:53,020 autoreload 8616 8468 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 11:00:54,517 autoreload 6832 8168 Watching for file changes with StatReloader
+INFO 2026-05-13 11:00:57,617 autoreload 6832 8168 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 11:00:59,081 autoreload 4320 8472 Watching for file changes with StatReloader
+INFO 2026-05-13 11:01:02,396 autoreload 4320 8472 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 11:01:03,812 autoreload 9212 4748 Watching for file changes with StatReloader
+INFO 2026-05-13 11:01:06,146 autoreload 9212 4748 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 11:01:07,779 autoreload 8628 9196 Watching for file changes with StatReloader
+INFO 2026-05-13 11:01:09,890 autoreload 8628 9196 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 11:01:11,128 autoreload 4824 4496 Watching for file changes with StatReloader
+INFO 2026-05-13 11:01:15,443 autoreload 4824 4496 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 11:01:16,699 autoreload 7556 8700 Watching for file changes with StatReloader
+INFO 2026-05-13 11:01:19,004 autoreload 7556 8700 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 11:01:20,478 autoreload 8636 8596 Watching for file changes with StatReloader
+INFO 2026-05-13 11:01:24,739 autoreload 8636 8596 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 11:01:25,844 autoreload 5752 7068 Watching for file changes with StatReloader
+INFO 2026-05-13 11:01:31,124 autoreload 5752 7068 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 11:01:32,390 autoreload 1304 8444 Watching for file changes with StatReloader
+INFO 2026-05-13 11:01:36,864 autoreload 1304 8444 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 11:01:38,206 autoreload 9008 2332 Watching for file changes with StatReloader
+INFO 2026-05-13 11:01:40,420 autoreload 9008 2332 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 11:01:41,786 autoreload 3992 8608 Watching for file changes with StatReloader
+INFO 2026-05-13 11:01:43,884 autoreload 3992 8608 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 11:01:45,500 autoreload 7868 8976 Watching for file changes with StatReloader
+INFO 2026-05-13 11:01:50,124 autoreload 7868 8976 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 11:01:51,558 autoreload 4360 808 Watching for file changes with StatReloader
+INFO 2026-05-13 11:01:53,603 autoreload 4360 808 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 11:01:55,063 autoreload 7868 9164 Watching for file changes with StatReloader
+INFO 2026-05-13 11:01:57,269 autoreload 7868 9164 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 11:01:58,573 autoreload 8904 8424 Watching for file changes with StatReloader
+INFO 2026-05-13 11:02:00,644 autoreload 8904 8424 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 11:02:02,046 autoreload 6728 7472 Watching for file changes with StatReloader
+INFO 2026-05-13 11:02:04,223 autoreload 6728 7472 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 11:02:05,525 autoreload 2480 5532 Watching for file changes with StatReloader
+INFO 2026-05-13 11:02:07,602 autoreload 2480 5532 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 11:02:09,170 autoreload 2332 6232 Watching for file changes with StatReloader
+INFO 2026-05-13 11:02:11,319 autoreload 2332 6232 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 11:02:12,705 autoreload 6900 9056 Watching for file changes with StatReloader
+INFO 2026-05-13 11:02:17,942 autoreload 6900 9056 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 11:02:19,453 autoreload 8412 8756 Watching for file changes with StatReloader
+INFO 2026-05-13 11:02:22,682 autoreload 8412 8756 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 11:02:23,805 autoreload 9056 8188 Watching for file changes with StatReloader
+INFO 2026-05-13 11:02:30,169 autoreload 9056 8188 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 11:02:31,476 autoreload 4924 7540 Watching for file changes with StatReloader
+INFO 2026-05-13 11:02:34,530 autoreload 4924 7540 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 11:02:35,822 autoreload 7752 9244 Watching for file changes with StatReloader
+INFO 2026-05-13 11:02:45,625 autoreload 7752 9244 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 11:02:46,870 autoreload 9560 9548 Watching for file changes with StatReloader
+INFO 2026-05-13 11:02:48,906 autoreload 9560 9548 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 11:02:50,102 autoreload 9708 9724 Watching for file changes with StatReloader
+INFO 2026-05-13 11:02:53,267 autoreload 9708 9724 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 11:02:54,354 autoreload 8904 8800 Watching for file changes with StatReloader
+INFO 2026-05-13 11:03:05,085 autoreload 8904 8800 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 11:03:06,582 autoreload 4496 9328 Watching for file changes with StatReloader
+INFO 2026-05-13 11:03:08,831 autoreload 4496 9328 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 11:03:09,919 autoreload 10156 10112 Watching for file changes with StatReloader
+INFO 2026-05-13 11:03:18,521 autoreload 10156 10112 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 11:03:19,608 autoreload 9476 8764 Watching for file changes with StatReloader
+INFO 2026-05-13 11:03:47,725 autoreload 9476 8764 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 11:03:49,009 autoreload 9684 9408 Watching for file changes with StatReloader
+INFO 2026-05-13 11:03:58,618 autoreload 9684 9408 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 11:04:00,075 autoreload 9384 5924 Watching for file changes with StatReloader
+INFO 2026-05-13 11:04:02,274 autoreload 9384 5924 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 11:04:03,351 autoreload 9752 9876 Watching for file changes with StatReloader
+INFO 2026-05-13 11:04:08,716 autoreload 9752 9876 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-13 11:04:09,935 autoreload 10032 9700 Watching for file changes with StatReloader
+INFO 2026-05-13 11:04:30,662 autoreload 10032 9700 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\urls.py changed, reloading.
+INFO 2026-05-13 11:04:31,823 autoreload 9200 9300 Watching for file changes with StatReloader
+INFO 2026-05-13 11:04:33,855 autoreload 9200 9300 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\urls.py changed, reloading.
+INFO 2026-05-13 11:04:35,037 autoreload 9240 1156 Watching for file changes with StatReloader
+INFO 2026-05-13 11:04:41,342 autoreload 9240 1156 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\urls.py changed, reloading.
+INFO 2026-05-13 11:04:42,651 autoreload 10184 9536 Watching for file changes with StatReloader
+INFO 2026-05-13 11:04:46,990 autoreload 10184 9536 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\urls.py changed, reloading.
+INFO 2026-05-13 11:04:48,279 autoreload 8880 8468 Watching for file changes with StatReloader
+INFO 2026-05-13 11:04:53,746 autoreload 8880 8468 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\urls.py changed, reloading.
+INFO 2026-05-13 11:04:54,886 autoreload 8684 10128 Watching for file changes with StatReloader
+INFO 2026-05-13 11:04:58,193 autoreload 8684 10128 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\urls.py changed, reloading.
+INFO 2026-05-13 11:04:59,337 autoreload 8876 9640 Watching for file changes with StatReloader
+INFO 2026-05-13 11:05:09,932 autoreload 8876 9640 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\urls.py changed, reloading.
+INFO 2026-05-13 11:05:11,015 autoreload 9688 10000 Watching for file changes with StatReloader
+INFO 2026-05-13 11:05:15,119 autoreload 9688 10000 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\urls.py changed, reloading.
+INFO 2026-05-13 11:05:16,465 autoreload 4284 6464 Watching for file changes with StatReloader
+INFO 2026-05-13 11:05:19,485 autoreload 4284 6464 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\urls.py changed, reloading.
+INFO 2026-05-13 11:05:20,657 autoreload 8636 10236 Watching for file changes with StatReloader
+INFO 2026-05-13 11:05:24,722 autoreload 8636 10236 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\urls.py changed, reloading.
+INFO 2026-05-13 11:05:26,012 autoreload 9224 8600 Watching for file changes with StatReloader
+INFO 2026-05-13 11:05:32,483 autoreload 9224 8600 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\urls.py changed, reloading.
+INFO 2026-05-13 11:05:33,572 autoreload 9284 10200 Watching for file changes with StatReloader
+INFO 2026-05-13 11:05:52,713 runserver 9284 9764 [mHTTP GET / 200 [0.03, 127.0.0.1:57254][0m
+INFO 2026-05-13 11:05:52,957 runserver 9284 9764 [mHTTP GET /api/schema/ 200 [0.14, 127.0.0.1:57254][0m
+INFO 2026-05-13 11:06:36,608 runserver 9284 9764 [mHTTP POST /api/auth/login/ 200 [1.36, 127.0.0.1:57254][0m
+INFO 2026-05-13 11:07:01,622 runserver 9284 9764 [mHTTP POST /api/auth/my-profile-logout/ 200 [0.10, 127.0.0.1:57254][0m
+INFO 2026-05-13 11:07:08,880 runserver 9284 9764 [mHTTP GET /api/auth/my-profile-list/ 200 [0.08, 127.0.0.1:57254][0m
+INFO 2026-05-13 11:11:49,793 runserver 9284 9764 [mHTTP GET /api/groups/schedule/ 200 [0.09, 127.0.0.1:57316][0m
+INFO 2026-05-13 11:11:56,426 runserver 9284 9764 [mHTTP GET /api/groups/today-schedule/ 200 [0.08, 127.0.0.1:57316][0m
+INFO 2026-05-13 11:17:32,524 runserver 9284 9764 [mHTTP GET /api/groups/my-groups/ 200 [0.10, 127.0.0.1:57391][0m
+INFO 2026-05-13 11:17:55,304 autoreload 9284 10200 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\groups\views.py changed, reloading.
+INFO 2026-05-13 11:17:56,592 autoreload 9332 9168 Watching for file changes with StatReloader
+INFO 2026-05-13 11:18:01,874 autoreload 9332 9168 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\groups\views.py changed, reloading.
+INFO 2026-05-13 11:18:03,220 autoreload 6180 7288 Watching for file changes with StatReloader
+INFO 2026-05-13 11:18:05,225 autoreload 6180 7288 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\groups\views.py changed, reloading.
+INFO 2026-05-13 11:18:06,482 autoreload 9356 8188 Watching for file changes with StatReloader
+INFO 2026-05-13 11:18:29,683 autoreload 9356 8188 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\groups\views.py changed, reloading.
+INFO 2026-05-13 11:18:30,976 autoreload 6936 5436 Watching for file changes with StatReloader
+INFO 2026-05-13 11:18:34,292 autoreload 6936 5436 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\groups\views.py changed, reloading.
+INFO 2026-05-13 11:18:35,533 autoreload 9088 7828 Watching for file changes with StatReloader
+INFO 2026-05-13 11:26:21,362 runserver 9088 10056 [mHTTP GET / 200 [0.04, 127.0.0.1:58227][0m
+INFO 2026-05-13 11:26:21,600 runserver 9088 10056 [mHTTP GET /api/schema/ 200 [0.15, 127.0.0.1:58227][0m
+INFO 2026-05-13 11:26:51,618 runserver 9088 10056 [mHTTP POST /api/auth/login/ 200 [1.45, 127.0.0.1:58227][0m
+INFO 2026-05-13 11:27:28,683 runserver 9088 10056 [mHTTP GET /api/auth/my-profile-list/ 200 [0.09, 127.0.0.1:58227][0m
+INFO 2026-05-13 11:28:15,445 runserver 9088 10056 [mHTTP POST /api/auth/login/ 200 [1.51, 127.0.0.1:58227][0m
+INFO 2026-05-13 11:28:43,803 runserver 9088 10056 [mHTTP GET /api/groups/schedule/ 200 [0.10, 127.0.0.1:58227][0m
+INFO 2026-05-13 11:28:50,215 runserver 9088 10056 [mHTTP GET /api/groups/today-schedule/ 200 [0.08, 127.0.0.1:58227][0m
+WARNING 2026-05-13 11:29:02,155 log 9088 8664 Forbidden: /api/groups/list-admin/
+WARNING 2026-05-13 11:29:02,156 runserver 9088 10056 [31;1mHTTP GET /api/groups/list-admin/ 403 [0.10, 127.0.0.1:58227][0m
+INFO 2026-05-13 11:29:28,655 runserver 9088 10056 [mHTTP GET /api/groups/my/ 200 [0.20, 127.0.0.1:58227][0m
+INFO 2026-05-13 11:35:01,392 runserver 9088 10056 [mHTTP GET /api/auth/my-profile-list/ 200 [0.10, 127.0.0.1:58388][0m
+INFO 2026-05-13 11:35:58,891 runserver 9088 10056 [mHTTP POST /api/auth/login/ 200 [1.60, 127.0.0.1:58388][0m
+INFO 2026-05-13 11:36:36,589 runserver 9088 10056 [mHTTP GET /api/auth/my-profile-list/ 200 [0.10, 127.0.0.1:58388][0m
+INFO 2026-05-13 11:37:30,054 runserver 9088 10056 [mHTTP POST /api/groups/create-admin/ 201 [0.17, 127.0.0.1:58388][0m
+INFO 2026-05-13 11:37:54,687 runserver 9088 10056 [mHTTP GET /api/groups/schedule/ 200 [0.12, 127.0.0.1:58388][0m
+INFO 2026-05-13 11:38:37,117 runserver 9088 10056 [mHTTP GET /api/groups/today-schedule/ 200 [0.10, 127.0.0.1:58388][0m
+INFO 2026-05-13 11:45:22,683 autoreload 9088 7828 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\groups\views.py changed, reloading.
+INFO 2026-05-13 11:45:24,182 autoreload 8412 4840 Watching for file changes with StatReloader
+INFO 2026-05-13 11:46:33,883 runserver 8412 4288 [mHTTP GET / 200 [0.04, 127.0.0.1:58652][0m
+INFO 2026-05-13 11:46:34,123 runserver 8412 4288 [mHTTP GET /api/schema/ 200 [0.15, 127.0.0.1:58652][0m
+INFO 2026-05-13 11:47:20,793 runserver 8412 4288 [mHTTP GET /api/groups/schedule/?date=2026-05-13 200 [0.21, 127.0.0.1:58652][0m
+INFO 2026-05-13 11:47:29,489 runserver 8412 4288 [mHTTP GET /api/groups/today-schedule/ 200 [0.18, 127.0.0.1:58667][0m
