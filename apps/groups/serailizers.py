@@ -6,48 +6,61 @@ from .models import Group , GroupStudent
 
 
 WEEK_DAYS_MAP = {
-    'toq_kunlar':  [0, 2, 4],              # Du, Ch, Ju
-    'juft_kunlar': [1, 3, 5],              # Se, Pa, Sh
-    'har_kuni':    [0, 1, 2, 3, 4, 5, 6], # Hamma kun
+    'toq_kunlar': [0, 2, 4],   
+    'juft_kunlar': [1, 3, 5],   
+    'har_kuni': [0, 1, 2, 3, 4, 5],
 }
+
+# Kunlarni matn ko'rinishida chiqarish uchun
+WEEK_DAYS_NAMES = {
+    0: "Dushanba", 1: "Seshanba", 2: "Chorshanba",
+    3: "Payshanba", 4: "Juma", 5: "Shanba"
+}
+
+from rest_framework import serializers
 
 class GroupSerializer(serializers.ModelSerializer):
     teacher = serializers.PrimaryKeyRelatedField(queryset=User.objects.filter(role='teacher'))
     
-    # Faqat yozish uchun (POST/PUT)
+    # Kategoriya tanlash uchun (Faqat POST/PUT uchun)
     week_days_type = serializers.ChoiceField(
-        choices=list(WEEK_DAYS_MAP.keys()),
+        choices=[(k, k.replace('_', ' ').capitalize()) for k in WEEK_DAYS_MAP.keys()],
         write_only=True,
-        required=False,
+        required=True  # Majburiy tanlanishi uchun
     )
-    # Faqat o'qish uchun (GET) — week_days dan qayta hisoblaydi
-    week_days_label = serializers.SerializerMethodField(read_only=True)
+    
+    # GET qilganda kunlarni nomini chiqarish uchun
+    week_days_display = serializers.SerializerMethodField(read_only=True)
 
     class Meta:
-        model  = Group
+        model = Group
         fields = [
             'id', 'name', 'course', 'teacher',
             'start_time', 'end_time',
-            'week_days_type',   # <-- input (POST/PUT)
-            'week_days',        # <-- saqlangan list (GET)
-            'week_days_label',  # <-- "Toq kunlar" (GET)
+            'week_days_type',    # Input uchun
+            'week_days',         # Read-only (ID list: [0, 2, 4])
+            'week_days_display', # Read-only (Nomlar: "Dushanba, Chorshanba...")
             'status', 'start_date', 'end_date', 'created_at',
         ]
+        # week_days ni serializer darajasida read_only qilamiz
+        extra_kwargs = {
+            'week_days': {'read_only': True}
+        }
 
     def validate(self, attrs):
-        week_days_type = attrs.pop('week_days_type', None)
-        if week_days_type:
-            attrs['week_days'] = WEEK_DAYS_MAP[week_days_type]
+        # week_days_type dan qiymatni olib week_days ga o'zlashtiramiz
+        week_type = attrs.pop('week_days_type', None)
+        if week_type in WEEK_DAYS_MAP:
+            attrs['week_days'] = WEEK_DAYS_MAP[week_type]
         return super().validate(attrs)
 
-    def get_week_days_label(self, obj):
-        days = sorted(obj.week_days or [])
-        labels = {
-            (0, 2, 4): 'Toq kunlar',
-            (1, 3, 5): 'Juft kunlar',
-            (0, 1, 2, 3, 4, 5, 6): 'Har kuni',
-        }
-        return labels.get(tuple(days), 'Maxsus')
+    def get_week_days_display(self, obj):
+        # Listdagi raqamlarni nomlarga aylantiradi: [0, 2, 4] -> "Dushanba, Chorshanba, Juma"
+        if not obj.week_days:
+            return ""
+        
+        days_list = sorted(obj.week_days)
+        return ", ".join([WEEK_DAYS_NAMES.get(day, "") for day in days_list])
     
 class GroupStudentSerializer(serializers.ModelSerializer):
     class Meta:
@@ -83,7 +96,7 @@ class MyGroupSerializer(serializers.ModelSerializer):
     students = GroupStudentSerializer( source = 'group_students' , many = True , read_only = True)
     class Meta:
         model  = Group
-        fields = ['id', 'name', 'course', 'teacher', 'status', 'start_date','start_time','end_time', 'students', ]
+        fields = ['id', 'name', 'course', 'teacher', 'status', 'week_days','start_date','start_time','end_time', 'students', ]
   
     
         

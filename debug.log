@@ -1990,3 +1990,110 @@ INFO 2026-05-13 11:46:33,883 runserver 8412 4288 [mHTTP GET / 200 [0.04, 127.0.
 INFO 2026-05-13 11:46:34,123 runserver 8412 4288 [mHTTP GET /api/schema/ 200 [0.15, 127.0.0.1:58652][0m
 INFO 2026-05-13 11:47:20,793 runserver 8412 4288 [mHTTP GET /api/groups/schedule/?date=2026-05-13 200 [0.21, 127.0.0.1:58652][0m
 INFO 2026-05-13 11:47:29,489 runserver 8412 4288 [mHTTP GET /api/groups/today-schedule/ 200 [0.18, 127.0.0.1:58667][0m
+INFO 2026-05-13 23:38:13,121 autoreload 6940 8692 Watching for file changes with StatReloader
+INFO 2026-05-13 23:38:17,345 runserver 6940 6796 [mHTTP GET / 200 [0.05, 127.0.0.1:50306][0m
+INFO 2026-05-13 23:38:17,635 runserver 6940 6796 [mHTTP GET /api/schema/ 200 [0.16, 127.0.0.1:50306][0m
+WARNING 2026-05-13 23:39:13,412 log 6940 9108 Unauthorized: /api/auth/profile-delete/8/
+WARNING 2026-05-13 23:39:13,413 runserver 6940 6796 [31;1mHTTP DELETE /api/auth/profile-delete/8/ 401 [0.03, 127.0.0.1:50306][0m
+INFO 2026-05-13 23:39:20,300 runserver 6940 6796 [32mHTTP GET /admin/ 302 [0.02, 127.0.0.1:50306][0m
+INFO 2026-05-13 23:39:20,370 runserver 6940 6796 [mHTTP GET /admin/login/?next=/admin/ 200 [0.07, 127.0.0.1:50306][0m
+INFO 2026-05-13 23:39:20,452 runserver 6940 6796 [mHTTP GET /static/admin/css/login.css 200 [0.06, 127.0.0.1:50306][0m
+WARNING 2026-05-13 23:39:20,528 log 6940 9108 Not Found: /favicon.ico
+WARNING 2026-05-13 23:39:20,528 runserver 6940 6796 [33mHTTP GET /favicon.ico 404 [0.01, 127.0.0.1:50306][0m
+INFO 2026-05-13 23:39:37,008 runserver 6940 6796 [32mHTTP POST /admin/login/?next=/admin/ 302 [1.67, 127.0.0.1:50306][0m
+INFO 2026-05-13 23:39:37,226 runserver 6940 6796 [mHTTP GET /admin/ 200 [0.21, 127.0.0.1:50306][0m
+INFO 2026-05-13 23:39:43,940 runserver 6940 6796 [mHTTP GET /admin/accounts/customuser/ 200 [0.12, 127.0.0.1:50306][0m
+INFO 2026-05-13 23:39:44,090 runserver 6940 6796 [mHTTP GET /admin/jsi18n/ 200 [0.13, 127.0.0.1:50306][0m
+INFO 2026-05-13 23:40:31,144 runserver 6940 6796 [mHTTP POST /api/auth/login/ 200 [1.60, 127.0.0.1:50306][0m
+INFO 2026-05-13 23:40:58,313 runserver 6940 6796 [mHTTP DELETE /api/auth/profile-delete/10/ 204 [0.33, 127.0.0.1:50306][0m
+INFO 2026-05-13 23:41:06,165 runserver 6940 6796 [mHTTP GET /admin/accounts/customuser/ 200 [0.09, 127.0.0.1:50306][0m
+INFO 2026-05-13 23:41:06,399 runserver 6940 6796 [mHTTP GET /admin/jsi18n/ 200 [0.17, 127.0.0.1:50306][0m
+WARNING 2026-05-13 23:41:11,846 log 6940 9108 Not Found: /api/auth/profile-delete/10/
+WARNING 2026-05-13 23:41:11,847 runserver 6940 6796 [33mHTTP DELETE /api/auth/profile-delete/10/ 404 [0.08, 127.0.0.1:50306][0m
+INFO 2026-05-13 23:41:55,506 runserver 6940 6796 [mHTTP GET /api/groups/my/ 200 [0.20, 127.0.0.1:50306][0m
+INFO 2026-05-13 23:42:17,725 runserver 6940 6796 [mHTTP POST /api/auth/login/ 200 [1.53, 127.0.0.1:50306][0m
+INFO 2026-05-13 23:43:06,954 runserver 6940 6796 [mHTTP GET /api/groups/my/ 200 [0.11, 127.0.0.1:50306][0m
+INFO 2026-05-13 23:45:54,380 autoreload 6940 8692 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\groups\serailizers.py changed, reloading.
+INFO 2026-05-13 23:45:55,933 autoreload 7688 8656 Watching for file changes with StatReloader
+INFO 2026-05-13 23:45:58,225 autoreload 7688 8656 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\groups\serailizers.py changed, reloading.
+INFO 2026-05-13 23:45:59,495 autoreload 8276 8804 Watching for file changes with StatReloader
+INFO 2026-05-13 23:46:15,961 runserver 8276 2636 [mHTTP GET /api/groups/my/ 200 [0.11, 127.0.0.1:50399][0m
+WARNING 2026-05-13 23:47:40,921 log 8276 8716 Forbidden: /api/groups/my-groups/
+WARNING 2026-05-13 23:47:40,921 runserver 8276 2636 [31;1mHTTP GET /api/groups/my-groups/ 403 [0.10, 127.0.0.1:50410][0m
+INFO 2026-05-13 23:48:12,032 runserver 8276 2636 [mHTTP POST /api/auth/login/ 200 [1.60, 127.0.0.1:50410][0m
+INFO 2026-05-13 23:48:44,637 runserver 8276 2636 [mHTTP GET /api/groups/my-groups/ 200 [0.10, 127.0.0.1:50410][0m
+INFO 2026-05-13 23:49:45,973 runserver 8276 2636 [mHTTP GET /admin/accounts/customuser/3/change/ 200 [0.15, 127.0.0.1:50425][0m
+INFO 2026-05-13 23:49:46,057 runserver 8276 2636 [mHTTP GET /static/admin/js/prepopulate_init.js 200 [0.05, 127.0.0.1:50426][0m
+INFO 2026-05-13 23:49:46,067 runserver 8276 2636 [mHTTP GET /static/admin/css/forms.css 200 [0.07, 127.0.0.1:50425][0m
+INFO 2026-05-13 23:49:46,076 runserver 8276 2636 [mHTTP GET /static/admin/js/change_form.js 200 [0.01, 127.0.0.1:50425][0m
+INFO 2026-05-13 23:49:46,079 runserver 8276 2636 [mHTTP GET /static/admin/css/widgets.css 200 [0.01, 127.0.0.1:50426][0m
+INFO 2026-05-13 23:49:46,105 runserver 8276 2636 [mHTTP GET /admin/jsi18n/ 200 [0.10, 127.0.0.1:50429][0m
+INFO 2026-05-13 23:50:18,719 runserver 8276 2636 [32mHTTP POST /admin/accounts/customuser/3/change/ 302 [0.10, 127.0.0.1:50429][0m
+INFO 2026-05-13 23:50:18,829 runserver 8276 2636 [mHTTP GET /admin/accounts/customuser/ 200 [0.11, 127.0.0.1:50429][0m
+INFO 2026-05-13 23:50:18,939 runserver 8276 2636 [mHTTP GET /admin/jsi18n/ 200 [0.08, 127.0.0.1:50429][0m
+INFO 2026-05-13 23:50:18,968 runserver 8276 2636 [mHTTP GET /static/admin/img/icon-yes-dark.svg 200 [0.01, 127.0.0.1:50429][0m
+INFO 2026-05-13 23:50:29,548 runserver 8276 2636 [mHTTP GET /admin/accounts/customuser/3/change/ 200 [0.09, 127.0.0.1:50429][0m
+INFO 2026-05-13 23:50:29,655 runserver 8276 2636 [mHTTP GET /admin/jsi18n/ 200 [0.08, 127.0.0.1:50429][0m
+INFO 2026-05-13 23:51:12,672 autoreload 8276 8804 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\admin.py changed, reloading.
+INFO 2026-05-13 23:51:14,046 autoreload 7152 5448 Watching for file changes with StatReloader
+INFO 2026-05-13 23:51:19,911 runserver 7152 8912 [mHTTP GET /admin/accounts/customuser/3/change/ 200 [0.20, 127.0.0.1:50458][0m
+INFO 2026-05-13 23:51:20,050 runserver 7152 8912 [mHTTP GET /static/admin/js/SelectFilter2.js 200 [0.10, 127.0.0.1:50463][0m
+INFO 2026-05-13 23:51:20,054 runserver 7152 8912 [mHTTP GET /static/admin/js/calendar.js 200 [0.11, 127.0.0.1:50459][0m
+INFO 2026-05-13 23:51:20,056 runserver 7152 8912 [mHTTP GET /static/admin/js/admin/DateTimeShortcuts.js 200 [0.11, 127.0.0.1:50461][0m
+INFO 2026-05-13 23:51:20,059 runserver 7152 8912 [mHTTP GET /static/admin/js/SelectBox.js 200 [0.11, 127.0.0.1:50462][0m
+INFO 2026-05-13 23:51:20,086 runserver 7152 8912 [mHTTP GET /admin/jsi18n/ 200 [0.14, 127.0.0.1:50458][0m
+INFO 2026-05-13 23:51:20,145 runserver 7152 8912 [mHTTP GET /static/admin/img/selector-icons.svg 200 [0.01, 127.0.0.1:50458][0m
+INFO 2026-05-13 23:51:20,147 runserver 7152 8912 [mHTTP GET /static/admin/img/icon-clock.svg 200 [0.01, 127.0.0.1:50461][0m
+INFO 2026-05-13 23:51:20,149 runserver 7152 8912 [mHTTP GET /static/admin/img/icon-calendar.svg 200 [0.01, 127.0.0.1:50462][0m
+INFO 2026-05-13 23:51:22,623 runserver 7152 8912 [mHTTP GET /admin/accounts/customuser/ 200 [0.11, 127.0.0.1:50462][0m
+INFO 2026-05-13 23:51:22,718 runserver 7152 8912 [mHTTP GET /admin/jsi18n/ 200 [0.07, 127.0.0.1:50462][0m
+INFO 2026-05-13 23:51:44,131 autoreload 7152 5448 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\admin.py changed, reloading.
+INFO 2026-05-13 23:51:45,585 autoreload 8244 3856 Watching for file changes with StatReloader
+INFO 2026-05-13 23:51:48,899 autoreload 8244 3856 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\admin.py changed, reloading.
+INFO 2026-05-13 23:51:50,238 autoreload 8360 8404 Watching for file changes with StatReloader
+INFO 2026-05-13 23:51:53,589 autoreload 8360 8404 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\admin.py changed, reloading.
+INFO 2026-05-13 23:51:54,892 autoreload 8412 9092 Watching for file changes with StatReloader
+INFO 2026-05-13 23:52:05,777 autoreload 8412 9092 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\admin.py changed, reloading.
+INFO 2026-05-13 23:52:07,318 autoreload 8408 6128 Watching for file changes with StatReloader
+INFO 2026-05-13 23:52:15,574 autoreload 8408 6128 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\admin.py changed, reloading.
+INFO 2026-05-13 23:52:16,900 autoreload 2076 8720 Watching for file changes with StatReloader
+INFO 2026-05-13 23:52:20,299 autoreload 2076 8720 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\admin.py changed, reloading.
+INFO 2026-05-13 23:52:21,518 autoreload 5364 192 Watching for file changes with StatReloader
+INFO 2026-05-13 23:52:24,272 autoreload 5364 192 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\admin.py changed, reloading.
+INFO 2026-05-13 23:52:25,701 autoreload 9020 2128 Watching for file changes with StatReloader
+INFO 2026-05-13 23:52:26,675 runserver 9020 4796 [mHTTP GET /admin/accounts/customuser/ 200 [0.24, 127.0.0.1:50522][0m
+INFO 2026-05-13 23:52:26,781 runserver 9020 4796 [mHTTP GET /admin/jsi18n/ 200 [0.08, 127.0.0.1:50522][0m
+INFO 2026-05-13 23:52:59,701 runserver 9020 4796 [mHTTP GET /admin/accounts/customuser/3/change/ 200 [0.19, 127.0.0.1:50522][0m
+INFO 2026-05-13 23:52:59,903 runserver 9020 4796 [mHTTP GET /admin/jsi18n/ 200 [0.17, 127.0.0.1:50522][0m
+INFO 2026-05-13 23:53:23,670 runserver 9020 4796 [32mHTTP POST /admin/accounts/customuser/3/change/ 302 [0.10, 127.0.0.1:50522][0m
+INFO 2026-05-13 23:53:23,876 runserver 9020 4796 [mHTTP GET /admin/accounts/customuser/ 200 [0.20, 127.0.0.1:50522][0m
+INFO 2026-05-13 23:53:24,094 runserver 9020 4796 [mHTTP GET /admin/jsi18n/ 200 [0.19, 127.0.0.1:50522][0m
+INFO 2026-05-13 23:53:29,019 runserver 9020 4796 [mHTTP GET /api/groups/my-groups/ 200 [0.11, 127.0.0.1:50522][0m
+INFO 2026-05-13 23:54:46,179 runserver 9020 4796 [mHTTP POST /api/auth/login/ 200 [1.48, 127.0.0.1:50545][0m
+INFO 2026-05-13 23:55:11,364 runserver 9020 4796 [mHTTP GET /api/groups/schedule/ 200 [0.11, 127.0.0.1:50545][0m
+INFO 2026-05-13 23:55:33,846 runserver 9020 4796 [mHTTP GET /api/groups/my/ 200 [0.11, 127.0.0.1:50545][0m
+INFO 2026-05-13 23:56:03,177 runserver 9020 4796 [mHTTP GET /api/groups/today-schedule/ 200 [0.10, 127.0.0.1:50545][0m
+INFO 2026-05-13 23:56:14,159 runserver 9020 4796 [mHTTP GET /api/groups/schedule/ 200 [0.10, 127.0.0.1:50545][0m
+INFO 2026-05-13 23:56:46,347 runserver 9020 4796 [mHTTP GET /api/groups/my/ 200 [0.12, 127.0.0.1:50545][0m
+INFO 2026-05-14 00:08:53,363 autoreload 9020 2128 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\groups\serailizers.py changed, reloading.
+INFO 2026-05-14 00:08:54,754 autoreload 6904 9208 Watching for file changes with StatReloader
+INFO 2026-05-14 00:09:11,250 autoreload 6904 9208 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\groups\serailizers.py changed, reloading.
+INFO 2026-05-14 00:09:12,705 autoreload 136 8540 Watching for file changes with StatReloader
+INFO 2026-05-14 00:09:57,938 runserver 136 7096 [mHTTP GET / 200 [0.04, 127.0.0.1:50720][0m
+INFO 2026-05-14 00:09:58,211 runserver 136 7096 [mHTTP GET /api/schema/ 200 [0.15, 127.0.0.1:50720][0m
+INFO 2026-05-14 00:10:24,240 runserver 136 7096 [mHTTP GET /api/groups/my/ 200 [0.21, 127.0.0.1:50720][0m
+INFO 2026-05-14 00:10:47,197 autoreload 136 8540 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\groups\serailizers.py changed, reloading.
+INFO 2026-05-14 00:10:48,703 autoreload 8376 2564 Watching for file changes with StatReloader
+INFO 2026-05-14 00:10:52,191 autoreload 8376 2564 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\groups\serailizers.py changed, reloading.
+INFO 2026-05-14 00:10:53,606 autoreload 7028 8000 Watching for file changes with StatReloader
+INFO 2026-05-14 00:11:51,584 runserver 7028 8976 [mHTTP GET /api/groups/schedule/ 200 [0.11, 127.0.0.1:50754][0m
+INFO 2026-05-14 00:12:12,193 runserver 7028 8976 [mHTTP GET /api/groups/my/ 200 [0.11, 127.0.0.1:50754][0m
+INFO 2026-05-14 00:13:51,145 runserver 7028 8976 [mHTTP GET / 200 [0.03, 127.0.0.1:50768][0m
+INFO 2026-05-14 00:13:51,452 runserver 7028 8976 [mHTTP GET /api/schema/ 200 [0.16, 127.0.0.1:50768][0m
+WARNING 2026-05-14 00:14:04,217 log 7028 4544 Forbidden: /api/groups/create-admin/
+WARNING 2026-05-14 00:14:04,218 runserver 7028 8976 [31;1mHTTP POST /api/groups/create-admin/ 403 [0.08, 127.0.0.1:50768][0m
+INFO 2026-05-14 00:14:54,127 runserver 7028 8976 [mHTTP POST /api/auth/login/ 200 [1.58, 127.0.0.1:50768][0m
+WARNING 2026-05-14 00:16:12,039 log 7028 4544 Unauthorized: /api/groups/create-admin/
+WARNING 2026-05-14 00:16:12,040 runserver 7028 8976 [31;1mHTTP POST /api/groups/create-admin/ 401 [0.01, 127.0.0.1:50785][0m
+INFO 2026-05-14 00:16:57,701 runserver 7028 8976 [mHTTP POST /api/groups/create-admin/ 201 [0.12, 127.0.0.1:50785][0m
+INFO 2026-05-14 00:17:15,922 runserver 7028 8976 [mHTTP GET /api/groups/list-admin/ 200 [0.08, 127.0.0.1:50785][0m

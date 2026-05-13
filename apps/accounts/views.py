@@ -132,14 +132,17 @@ class MyProfileLogoutView(APIView):
 )
 
 class ProfileDelete(DestroyAPIView):
+    queryset = User.objects.all()
     serializer_class = ProfileSerealizers
     permission_classes = [IsAuthenticated , IsAdmin]
+    lookup_field = 'id'
     
     def delete(self, request, *args, **kwargs):
-        user=self.request.user
-        user.delete()
-
-        return Response({"result":"user delete"})
+        instance = self.get_object()
+        user_id = instance.id
+        
+        self.perform_destroy(instance)
+        return Response({"result": f"User with id {user_id} deleted successfully"},status=status.HTTP_204_NO_CONTENT)
 
 @extend_schema(
     tags=["I forgot my password."],

@@ -210,7 +210,7 @@ class TodayScheduleView(ListAPIView):
     parameters=[
         OpenApiParameter(
             name='date',
-            type=OpenApiTypes.DATE,          # ← frontend date-picker bilan mos: YYYY-MM-DD
+            type=OpenApiTypes.DATE,          
             location=OpenApiParameter.QUERY,
             required=False,
             description='Sana formati: YYYY-MM-DD  (masalan: 2026-05-13)',

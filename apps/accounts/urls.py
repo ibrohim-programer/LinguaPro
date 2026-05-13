@@ -17,6 +17,6 @@ urlpatterns = [
     # IS_Admin
     path('register/',RegisterView.as_view(),name='register'),
     path('user-list/' , UserListAdminView.as_view() , name='user-list'),
-    path("profile-delete/" , ProfileDelete.as_view() ,name='profile-delete'),
+    path("profile-delete/<int:id>/" , ProfileDelete.as_view() ,name='profile-delete'),
     
 ]
