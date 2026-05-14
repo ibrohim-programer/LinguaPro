@@ -2097,3 +2097,60 @@ WARNING 2026-05-14 00:16:12,039 log 7028 4544 Unauthorized: /api/groups/create-a
 WARNING 2026-05-14 00:16:12,040 runserver 7028 8976 [31;1mHTTP POST /api/groups/create-admin/ 401 [0.01, 127.0.0.1:50785][0m
 INFO 2026-05-14 00:16:57,701 runserver 7028 8976 [mHTTP POST /api/groups/create-admin/ 201 [0.12, 127.0.0.1:50785][0m
 INFO 2026-05-14 00:17:15,922 runserver 7028 8976 [mHTTP GET /api/groups/list-admin/ 200 [0.08, 127.0.0.1:50785][0m
+INFO 2026-05-14 17:06:44,107 autoreload 7256 10888 Watching for file changes with StatReloader
+INFO 2026-05-14 17:06:48,781 runserver 7256 2536 [mHTTP GET / 200 [0.07, 127.0.0.1:62057][0m
+INFO 2026-05-14 17:06:48,844 runserver 7256 2536 [mHTTP GET / 200 [0.05, 127.0.0.1:62056][0m
+INFO 2026-05-14 17:06:49,332 runserver 7256 2536 [mHTTP GET /api/schema/ 200 [0.21, 127.0.0.1:62059][0m
+INFO 2026-05-14 17:06:49,514 runserver 7256 2536 [mHTTP GET /api/schema/ 200 [0.17, 127.0.0.1:62060][0m
+INFO 2026-05-14 17:11:48,485 autoreload 7256 10888 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\groups\views.py changed, reloading.
+INFO 2026-05-14 17:11:50,364 autoreload 968 1848 Watching for file changes with StatReloader
+INFO 2026-05-14 17:12:03,855 autoreload 968 1848 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\groups\views.py changed, reloading.
+INFO 2026-05-14 17:12:05,308 autoreload 10636 10652 Watching for file changes with StatReloader
+INFO 2026-05-14 17:12:07,809 autoreload 10636 10652 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\groups\views.py changed, reloading.
+INFO 2026-05-14 17:12:09,245 autoreload 10500 544 Watching for file changes with StatReloader
+INFO 2026-05-14 17:12:11,907 autoreload 10500 544 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\groups\views.py changed, reloading.
+INFO 2026-05-14 17:12:13,244 autoreload 2012 10556 Watching for file changes with StatReloader
+INFO 2026-05-14 17:12:17,825 autoreload 2012 10556 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\groups\views.py changed, reloading.
+INFO 2026-05-14 17:12:19,428 autoreload 4856 2272 Watching for file changes with StatReloader
+INFO 2026-05-14 17:12:51,949 autoreload 4856 2272 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\groups\views.py changed, reloading.
+INFO 2026-05-14 17:12:53,872 autoreload 8912 4828 Watching for file changes with StatReloader
+INFO 2026-05-14 17:12:56,332 autoreload 8912 4828 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\groups\views.py changed, reloading.
+INFO 2026-05-14 17:12:57,705 autoreload 9584 3828 Watching for file changes with StatReloader
+INFO 2026-05-14 17:13:01,137 autoreload 9584 3828 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\groups\views.py changed, reloading.
+INFO 2026-05-14 17:13:02,626 autoreload 9680 6308 Watching for file changes with StatReloader
+INFO 2026-05-14 17:13:09,562 autoreload 9680 6308 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\groups\views.py changed, reloading.
+INFO 2026-05-14 17:13:10,880 autoreload 4324 8388 Watching for file changes with StatReloader
+INFO 2026-05-14 17:13:28,623 autoreload 4324 8388 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\groups\views.py changed, reloading.
+INFO 2026-05-14 17:13:31,185 autoreload 5060 448 Watching for file changes with StatReloader
+INFO 2026-05-14 17:13:57,861 autoreload 5060 448 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\groups\views.py changed, reloading.
+INFO 2026-05-14 17:13:59,429 autoreload 5168 2072 Watching for file changes with StatReloader
+INFO 2026-05-14 17:14:03,828 autoreload 5168 2072 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\groups\views.py changed, reloading.
+INFO 2026-05-14 17:14:05,500 autoreload 5268 9460 Watching for file changes with StatReloader
+INFO 2026-05-14 17:14:08,937 autoreload 5268 9460 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\groups\views.py changed, reloading.
+INFO 2026-05-14 17:14:10,427 autoreload 1252 9032 Watching for file changes with StatReloader
+INFO 2026-05-14 17:14:13,788 autoreload 1252 9032 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\groups\views.py changed, reloading.
+INFO 2026-05-14 17:14:15,244 autoreload 8208 10620 Watching for file changes with StatReloader
+INFO 2026-05-14 17:14:32,079 autoreload 8208 10620 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\groups\views.py changed, reloading.
+INFO 2026-05-14 17:14:33,407 autoreload 9272 9100 Watching for file changes with StatReloader
+INFO 2026-05-14 17:14:50,063 autoreload 9272 9100 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\groups\views.py changed, reloading.
+INFO 2026-05-14 17:14:51,785 autoreload 4700 5468 Watching for file changes with StatReloader
+INFO 2026-05-14 17:14:54,036 autoreload 4700 5468 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\groups\views.py changed, reloading.
+INFO 2026-05-14 17:14:55,302 autoreload 8072 6028 Watching for file changes with StatReloader
+INFO 2026-05-14 17:15:00,729 autoreload 8072 6028 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\groups\views.py changed, reloading.
+INFO 2026-05-14 17:15:02,166 autoreload 11112 8992 Watching for file changes with StatReloader
+INFO 2026-05-14 17:15:15,471 autoreload 11112 8992 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\groups\urls.py changed, reloading.
+INFO 2026-05-14 17:15:17,080 autoreload 1356 488 Watching for file changes with StatReloader
+INFO 2026-05-14 17:15:19,536 autoreload 1356 488 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\groups\urls.py changed, reloading.
+INFO 2026-05-14 17:15:21,125 autoreload 4840 4396 Watching for file changes with StatReloader
+INFO 2026-05-14 17:15:24,887 autoreload 4840 4396 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\groups\urls.py changed, reloading.
+INFO 2026-05-14 17:15:26,440 autoreload 2260 4672 Watching for file changes with StatReloader
+INFO 2026-05-14 17:15:30,856 autoreload 2260 4672 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\groups\urls.py changed, reloading.
+INFO 2026-05-14 17:15:32,608 autoreload 4128 9700 Watching for file changes with StatReloader
+INFO 2026-05-14 17:15:36,110 autoreload 4128 9700 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\groups\urls.py changed, reloading.
+INFO 2026-05-14 17:15:37,642 autoreload 3404 8008 Watching for file changes with StatReloader
+INFO 2026-05-14 17:15:41,031 autoreload 3404 8008 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\groups\urls.py changed, reloading.
+INFO 2026-05-14 17:15:42,455 autoreload 9272 9256 Watching for file changes with StatReloader
+INFO 2026-05-14 17:15:46,385 runserver 9272 7420 [mHTTP GET / 200 [0.03, 127.0.0.1:62308][0m
+INFO 2026-05-14 17:15:46,785 runserver 9272 7420 [mHTTP GET /api/schema/ 200 [0.15, 127.0.0.1:62308][0m
+INFO 2026-05-14 17:16:15,098 runserver 9272 7420 [mHTTP POST /api/auth/login/ 200 [1.61, 127.0.0.1:62308][0m
+INFO 2026-05-14 17:16:35,596 runserver 9272 7420 [mHTTP GET /api/groups/teachers-list/ 200 [0.21, 127.0.0.1:62308][0m

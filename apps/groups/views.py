@@ -147,6 +147,17 @@ class StudentListView(ListAPIView):
 
     def get_queryset(self):
         return User.objects.filter(role="student")
+    
+@extend_schema(
+    tags=['Group - Admin - Teacher'],
+    summary="Teacherlarni Ruyxati - Admin uchun",
+)
+class TeacherListView(ListAPIView):
+    serializer_class = AvailableStudentsSerializer
+    permission_classes = [IsAdmin]
+
+    def get_queryset(self):
+        return User.objects.filter(role="teacher")
 
 
 @extend_schema(
