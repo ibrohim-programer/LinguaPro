@@ -2,21 +2,21 @@ from rest_framework.generics import ListAPIView, CreateAPIView, RetrieveUpdateDe
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework import serializers as rf_serializers
-from drf_spectacular.utils import extend_schema, inline_serializer, OpenApiParameter  # ← OpenApiParameter qo'shildi
-from drf_spectacular.types import OpenApiTypes                                         # ← OpenApiTypes qo'shildi
+from drf_spectacular.utils import extend_schema, inline_serializer, OpenApiParameter  
+from drf_spectacular.types import OpenApiTypes                                         
 
 from django.contrib.auth import get_user_model
 from django.utils import timezone
-from apps.common.permissions import IsAdmin, IsAdminOrTeacher
+from apps.common.permissions import IsAdmin, IsAdminOrTeacher , IsStudent ,IsTeacher
 from .models import Group, GroupStudent
-from .serailizers import GroupSerializer, AddStudentSerializer, MyGroupSerializer, AvailableStudentsSerializer, TodayScheduleSerializer, StudentMyGroupSerializer
+from .serailizers import GroupSerializer, AddStudentSerializer, MyGroupSerializer, AvailableStudentsSerializer, TodayScheduleSerializer, StudentMyGroupSerializer , StudentScheduleSerializer
 User = get_user_model()
 
 
 @extend_schema(tags=['Group - Crud'], summary='Admin gruppalar ruyxatini kura oldi')
 class GroupListIsAdmin(ListAPIView):
     queryset = Group.objects.all()
-    permission_classes = [IsAdmin]
+    permission_classes = [IsAuthenticated ,IsAdmin]
     serializer_class = GroupSerializer
 
 
@@ -30,7 +30,7 @@ class GroupCreateIsAdmin(CreateAPIView):
 @extend_schema(tags=['Group - Crud'], summary='Admin gruppalarni yangilashi va uchiradi')
 class GroupUpdateDeleteIsAdmin(RetrieveUpdateDestroyAPIView):
     queryset = Group.objects.all()
-    permission_classes = [IsAdmin]
+    permission_classes = [IsAuthenticated,IsAdmin]
     serializer_class = GroupSerializer
     http_method_names = ['put', 'delete']
 
@@ -46,7 +46,7 @@ class GroupUpdateDeleteIsAdmin(RetrieveUpdateDestroyAPIView):
 )
 class MyGroupsView(ListAPIView):
     serializer_class = MyGroupSerializer
-    permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated , IsAdminOrTeacher]
 
     def get_queryset(self):
         if getattr(self, 'swagger_fake_view', False):   
@@ -77,7 +77,7 @@ class MyGroupsView(ListAPIView):
 class AddStudentView(GenericAPIView):
     queryset = Group.objects.all()
     serializer_class = AddStudentSerializer
-    permission_classes = [IsAdminOrTeacher]
+    permission_classes = [IsAuthenticated ,IsAdminOrTeacher]
 
     def post(self, request, pk=None):
         group = self.get_object()
@@ -129,7 +129,7 @@ class RemoveStudentView(GenericAPIView):
 )
 class AvailableStudentsView(ListAPIView):
     serializer_class = AvailableStudentsSerializer  
-    permission_classes = [IsAdminOrTeacher]
+    permission_classes = [IsAuthenticated ,IsAdminOrTeacher]
 
     def get_queryset(self):
         group_id = self.kwargs['pk']
@@ -143,7 +143,7 @@ class AvailableStudentsView(ListAPIView):
 )
 class StudentListView(ListAPIView):
     serializer_class = AvailableStudentsSerializer
-    permission_classes = [IsAdminOrTeacher]
+    permission_classes = [IsAuthenticated,IsAdminOrTeacher]
 
     def get_queryset(self):
         return User.objects.filter(role="student")
@@ -154,7 +154,7 @@ class StudentListView(ListAPIView):
 )
 class TeacherListView(ListAPIView):
     serializer_class = AvailableStudentsSerializer
-    permission_classes = [IsAdmin]
+    permission_classes = [IsAuthenticated ,IsAdmin]
 
     def get_queryset(self):
         return User.objects.filter(role="teacher")
@@ -173,7 +173,7 @@ class TeacherListView(ListAPIView):
 )
 class TodayScheduleView(ListAPIView):
     serializer_class = TodayScheduleSerializer
-    permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated , IsTeacher]
 
     def get_queryset(self):
         if getattr(self, 'swagger_fake_view', False):
@@ -230,7 +230,7 @@ class TodayScheduleView(ListAPIView):
 )
 class ScheduleByDateView(ListAPIView):
     serializer_class = TodayScheduleSerializer
-    permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated , IsTeacher]
 
     def _get_target_date(self):
         import datetime
@@ -302,7 +302,7 @@ class ScheduleByDateView(ListAPIView):
 )
 class StudentMyGroupsView(ListAPIView):
     serializer_class = StudentMyGroupSerializer
-    permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated , IsStudent]
 
     def get_queryset(self):
         if getattr(self, 'swagger_fake_view', False):
@@ -323,3 +323,65 @@ class StudentMyGroupsView(ListAPIView):
                 status=403
             )
         return super().list(request, *args, **kwargs)
+    
+    
+    
+
+# ===================== YANGI: Student Dars Jadvali =====================
+ 
+@extend_schema(
+    tags=['Group - Student Dashboard'],
+    summary="Student o'z dars jadvalini ko'radi",
+    description="""
+    Faqat **Student** role uchun.
+ 
+    Student o'zi a'zo bo'lgan barcha guruhlarning dars jadvalini
+    quyidagi formatda ko'radi:
+ 
+    ```
+    Kurs nomi - Guruh nomi          08:00 - 10:00
+        - Toq kunlar
+            - Dushanba, Chorshanba, Juma
+    ```
+ 
+    Qaytariladigan maydonlar:
+    - **title** → `"Kurs nomi - Guruh nomi"`
+    - **time** → `"08:00 - 10:00"`
+    - **week_days_type** → `"Toq kunlar"` / `"Juft kunlar"` / `"Har kuni"` / `"Maxsus"`
+    - **week_days_names** → `["Dushanba", "Chorshanba", "Juma"]`
+    - **status**, **start_date**, **end_date**
+    """,
+    responses={
+        403: inline_serializer('ScheduleStudentOnlyError', fields={'detail': rf_serializers.CharField()}),
+    },
+)
+class StudentScheduleView(ListAPIView):
+    serializer_class = StudentScheduleSerializer
+    permission_classes = [IsAuthenticated , IsStudent]
+ 
+    def get_queryset(self):
+        if getattr(self, 'swagger_fake_view', False):
+            return Group.objects.none()
+ 
+        user = self.request.user
+        if user.role != 'student':
+            return Group.objects.none()
+ 
+        return (
+            Group.objects
+            .filter(group_students__student=user)
+            .select_related('course')          # course.name uchun JOIN
+            .prefetch_related('group_students') # student_count uchun
+            .order_by('start_time')            # Vaqt bo'yicha tartib
+        )
+ 
+    def list(self, request, *args, **kwargs):
+        if request.user.role != 'student':
+            return Response(
+                {'detail': 'Bu endpoint faqat studentlar uchun.'},
+                status=403,
+            )
+        return super().list(request, *args, **kwargs)
+ 
+# ======================================================================
+ 

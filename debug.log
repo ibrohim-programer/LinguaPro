@@ -2154,3 +2154,87 @@ INFO 2026-05-14 17:15:46,385 runserver 9272 7420 [mHTTP GET / 200 [0.03, 127.0.
 INFO 2026-05-14 17:15:46,785 runserver 9272 7420 [mHTTP GET /api/schema/ 200 [0.15, 127.0.0.1:62308][0m
 INFO 2026-05-14 17:16:15,098 runserver 9272 7420 [mHTTP POST /api/auth/login/ 200 [1.61, 127.0.0.1:62308][0m
 INFO 2026-05-14 17:16:35,596 runserver 9272 7420 [mHTTP GET /api/groups/teachers-list/ 200 [0.21, 127.0.0.1:62308][0m
+INFO 2026-05-15 10:20:52,755 autoreload 9672 8980 Watching for file changes with StatReloader
+INFO 2026-05-15 10:20:55,482 runserver 9672 8844 [mHTTP GET / 200 [0.05, 127.0.0.1:50148][0m
+INFO 2026-05-15 10:20:55,866 runserver 9672 8844 [mHTTP GET /api/schema/ 200 [0.19, 127.0.0.1:50148][0m
+WARNING 2026-05-15 10:21:07,473 log 9672 4772 Unauthorized: /api/groups/my-schedule/
+WARNING 2026-05-15 10:21:07,474 runserver 9672 8844 [31;1mHTTP GET /api/groups/my-schedule/ 401 [0.02, 127.0.0.1:50148][0m
+WARNING 2026-05-15 10:21:31,977 log 9672 4772 Bad Request: /api/auth/login/
+WARNING 2026-05-15 10:21:31,978 runserver 9672 8844 [31;1mHTTP POST /api/auth/login/ 400 [1.47, 127.0.0.1:50148][0m
+WARNING 2026-05-15 10:21:39,414 log 9672 4772 Bad Request: /api/auth/login/
+WARNING 2026-05-15 10:21:39,415 runserver 9672 8844 [31;1mHTTP POST /api/auth/login/ 400 [1.40, 127.0.0.1:50148][0m
+WARNING 2026-05-15 10:21:46,070 log 9672 4772 Bad Request: /api/auth/login/
+WARNING 2026-05-15 10:21:46,071 runserver 9672 8844 [31;1mHTTP POST /api/auth/login/ 400 [1.42, 127.0.0.1:50148][0m
+WARNING 2026-05-15 10:22:02,844 log 9672 4772 Bad Request: /api/auth/login/
+WARNING 2026-05-15 10:22:02,845 runserver 9672 8844 [31;1mHTTP POST /api/auth/login/ 400 [1.45, 127.0.0.1:50148][0m
+WARNING 2026-05-15 10:22:09,959 log 9672 4772 Bad Request: /api/auth/login/
+WARNING 2026-05-15 10:22:09,961 runserver 9672 8844 [31;1mHTTP POST /api/auth/login/ 400 [1.45, 127.0.0.1:50148][0m
+INFO 2026-05-15 10:22:16,131 runserver 9672 8844 [mHTTP POST /api/auth/login/ 200 [1.46, 127.0.0.1:50148][0m
+INFO 2026-05-15 10:22:39,557 runserver 9672 8844 [mHTTP GET /api/groups/my-schedule/ 200 [0.13, 127.0.0.1:50148][0m
+INFO 2026-05-15 10:23:33,854 runserver 9672 8844 [mHTTP POST /api/auth/login/ 200 [1.48, 127.0.0.1:50148][0m
+WARNING 2026-05-15 10:24:39,099 log 9672 4772 Forbidden: /api/groups/create-admin/
+WARNING 2026-05-15 10:24:39,099 runserver 9672 8844 [31;1mHTTP POST /api/groups/create-admin/ 403 [0.10, 127.0.0.1:50198][0m
+INFO 2026-05-15 10:24:53,458 runserver 9672 8844 [mHTTP POST /api/groups/create-admin/ 201 [0.12, 127.0.0.1:50198][0m
+INFO 2026-05-15 10:25:17,555 runserver 9672 8844 [mHTTP POST /api/groups/8/add-student/ 201 [0.09, 127.0.0.1:50198][0m
+INFO 2026-05-15 10:25:52,758 runserver 9672 8844 [mHTTP GET /api/groups/today-schedule/ 200 [0.12, 127.0.0.1:50198][0m
+INFO 2026-05-15 10:25:59,036 runserver 9672 8844 [mHTTP GET /api/groups/today-schedule/ 200 [0.12, 127.0.0.1:50198][0m
+INFO 2026-05-15 10:26:23,210 runserver 9672 8844 [mHTTP GET /api/groups/my-schedule/ 200 [0.08, 127.0.0.1:50198][0m
+INFO 2026-05-15 10:26:45,158 runserver 9672 8844 [mHTTP GET /api/groups/today-schedule/ 200 [0.13, 127.0.0.1:50198][0m
+INFO 2026-05-15 10:27:09,572 autoreload 9672 8980 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\groups\views.py changed, reloading.
+INFO 2026-05-15 10:27:10,926 autoreload 8592 8276 Watching for file changes with StatReloader
+INFO 2026-05-15 10:27:15,116 autoreload 8592 8276 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\groups\views.py changed, reloading.
+INFO 2026-05-15 10:27:16,501 autoreload 1108 9888 Watching for file changes with StatReloader
+INFO 2026-05-15 10:27:40,685 autoreload 1108 9888 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\groups\views.py changed, reloading.
+INFO 2026-05-15 10:27:41,984 autoreload 4120 4320 Watching for file changes with StatReloader
+INFO 2026-05-15 10:27:47,277 autoreload 4120 4320 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\groups\views.py changed, reloading.
+INFO 2026-05-15 10:27:48,707 autoreload 404 6488 Watching for file changes with StatReloader
+INFO 2026-05-15 10:28:01,938 autoreload 404 6488 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\groups\views.py changed, reloading.
+INFO 2026-05-15 10:28:03,239 autoreload 8564 9712 Watching for file changes with StatReloader
+INFO 2026-05-15 10:28:07,570 autoreload 8564 9712 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\groups\views.py changed, reloading.
+INFO 2026-05-15 10:28:08,931 autoreload 3592 8920 Watching for file changes with StatReloader
+INFO 2026-05-15 10:28:13,226 autoreload 3592 8920 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\groups\views.py changed, reloading.
+INFO 2026-05-15 10:28:14,776 autoreload 9016 8484 Watching for file changes with StatReloader
+INFO 2026-05-15 10:29:04,660 autoreload 9016 8484 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\groups\views.py changed, reloading.
+INFO 2026-05-15 10:29:06,152 autoreload 1400 5008 Watching for file changes with StatReloader
+INFO 2026-05-15 10:29:11,801 autoreload 1400 5008 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\groups\views.py changed, reloading.
+INFO 2026-05-15 10:29:13,394 autoreload 6776 9976 Watching for file changes with StatReloader
+INFO 2026-05-15 10:29:15,361 autoreload 6776 9976 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\groups\views.py changed, reloading.
+INFO 2026-05-15 10:29:16,777 autoreload 2992 7916 Watching for file changes with StatReloader
+INFO 2026-05-15 10:29:18,853 autoreload 2992 7916 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\groups\views.py changed, reloading.
+INFO 2026-05-15 10:29:20,446 autoreload 404 2240 Watching for file changes with StatReloader
+INFO 2026-05-15 10:29:22,580 autoreload 404 2240 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\groups\views.py changed, reloading.
+INFO 2026-05-15 10:29:23,911 autoreload 9276 7492 Watching for file changes with StatReloader
+INFO 2026-05-15 10:29:52,624 autoreload 9276 7492 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\groups\views.py changed, reloading.
+INFO 2026-05-15 10:29:54,103 autoreload 3704 6656 Watching for file changes with StatReloader
+INFO 2026-05-15 10:30:09,514 autoreload 3704 6656 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\groups\views.py changed, reloading.
+INFO 2026-05-15 10:30:11,170 autoreload 7964 3868 Watching for file changes with StatReloader
+INFO 2026-05-15 10:30:23,463 autoreload 7964 3868 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\groups\views.py changed, reloading.
+INFO 2026-05-15 10:30:25,092 autoreload 3576 9644 Watching for file changes with StatReloader
+INFO 2026-05-15 10:30:31,958 autoreload 3576 9644 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\groups\views.py changed, reloading.
+INFO 2026-05-15 10:30:33,315 autoreload 7872 4724 Watching for file changes with StatReloader
+INFO 2026-05-15 10:30:36,485 autoreload 7872 4724 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\groups\views.py changed, reloading.
+INFO 2026-05-15 10:30:37,857 autoreload 528 9400 Watching for file changes with StatReloader
+INFO 2026-05-15 10:30:47,807 autoreload 528 9400 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\groups\views.py changed, reloading.
+INFO 2026-05-15 10:30:49,358 autoreload 5124 8916 Watching for file changes with StatReloader
+INFO 2026-05-15 10:31:05,009 autoreload 5124 8916 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\groups\views.py changed, reloading.
+INFO 2026-05-15 10:31:06,455 autoreload 3900 5376 Watching for file changes with StatReloader
+INFO 2026-05-15 10:31:10,755 autoreload 3900 5376 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\groups\views.py changed, reloading.
+INFO 2026-05-15 10:31:12,182 autoreload 3396 7324 Watching for file changes with StatReloader
+INFO 2026-05-15 10:31:16,533 autoreload 3396 7324 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\groups\views.py changed, reloading.
+INFO 2026-05-15 10:31:17,988 autoreload 7056 5568 Watching for file changes with StatReloader
+INFO 2026-05-15 10:31:28,841 autoreload 7056 5568 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\groups\views.py changed, reloading.
+INFO 2026-05-15 10:31:30,442 autoreload 4208 8256 Watching for file changes with StatReloader
+INFO 2026-05-15 10:31:37,051 autoreload 4208 8256 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\groups\views.py changed, reloading.
+INFO 2026-05-15 10:31:38,382 autoreload 9896 1848 Watching for file changes with StatReloader
+INFO 2026-05-15 10:31:40,530 autoreload 9896 1848 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\groups\views.py changed, reloading.
+INFO 2026-05-15 10:31:41,969 autoreload 8308 8360 Watching for file changes with StatReloader
+INFO 2026-05-15 10:31:56,300 autoreload 8308 8360 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\groups\views.py changed, reloading.
+INFO 2026-05-15 10:31:57,908 autoreload 8528 7324 Watching for file changes with StatReloader
+INFO 2026-05-15 10:32:04,606 autoreload 8528 7324 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\groups\views.py changed, reloading.
+INFO 2026-05-15 10:32:06,090 autoreload 5540 10140 Watching for file changes with StatReloader
+INFO 2026-05-15 10:32:08,224 autoreload 5540 10140 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\groups\views.py changed, reloading.
+INFO 2026-05-15 10:32:09,573 autoreload 9480 9164 Watching for file changes with StatReloader
+INFO 2026-05-15 10:32:15,065 autoreload 9480 9164 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\groups\views.py changed, reloading.
+INFO 2026-05-15 10:32:16,592 autoreload 4472 8572 Watching for file changes with StatReloader
+WARNING 2026-05-15 10:32:24,325 log 4472 440 Forbidden: /api/groups/today-schedule/
+WARNING 2026-05-15 10:32:24,326 runserver 4472 9780 [31;1mHTTP GET /api/groups/today-schedule/ 403 [0.10, 127.0.0.1:50485][0m

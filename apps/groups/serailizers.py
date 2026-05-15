@@ -17,7 +17,13 @@ WEEK_DAYS_NAMES = {
     3: "Payshanba", 4: "Juma", 5: "Shanba"
 }
 
-from rest_framework import serializers
+# Hafta kunlari turini aniqlash uchun teskari map
+WEEK_DAYS_TYPE_LABELS = {
+    (0, 2, 4): 'Toq kunlar',
+    (1, 3, 5): 'Juft kunlar',
+    (0, 1, 2, 3, 4, 5): 'Har kuni',
+}
+
 
 class GroupSerializer(serializers.ModelSerializer):
     teacher = serializers.PrimaryKeyRelatedField(queryset=User.objects.filter(role='teacher'))
@@ -42,45 +48,38 @@ class GroupSerializer(serializers.ModelSerializer):
             'week_days_display', # Read-only (Nomlar: "Dushanba, Chorshanba...")
             'status', 'start_date', 'end_date', 'created_at',
         ]
-        # week_days ni serializer darajasida read_only qilamiz
         extra_kwargs = {
             'week_days': {'read_only': True}
         }
 
     def validate(self, attrs):
-        # week_days_type dan qiymatni olib week_days ga o'zlashtiramiz
         week_type = attrs.pop('week_days_type', None)
         if week_type in WEEK_DAYS_MAP:
             attrs['week_days'] = WEEK_DAYS_MAP[week_type]
         return super().validate(attrs)
 
     def get_week_days_display(self, obj):
-        # Listdagi raqamlarni nomlarga aylantiradi: [0, 2, 4] -> "Dushanba, Chorshanba, Juma"
         if not obj.week_days:
             return ""
-        
         days_list = sorted(obj.week_days)
         return ", ".join([WEEK_DAYS_NAMES.get(day, "") for day in days_list])
     
-class GroupStudentSerializer(serializers.ModelSerializer):
-    class Meta:
-        model  = GroupStudent
-        fields = ['id', 'student', 'joined_at']
-        
+    
 class AddStudentSerializer(serializers.Serializer):
     username = serializers.CharField()
     
     def validate_username(self , value):
         try:
-            user = User.objects.get(username = value , role = 'student')
+            user = User.objects.get(username=value, role='student')
         except User.DoesNotExist:
             raise serializers.ValidationError("Bunday student topilmadi!")
         return value
 
+
 # Student ma'lumotlarini chiqaruvchi serializer
 class StudentInfoSerializer(serializers.ModelSerializer):
     class Meta:
-        model = User  # yoki Student model
+        model = User
         fields = ['id', 'username', 'full_name']
 
 
@@ -91,19 +90,22 @@ class GroupStudentSerializer(serializers.ModelSerializer):
 
     class Meta:
         model  = GroupStudent
-        fields = ['id', 'student', 'username', 'full_name', 'joined_at']    
+        fields = ['id', 'student', 'username', 'full_name', 'joined_at']
+
+
 class MyGroupSerializer(serializers.ModelSerializer):
-    students = GroupStudentSerializer( source = 'group_students' , many = True , read_only = True)
+    students = GroupStudentSerializer(source='group_students', many=True, read_only=True)
+
     class Meta:
         model  = Group
-        fields = ['id', 'name', 'course', 'teacher', 'status', 'week_days','start_date','start_time','end_time', 'students', ]
-  
-    
+        fields = ['id', 'name', 'course', 'teacher', 'status', 'week_days',
+                  'start_date', 'start_time', 'end_time', 'students']
+
         
 class AvailableStudentsSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ['id' , 'username',"full_name","phone","avatar","learning_goal"]
+        fields = ['id', 'username', 'full_name', 'phone', 'avatar', 'learning_goal']
 
 
 WEEKDAY_NAMES = {
@@ -135,7 +137,6 @@ class TodayScheduleSerializer(serializers.ModelSerializer):
         if mode == 'future':
             return 'upcoming'
 
-        # today — haqiqiy vaqt bilan taqqoslaymiz
         now = self.context.get('now')
         if now is None:
             return 'upcoming'
@@ -148,13 +149,14 @@ class TodayScheduleSerializer(serializers.ModelSerializer):
         elif start <= now <= end:
             return 'ongoing'
         else:
-            return 'completed'  
+            return 'completed'
+
 
 class StudentMyGroupSerializer(serializers.ModelSerializer):
     """Student o'z guruhini ko'radi — boshqa studentlar ko'rsatilmaydi"""
-    course_name    = serializers.CharField(source='course.name', read_only=True)
-    teacher_name   = serializers.CharField(source='teacher.full_name', read_only=True)
-    student_count  = serializers.SerializerMethodField()
+    course_name     = serializers.CharField(source='course.name', read_only=True)
+    teacher_name    = serializers.CharField(source='teacher.full_name', read_only=True)
+    student_count   = serializers.SerializerMethodField()
     week_days_label = serializers.SerializerMethodField()
 
     class Meta:
@@ -179,3 +181,60 @@ class StudentMyGroupSerializer(serializers.ModelSerializer):
             (0, 1, 2, 3, 4, 5, 6): 'Har kuni',
         }
         return labels.get(tuple(days), 'Maxsus')
+
+
+# ===================== YANGI: Student Dars Jadvali =====================
+
+class StudentScheduleSerializer(serializers.ModelSerializer):
+    """
+    Student dars jadvalini quyidagi formatda chiqaradi:
+
+        title      : "Kurs nomi - Guruh nomi"
+        time       : "08:00 - 10:00"
+        week_days_type  : "Toq kunlar"  /  "Juft kunlar"  /  "Har kuni"  /  "Maxsus"
+        week_days_names : ["Dushanba", "Chorshanba", "Juma"]
+    """
+    # "Python kursi - A-guruh"  ko'rinishidagi sarlavha
+    title = serializers.SerializerMethodField()
+
+    # "08:00 - 10:00"  ko'rinishidagi vaqt
+    time = serializers.SerializerMethodField()
+
+    # "Toq kunlar" / "Juft kunlar" / "Har kuni" / "Maxsus"
+    week_days_type = serializers.SerializerMethodField()
+
+    # ["Dushanba", "Chorshanba", "Juma"]
+    week_days_names = serializers.SerializerMethodField()
+
+    class Meta:
+        model  = Group
+        fields = [
+            'id',
+            'title',           # "Kurs nomi - Guruh nomi"
+            'time',            # "08:00 - 10:00"
+            'week_days_type',  # "Toq kunlar"
+            'week_days_names', # ["Dushanba", "Chorshanba", "Juma"]
+            'status',
+            'start_date',
+            'end_date',
+        ]
+
+    def get_title(self, obj):
+        course_name = obj.course.name if obj.course else 'Kurs nomi yo\'q'
+        return f"{course_name} - {obj.name}"
+
+    def get_time(self, obj):
+        # TimeField -> "HH:MM" formatiga o'giramiz
+        start = obj.start_time.strftime('%H:%M') if obj.start_time else '--:--'
+        end   = obj.end_time.strftime('%H:%M')   if obj.end_time   else '--:--'
+        return f"{start} - {end}"
+
+    def get_week_days_type(self, obj):
+        days = tuple(sorted(obj.week_days or []))
+        return WEEK_DAYS_TYPE_LABELS.get(days, 'Maxsus')
+
+    def get_week_days_names(self, obj):
+        days = sorted(obj.week_days or [])
+        return [WEEK_DAYS_NAMES.get(d, '') for d in days]
+
+# ======================================================================

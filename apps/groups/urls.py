@@ -22,6 +22,9 @@ urlpatterns = [
 
     # Student Dashboard - O'z guruhlari
     path('my-groups/', StudentMyGroupsView.as_view(), name='student-my-groups'),
+    
+     # Yangi: Student dars jadvali  →  GET /groups/my-schedule/
+    path('my-schedule/',     StudentScheduleView.as_view(), name='student-schedule'),
 ]
 
 
