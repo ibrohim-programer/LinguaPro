@@ -2,7 +2,24 @@ from channels.layers import get_channel_layer
 from asgiref.sync import async_to_sync
 from .models import Notification, BroadcastNotification
 from django.contrib.auth import get_user_model
+
 User = get_user_model()
+
+MAX_NOTIFICATIONS = 30  # Har bir foydalanuvchi uchun maksimum xabar soni
+
+
+def _trim_old_notifications(user):
+    """
+    Foydalanuvchining xabarlari 30 dan oshsa,
+    eng eski xabarlarni o'chirib, faqat yangi 30 tasini qoldiradi.
+    """
+    qs = Notification.objects.filter(recipient=user).order_by('-created_at')
+    if qs.count() > MAX_NOTIFICATIONS:
+        keep_ids = list(qs.values_list('id', flat=True)[:MAX_NOTIFICATIONS])
+        Notification.objects.filter(recipient=user).exclude(
+            id__in=keep_ids
+        ).delete()
+
 
 def get_target_users(target_role: str):
     if target_role == BroadcastNotification.TargetRole.ALL:
@@ -24,6 +41,10 @@ def send_broadcast(broadcast: BroadcastNotification):
         for user in users
     ]
     Notification.objects.bulk_create(notifications)
+
+    # Har bir foydalanuvchi uchun 30 dan oshgan eski xabarlarni o'chir
+    for user in users:
+        _trim_old_notifications(user)
 
     payload = {
         'type'        : 'send_notification',

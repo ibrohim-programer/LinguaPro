@@ -2238,3 +2238,68 @@ INFO 2026-05-15 10:32:15,065 autoreload 9480 9164 C:\Users\user\Documents\Loyxal
 INFO 2026-05-15 10:32:16,592 autoreload 4472 8572 Watching for file changes with StatReloader
 WARNING 2026-05-15 10:32:24,325 log 4472 440 Forbidden: /api/groups/today-schedule/
 WARNING 2026-05-15 10:32:24,326 runserver 4472 9780 [31;1mHTTP GET /api/groups/today-schedule/ 403 [0.10, 127.0.0.1:50485][0m
+INFO 2026-05-15 15:39:26,147 autoreload 8336 10120 Watching for file changes with StatReloader
+INFO 2026-05-15 15:39:33,683 runserver 8336 6068 [mHTTP GET / 200 [0.06, 127.0.0.1:50401][0m
+INFO 2026-05-15 15:39:35,895 runserver 8336 6068 [mHTTP GET /api/schema/ 200 [0.20, 127.0.0.1:50401][0m
+INFO 2026-05-15 15:40:56,888 runserver 8336 6068 [mHTTP POST /api/auth/login/ 200 [1.46, 127.0.0.1:50412][0m
+INFO 2026-05-15 15:41:32,546 runserver 8336 6068 [mHTTP GET /api/notifications/broadcast/list/ 200 [0.12, 127.0.0.1:50412][0m
+INFO 2026-05-15 15:41:49,437 runserver 8336 6068 [mHTTP GET /api/notifications/my/ 200 [0.09, 127.0.0.1:50412][0m
+WARNING 2026-05-15 15:42:06,226 log 8336 8356 Not Found: /api/notifications/student-teacher/2/delete/
+WARNING 2026-05-15 15:42:06,227 runserver 8336 6068 [33mHTTP DELETE /api/notifications/student-teacher/2/delete/ 404 [0.11, 127.0.0.1:50412][0m
+WARNING 2026-05-15 15:42:28,687 log 8336 8356 Not Found: /api/notifications/broadcast/2/delete/
+WARNING 2026-05-15 15:42:28,688 runserver 8336 6068 [33mHTTP DELETE /api/notifications/broadcast/2/delete/ 404 [0.08, 127.0.0.1:50412][0m
+INFO 2026-05-15 15:42:37,489 runserver 8336 6068 [mHTTP GET /api/notifications/broadcast/list/ 200 [0.10, 127.0.0.1:50412][0m
+INFO 2026-05-15 15:43:17,590 autoreload 8336 10120 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\notifications\urls.py changed, reloading.
+INFO 2026-05-15 15:43:19,004 autoreload 3616 8920 Watching for file changes with StatReloader
+INFO 2026-05-15 15:43:21,342 autoreload 3616 8920 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\notifications\urls.py changed, reloading.
+INFO 2026-05-15 15:43:22,985 autoreload 5268 1384 Watching for file changes with StatReloader
+INFO 2026-05-15 15:43:39,738 autoreload 5268 1384 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\notifications\services.py changed, reloading.
+INFO 2026-05-15 15:43:41,189 autoreload 6816 8640 Watching for file changes with StatReloader
+INFO 2026-05-15 15:44:15,299 autoreload 6816 8640 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\notifications\services.py changed, reloading.
+INFO 2026-05-15 15:44:16,819 autoreload 2828 8652 Watching for file changes with StatReloader
+INFO 2026-05-15 15:44:27,731 autoreload 2828 8652 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\notifications\services.py changed, reloading.
+INFO 2026-05-15 15:44:29,135 autoreload 8452 7200 Watching for file changes with StatReloader
+INFO 2026-05-15 15:44:35,858 autoreload 8452 7200 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\notifications\services.py changed, reloading.
+INFO 2026-05-15 15:44:37,199 autoreload 6152 4508 Watching for file changes with StatReloader
+INFO 2026-05-15 15:46:35,644 autoreload 6152 4508 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\notifications\services.py changed, reloading.
+INFO 2026-05-15 15:46:37,152 autoreload 9924 800 Watching for file changes with StatReloader
+WARNING 2026-05-15 15:46:59,736 log 9924 2132 Not Found: /api/notifications/student-teacher/2/delete/
+WARNING 2026-05-15 15:46:59,736 runserver 9924 7868 [33mHTTP DELETE /api/notifications/student-teacher/2/delete/ 404 [0.03, 127.0.0.1:50509][0m
+WARNING 2026-05-15 15:47:06,099 log 9924 2132 Not Found: /api/notifications/student-teacher/2/delete/
+WARNING 2026-05-15 15:47:06,100 runserver 9924 7868 [33mHTTP DELETE /api/notifications/student-teacher/2/delete/ 404 [0.04, 127.0.0.1:50509][0m
+INFO 2026-05-15 15:47:14,340 runserver 9924 7868 [mHTTP GET /api/notifications/broadcast/list/ 200 [0.12, 127.0.0.1:50509][0m
+INFO 2026-05-15 15:47:26,051 runserver 9924 7868 [mHTTP GET /api/notifications/my/ 200 [0.09, 127.0.0.1:50509][0m
+INFO 2026-05-15 15:49:23,920 runserver 9924 7868 [mHTTP GET / 200 [0.03, 127.0.0.1:50540][0m
+INFO 2026-05-15 15:49:24,349 runserver 9924 7868 [mHTTP GET /api/schema/ 200 [0.16, 127.0.0.1:50540][0m
+WARNING 2026-05-15 15:49:59,857 log 9924 2132 Bad Request: /api/auth/login/
+WARNING 2026-05-15 15:49:59,858 runserver 9924 7868 [31;1mHTTP POST /api/auth/login/ 400 [1.40, 127.0.0.1:50540][0m
+WARNING 2026-05-15 15:50:18,273 log 9924 2132 Bad Request: /api/auth/login/
+WARNING 2026-05-15 15:50:18,274 runserver 9924 7868 [31;1mHTTP POST /api/auth/login/ 400 [1.43, 127.0.0.1:50540][0m
+INFO 2026-05-15 15:50:40,176 runserver 9924 7868 [mHTTP POST /api/auth/login/ 200 [1.45, 127.0.0.1:50540][0m
+INFO 2026-05-15 15:51:08,701 runserver 9924 7868 [mHTTP GET /api/notifications/broadcast/list/ 200 [0.11, 127.0.0.1:50540][0m
+WARNING 2026-05-15 15:51:19,282 log 9924 2132 Not Found: /api/notifications/broadcast/3/delete/
+WARNING 2026-05-15 15:51:19,283 runserver 9924 7868 [33mHTTP DELETE /api/notifications/broadcast/3/delete/ 404 [0.10, 127.0.0.1:50540][0m
+WARNING 2026-05-15 15:51:23,427 log 9924 2132 Not Found: /api/notifications/broadcast/2/delete/
+WARNING 2026-05-15 15:51:23,428 runserver 9924 7868 [33mHTTP DELETE /api/notifications/broadcast/2/delete/ 404 [0.11, 127.0.0.1:50540][0m
+INFO 2026-05-15 15:51:57,400 runserver 9924 7868 [mHTTP DELETE /api/notifications/broadcast/1/delete/ 204 [0.12, 127.0.0.1:50540][0m
+INFO 2026-05-15 15:52:04,500 runserver 9924 7868 [mHTTP GET /api/notifications/broadcast/list/ 200 [0.10, 127.0.0.1:50540][0m
+INFO 2026-05-15 15:52:21,046 runserver 9924 7868 [mHTTP GET /api/notifications/broadcast/list/ 200 [0.11, 127.0.0.1:50540][0m
+WARNING 2026-05-15 15:52:26,769 log 9924 2132 Not Found: /api/notifications/broadcast/2/delete/
+WARNING 2026-05-15 15:52:26,769 runserver 9924 7868 [33mHTTP DELETE /api/notifications/broadcast/2/delete/ 404 [0.10, 127.0.0.1:50540][0m
+INFO 2026-05-15 15:52:40,218 runserver 9924 7868 [mHTTP GET /api/notifications/my/ 200 [0.17, 127.0.0.1:50540][0m
+INFO 2026-05-15 15:52:58,575 runserver 9924 7868 [mHTTP GET /api/notifications/unread-count/ 200 [0.10, 127.0.0.1:50540][0m
+INFO 2026-05-15 15:53:43,626 runserver 9924 7868 [mHTTP GET /api/notifications/my/ 200 [0.11, 127.0.0.1:50540][0m
+INFO 2026-05-15 15:54:52,921 runserver 9924 7868 [mHTTP POST /api/notifications/broadcast/ 201 [0.28, 127.0.0.1:50589][0m
+INFO 2026-05-15 15:54:58,880 runserver 9924 7868 [mHTTP GET /api/notifications/broadcast/list/ 200 [0.08, 127.0.0.1:50589][0m
+INFO 2026-05-15 15:55:06,558 runserver 9924 7868 [mHTTP DELETE /api/notifications/broadcast/3/delete/ 204 [0.10, 127.0.0.1:50589][0m
+WARNING 2026-05-15 15:55:34,359 log 9924 2132 Bad Request: /api/auth/login/
+WARNING 2026-05-15 15:55:34,360 runserver 9924 7868 [31;1mHTTP POST /api/auth/login/ 400 [1.43, 127.0.0.1:50589][0m
+INFO 2026-05-15 15:55:41,852 runserver 9924 7868 [mHTTP POST /api/auth/login/ 200 [1.48, 127.0.0.1:50589][0m
+INFO 2026-05-15 15:56:14,396 runserver 9924 7868 [mHTTP GET /api/notifications/my/ 200 [0.08, 127.0.0.1:50589][0m
+INFO 2026-05-15 15:56:30,793 runserver 9924 7868 [mHTTP GET /api/notifications/unread-count/ 200 [0.19, 127.0.0.1:50589][0m
+INFO 2026-05-15 15:56:38,362 runserver 9924 7868 [mHTTP POST /api/notifications/read-all/ 200 [0.18, 127.0.0.1:50589][0m
+INFO 2026-05-15 15:56:44,073 runserver 9924 7868 [mHTTP GET /api/notifications/unread-count/ 200 [0.08, 127.0.0.1:50589][0m
+WARNING 2026-05-15 15:56:50,330 log 9924 2132 Not Found: /api/notifications/my/3/delete/
+WARNING 2026-05-15 15:56:50,331 runserver 9924 7868 [33mHTTP DELETE /api/notifications/my/3/delete/ 404 [0.10, 127.0.0.1:50589][0m
+INFO 2026-05-15 15:57:09,103 runserver 9924 7868 [mHTTP DELETE /api/notifications/my/2/delete/ 204 [0.11, 127.0.0.1:50589][0m
+INFO 2026-05-15 15:57:15,574 runserver 9924 7868 [mHTTP GET /api/notifications/my/ 200 [0.08, 127.0.0.1:50589][0m
