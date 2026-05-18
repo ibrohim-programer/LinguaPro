@@ -165,15 +165,15 @@ class BroadcastDeleteView(generics.DestroyAPIView):
     }
 )
 class MyNotificationDeleteView(generics.DestroyAPIView):
-    """Teacher / Student o'ziga kelgan xabarni o'chiradi."""
     permission_classes = [permissions.IsAuthenticated]
 
     def get_queryset(self):
+        # o'zi YUBORGAN emas, o'ziga KELGAN xabarlar
         return Notification.objects.filter(recipient=self.request.user)
 
     def destroy(self, request, *args, **kwargs):
         deleted, _ = Notification.objects.filter(
-            pk=kwargs['pk'], recipient=request.user
+            pk=kwargs['pk'], recipient=request.user  # faqat o'ziga kelganini o'chiradi
         ).delete()
         if not deleted:
             return Response(
