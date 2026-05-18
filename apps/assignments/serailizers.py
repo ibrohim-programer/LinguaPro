@@ -10,15 +10,22 @@ class AssignmentSerializer(serializers.ModelSerializer):
         fields = ['id','title','description','group','created_by','deadline','max_score','attachment','submission_type',"is_active",'created_at']
         read_only_fields = ['created_by', 'created_at',"is_active"]
 
-
 class SubmissionSerializer(serializers.ModelSerializer):
     student = serializers.ReadOnlyField(source='student.user.username')
     assignment_title = serializers.ReadOnlyField(source='assignment.title')
+    is_submitted = serializers.BooleanField(default=True, read_only=True)
 
     class Meta:
         model = Submission
-        fields = ['id','assignment','assignment_title','student','text_answer','file_answer','score','submitted_at',]
+        fields = [
+            'id', 'assignment', 'assignment_title', 'student',
+            'text_answer', 'file_answer', 'score', 'submitted_at',
+            'is_submitted',   # ← QO'SHILDI
+        ]
         read_only_fields = ['student', 'submitted_at', 'score']
+
+    # def get_is_submitted(self, obj):   # ← QO'SHILDI
+    #     return obj.pk is not None
 
 
 class GradeSubmissionSerializer(serializers.ModelSerializer):

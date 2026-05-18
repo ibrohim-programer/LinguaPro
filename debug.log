@@ -2303,3 +2303,20 @@ WARNING 2026-05-15 15:56:50,330 log 9924 2132 Not Found: /api/notifications/my/3
 WARNING 2026-05-15 15:56:50,331 runserver 9924 7868 [33mHTTP DELETE /api/notifications/my/3/delete/ 404 [0.10, 127.0.0.1:50589][0m
 INFO 2026-05-15 15:57:09,103 runserver 9924 7868 [mHTTP DELETE /api/notifications/my/2/delete/ 204 [0.11, 127.0.0.1:50589][0m
 INFO 2026-05-15 15:57:15,574 runserver 9924 7868 [mHTTP GET /api/notifications/my/ 200 [0.08, 127.0.0.1:50589][0m
+INFO 2026-05-18 15:34:32,971 autoreload 3852 4964 Watching for file changes with StatReloader
+WARNING 2026-05-18 15:34:46,250 log 3852 10248 Not Found: /swagger/
+WARNING 2026-05-18 15:34:46,251 runserver 3852 2252 [33mHTTP GET /swagger/ 404 [0.03, 127.0.0.1:50727][0m
+WARNING 2026-05-18 15:34:46,438 log 3852 10248 Not Found: /swagger/
+WARNING 2026-05-18 15:34:46,441 runserver 3852 2252 [33mHTTP GET /swagger/ 404 [0.02, 127.0.0.1:50727][0m
+WARNING 2026-05-18 15:34:46,633 log 3852 10248 Not Found: /favicon.ico
+WARNING 2026-05-18 15:34:46,634 runserver 3852 2252 [33mHTTP GET /favicon.ico 404 [0.01, 127.0.0.1:50727][0m
+INFO 2026-05-18 15:34:49,978 runserver 3852 2252 [mHTTP GET / 200 [0.04, 127.0.0.1:50727][0m
+INFO 2026-05-18 15:34:51,318 runserver 3852 2252 [mHTTP GET /api/schema/ 200 [0.17, 127.0.0.1:50727][0m
+INFO 2026-05-18 15:36:05,505 autoreload 3852 4964 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\assignments\serailizers.py changed, reloading.
+INFO 2026-05-18 15:36:06,899 autoreload 10424 10204 Watching for file changes with StatReloader
+INFO 2026-05-18 15:36:24,417 autoreload 10424 10204 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\assignments\serailizers.py changed, reloading.
+INFO 2026-05-18 15:36:27,771 autoreload 10388 6920 Watching for file changes with StatReloader
+INFO 2026-05-18 15:36:31,467 runserver 10388 1136 [mHTTP GET / 200 [0.03, 127.0.0.1:50764][0m
+INFO 2026-05-18 15:36:31,760 runserver 10388 1136 [mHTTP GET /api/schema/ 200 [0.15, 127.0.0.1:50764][0m
+INFO 2026-05-18 15:37:04,047 runserver 10388 1136 [mHTTP GET / 200 [0.01, 127.0.0.1:50764][0m
+INFO 2026-05-18 15:37:04,254 runserver 10388 1136 [mHTTP GET /api/schema/ 200 [0.13, 127.0.0.1:50764][0m
