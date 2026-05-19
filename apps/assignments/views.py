@@ -15,7 +15,7 @@ from rest_framework.views import APIView
 
 from apps.common.permissions import IsAdminOrTeacher, IsStudent
 from .models import Assignment, Submission
-from .serializers import (
+from .serailizers import (
     AssignmentSerializer,
     FileUploadResponseSerializer,
     FileUploadSerializer,
