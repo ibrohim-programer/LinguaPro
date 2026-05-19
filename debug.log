@@ -2333,3 +2333,39 @@ INFO 2026-05-19 17:23:08,827 autoreload 5528 9024 C:\Users\user\Documents\Loyxal
 INFO 2026-05-19 17:23:10,305 autoreload 2308 8204 Watching for file changes with StatReloader
 INFO 2026-05-19 17:23:32,191 runserver 2308 10888 [mHTTP GET / 200 [0.04, 127.0.0.1:56394][0m
 INFO 2026-05-19 17:23:32,660 runserver 2308 10888 [mHTTP GET /api/schema/ 200 [0.17, 127.0.0.1:56394][0m
+INFO 2026-05-19 18:47:59,322 autoreload 6132 5060 Watching for file changes with StatReloader
+INFO 2026-05-19 18:48:24,631 autoreload 4348 11232 Watching for file changes with StatReloader
+INFO 2026-05-19 18:48:27,093 runserver 4348 1364 [mHTTP GET / 200 [0.06, 127.0.0.1:51993][0m
+INFO 2026-05-19 18:48:34,711 runserver 4348 1364 [mHTTP GET /api/schema/ 200 [0.18, 127.0.0.1:51993][0m
+INFO 2026-05-19 18:51:12,334 autoreload 4348 11232 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-19 18:51:13,743 autoreload 10532 2912 Watching for file changes with StatReloader
+INFO 2026-05-19 18:52:24,359 autoreload 10532 2912 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-19 18:52:25,828 autoreload 8512 9876 Watching for file changes with StatReloader
+INFO 2026-05-19 18:52:30,292 runserver 8512 1580 [mHTTP GET / 200 [0.03, 127.0.0.1:52057][0m
+INFO 2026-05-19 18:52:30,788 runserver 8512 1580 [mHTTP GET /api/schema/ 200 [0.21, 127.0.0.1:52057][0m
+INFO 2026-05-19 18:52:46,853 runserver 8512 1580 [mHTTP GET / 200 [0.01, 127.0.0.1:52057][0m
+INFO 2026-05-19 18:52:47,075 runserver 8512 1580 [mHTTP GET /api/schema/ 200 [0.13, 127.0.0.1:52057][0m
+INFO 2026-05-19 18:54:02,352 autoreload 9992 9776 Watching for file changes with StatReloader
+INFO 2026-05-19 18:54:07,435 runserver 9992 1064 [mHTTP GET / 200 [0.03, 127.0.0.1:52074][0m
+INFO 2026-05-19 18:54:07,692 runserver 9992 1064 [mHTTP GET /api/schema/ 200 [0.17, 127.0.0.1:52074][0m
+INFO 2026-05-19 18:57:18,047 autoreload 10136 8520 Watching for file changes with StatReloader
+INFO 2026-05-19 18:57:22,460 runserver 10136 10888 [mHTTP GET / 200 [0.04, 127.0.0.1:52130][0m
+INFO 2026-05-19 18:57:22,767 runserver 10136 10888 [mHTTP GET /api/schema/ 200 [0.20, 127.0.0.1:52130][0m
+INFO 2026-05-19 18:58:09,440 runserver 10136 10888 [mHTTP GET / 200 [0.01, 127.0.0.1:52130][0m
+INFO 2026-05-19 18:58:09,654 runserver 10136 10888 [mHTTP GET /api/schema/ 200 [0.12, 127.0.0.1:52130][0m
+INFO 2026-05-19 18:59:10,258 autoreload 10136 8520 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-19 18:59:11,774 autoreload 8448 508 Watching for file changes with StatReloader
+INFO 2026-05-19 18:59:17,274 runserver 8448 11080 [mHTTP GET / 200 [0.03, 127.0.0.1:52156][0m
+INFO 2026-05-19 18:59:17,557 runserver 8448 11080 [mHTTP GET /api/schema/ 200 [0.18, 127.0.0.1:52156][0m
+INFO 2026-05-19 19:01:09,871 autoreload 8448 508 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\assignments\views.py changed, reloading.
+INFO 2026-05-19 19:01:11,204 autoreload 4440 10168 Watching for file changes with StatReloader
+INFO 2026-05-19 19:08:34,123 autoreload 4440 10168 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-19 19:08:35,582 autoreload 3784 3536 Watching for file changes with StatReloader
+INFO 2026-05-19 19:08:37,238 runserver 3784 7388 [mHTTP GET / 200 [0.03, 127.0.0.1:54183][0m
+INFO 2026-05-19 19:08:37,510 runserver 3784 7388 [mHTTP GET /api/schema/ 200 [0.15, 127.0.0.1:54183][0m
+INFO 2026-05-19 19:08:40,243 runserver 3784 7388 [mHTTP GET / 200 [0.01, 127.0.0.1:54183][0m
+INFO 2026-05-19 19:08:40,427 runserver 3784 7388 [mHTTP GET /api/schema/ 200 [0.11, 127.0.0.1:54183][0m
+INFO 2026-05-19 19:10:02,522 autoreload 3784 3536 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\accounts\views.py changed, reloading.
+INFO 2026-05-19 19:10:03,882 autoreload 10420 6104 Watching for file changes with StatReloader
+INFO 2026-05-19 19:10:04,660 runserver 10420 1572 [mHTTP GET / 200 [0.03, 127.0.0.1:54206][0m
+INFO 2026-05-19 19:10:04,889 runserver 10420 1572 [mHTTP GET /api/schema/ 200 [0.14, 127.0.0.1:54206][0m

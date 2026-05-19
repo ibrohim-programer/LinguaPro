@@ -6,6 +6,8 @@ from rest_framework.permissions import IsAuthenticated, AllowAny
 from rest_framework_simplejwt.tokens import RefreshToken
 from django.contrib.auth import get_user_model ,logout
 from drf_spectacular.utils import extend_schema
+from drf_spectacular.utils import extend_schema, inline_serializer
+from rest_framework import serializers
 
 from .serializers import (
     RegisterSerializer, LoginSerializer, ProfileSerealizers,
@@ -95,8 +97,42 @@ class ProfileView(GenericAPIView):
 @extend_schema(
     tags=["Profile - Crud"],
     summary="My Profile - Update",
-    description="Barcha malumotlarningizni yangilang."
+    description="Barcha malumotlarningizni yangilang.",
+    request={
+        'multipart/form-data': {
+            'type': 'object',
+            'properties': {
+                'username': {
+                    'type': 'string',
+                    'description': 'Foydalanuvchi nomi',
+                },
+                'full_name': {
+                    'type': 'string',
+                    'description': 'To\'liq ism',
+                },
+                'avatar': {
+                    'type': 'string',
+                    'format': 'binary',
+                    'description': 'Profil rasmi',
+                },
+                'timezone': {
+                    'type': 'string',
+                    'description': 'Vaqt zonasi',
+                },
+                'bio': {
+                    'type': 'string',
+                    'description': 'Qisqa ma\'lumot',
+                },
+                'learning_goal': {
+                    'type': 'string',
+                    'description': 'O\'qish maqsadi',
+                },
+            },
+        }
+    },
+    responses={200: ProfileUpdateSerealizers},
 )
+
 class ProfileUpdateView(UpdateAPIView):
     serializer_class = ProfileUpdateSerealizers
     permission_classes = [IsAuthenticated]
@@ -104,7 +140,13 @@ class ProfileUpdateView(UpdateAPIView):
     def put(self, request, *args, **kwargs):
         try:
             user = self.request.user
-            serializer = ProfileUpdateSerealizers(user, data=request.data)
+            # request.FILES ham qabul qilish uchun
+            serializer = ProfileUpdateSerealizers(
+                user,
+                data=request.data,
+                context={'request': request},  # ← bu qo'shildi
+                partial=True
+            )
             serializer.is_valid(raise_exception=True)
             serializer.save()
             return Response({

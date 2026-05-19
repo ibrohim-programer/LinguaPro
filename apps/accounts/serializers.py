@@ -53,17 +53,26 @@ class ProfileSerealizers(serializers.ModelSerializer):
         read_only_fields = ['id' , 'email' , 'role' ]
         
 class ProfileUpdateSerealizers(serializers.ModelSerializer):
+    avatar = serializers.ImageField(required=False, allow_null=True)
+
     class Meta:
         model = User
-        fields = ["id","username","full_name","avatar","timezone","bio","learning_goal", ]
+        fields = ["id", "username", "full_name", "avatar", "timezone", "bio", "learning_goal"]
         read_only_fields = ['id']
 
     def validate_phone(self, value):
         if value:
             import re
             if not re.match(r'^\+?[0-9]{9,15}$', value):
-                raise serializers.ValidationError("Telefon raqam noto'g'ri formatda. Masalan: +998901234567")
+                raise serializers.ValidationError("Telefon raqam noto'g'ri formatda.")
         return value
+
+    def to_representation(self, instance):
+        rep = super().to_representation(instance)
+        request = self.context.get('request')
+        if instance.avatar and request:
+            rep['avatar'] = request.build_absolute_uri(instance.avatar.url)
+        return rep
         
 class UserListSerializer(serializers.ModelSerializer):
     # full_name = serializers.CharField( read_only=True)

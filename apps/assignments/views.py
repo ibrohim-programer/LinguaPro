@@ -193,7 +193,7 @@ keyin shu `file_path` ni submit da body ga yuboring (`file_answer` bo'sh qoladi)
                 },
                 'file_answer': {
                     'type': 'string',
-                    'format': 'binary',          # ← fayl tugmasi
+                    'format': 'binary',          
                     'description': 'Fayl yuklab topshirish (ixtiyoriy)',
                 },
                 'file_path': {
