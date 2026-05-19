@@ -7,7 +7,8 @@ from django.core.files.storage import default_storage
 from django.shortcuts import get_object_or_404
 from django.utils import timezone
 
-from drf_spectacular.utils import extend_schema
+from drf_spectacular.utils import extend_schema, OpenApiTypes
+from drf_spectacular.openapi import AutoSchema
 from rest_framework import generics, permissions, status
 from rest_framework.parsers import FormParser, MultiPartParser
 from rest_framework.response import Response
@@ -57,7 +58,7 @@ class AssignmentListCreateView(generics.ListCreateAPIView):
         serializer.save(created_by=self.request.user)
 
 
-@extend_schema(tags=['Assignment Crud'], summary='Vazifa tafsilot / tahrirlash / o\'chirish')
+@extend_schema(tags=['Assignment Crud'], summary="Vazifa tafsilot / tahrirlash / o'chirish")
 class AssignmentDetailView(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = AssignmentSerializer
     http_method_names = ['get', 'put', 'delete']
@@ -100,16 +101,29 @@ class MyAssignmentsView(generics.ListAPIView):
 @extend_schema(
     tags=['Assignment Crud'],
     summary='Fayl yuklash (oldindan yuklash)',
-    description='''
+    description="""
 Fayl yuklash uchun alohida endpoint.
 
 **Ish tartibi:**
-1. `POST /assignments/upload/` → `file_path` va `file_url` olasiz
-2. `POST /assignments/{pk}/submit/` → `file_path` ni `file_answer` o'rniga yuboring
+1. `POST /assignments/upload/` → `file_path` va `file_url` oling
+2. `POST /assignments/{pk}/submit/` → `file_path` ni body ga yuboring
 
-Bu orqali faylni submit dan oldin yuklash va URL ni ko\'rish mumkin.
-    ''',
-    request=FileUploadSerializer,
+Bu orqali faylni submit dan oldin yuklash va URL ni ko'rish mumkin.
+    """,
+    # ✅ format: binary → Swaggerda "Choose File" tugmasi chiqadi
+    request={
+        'multipart/form-data': {
+            'type': 'object',
+            'properties': {
+                'file': {
+                    'type': 'string',
+                    'format': 'binary',
+                    'description': 'Yuklanadigan fayl (max 50MB)',
+                }
+            },
+            'required': ['file'],
+        }
+    },
     responses={201: FileUploadResponseSerializer},
 )
 class AssignmentFileUploadView(APIView):
@@ -155,15 +169,42 @@ class AssignmentFileUploadView(APIView):
 @extend_schema(
     tags=['Assignment Crud'],
     summary='Student vazifa topshiradi',
-    description='''
+    description="""
 Fayl bilan topshirish uchun ikki yo'l:
 
-**1-yo'l (to'g'ridan-to'g'ri):** `file_answer` maydoniga fayl yuboring.
+**1-yo'l (to'g'ridan-to'g'ri):** `file_answer` maydoniga fayl tanlang.
 
 **2-yo'l (oldindan yuklash):**
 Avval `POST /assignments/upload/` ga fayl yuboring → `file_path` oling →
-keyin shu `file_path` ni submit da `file_answer` o'rniga yuboring.
-    ''',
+keyin shu `file_path` ni submit da body ga yuboring (`file_answer` bo'sh qoladi).
+    """,
+    # ✅ file_answer → format:binary → Swaggerda "Choose File" tugmasi chiqadi
+    request={
+        'multipart/form-data': {
+            'type': 'object',
+            'properties': {
+                'assignment': {
+                    'type': 'integer',
+                    'description': 'Vazifa ID si',
+                },
+                'text_answer': {
+                    'type': 'string',
+                    'description': 'Matnli javob (ixtiyoriy)',
+                },
+                'file_answer': {
+                    'type': 'string',
+                    'format': 'binary',          # ← fayl tugmasi
+                    'description': 'Fayl yuklab topshirish (ixtiyoriy)',
+                },
+                'file_path': {
+                    'type': 'string',
+                    'description': '/upload/ dan olingan file_path (file_answer o\'rniga)',
+                },
+            },
+            'required': ['assignment'],
+        }
+    },
+    responses={201: SubmissionSerializer},
 )
 class SubmitAssignmentView(generics.GenericAPIView):
     serializer_class = SubmissionSerializer
@@ -175,7 +216,7 @@ class SubmitAssignmentView(generics.GenericAPIView):
 
         if not assignment.is_active:
             return Response(
-                {'detail': 'Vazifaning muddati tugagan, topshirib bo\'lmaydi.'},
+                {'detail': "Vazifaning muddati tugagan, topshirib bo'lmaydi."},
                 status=status.HTTP_400_BAD_REQUEST,
             )
 
@@ -230,7 +271,7 @@ class GradeSubmissionView(generics.UpdateAPIView):
 # ─────────────────────────────────────────────
 @extend_schema(
     tags=['Assignment Crud'],
-    summary='Vazifani topshirgan va topshirmagan o\'quvchilar ro\'yxati',
+    summary="Vazifani topshirgan va topshirmagan o'quvchilar ro'yxati",
 )
 class AssignmentSubmissionStatusView(generics.GenericAPIView):
     permission_classes = [IsAdminOrTeacher]
@@ -251,21 +292,21 @@ class AssignmentSubmissionStatusView(generics.GenericAPIView):
             student = gs.student
             submission = submission_map.get(student.id)
 
-            # BUG FIX: file_answer → file_url (absolute URL string)
+            # BUG FIX: absolute URL qaytaradi (avval null kelardi)
             if submission and submission.file_answer:
                 file_url = request.build_absolute_uri(submission.file_answer.url)
             else:
                 file_url = None
 
             result.append({
-                'student_id':  student.id,
-                'username':    student.username,
-                'full_name':   getattr(student, 'full_name', '') or student.get_full_name(),
-                'status':      'topshirgan' if submission else 'topshirmagan',
+                'student_id':   student.id,
+                'username':     student.username,
+                'full_name':    getattr(student, 'full_name', '') or student.get_full_name(),
+                'status':       'topshirgan' if submission else 'topshirmagan',
                 'submitted_at': submission.submitted_at if submission else None,
-                'score':       submission.score if submission else None,
-                'text_answer': submission.text_answer if submission else None,
-                'file_url':    file_url,   # ← avval 'file_answer' edi, null kelardi
+                'score':        submission.score if submission else None,
+                'text_answer':  submission.text_answer if submission else None,
+                'file_url':     file_url,
             })
 
         serializer = self.get_serializer(result, many=True)

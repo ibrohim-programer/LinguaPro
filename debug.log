@@ -2320,3 +2320,16 @@ INFO 2026-05-18 15:36:31,467 runserver 10388 1136 [mHTTP GET / 200 [0.03, 127.0
 INFO 2026-05-18 15:36:31,760 runserver 10388 1136 [mHTTP GET /api/schema/ 200 [0.15, 127.0.0.1:50764][0m
 INFO 2026-05-18 15:37:04,047 runserver 10388 1136 [mHTTP GET / 200 [0.01, 127.0.0.1:50764][0m
 INFO 2026-05-18 15:37:04,254 runserver 10388 1136 [mHTTP GET /api/schema/ 200 [0.13, 127.0.0.1:50764][0m
+INFO 2026-05-19 17:15:07,320 autoreload 9504 8516 Watching for file changes with StatReloader
+INFO 2026-05-19 17:15:18,282 autoreload 9504 8516 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\assignments\views.py changed, reloading.
+INFO 2026-05-19 17:15:19,837 autoreload 11104 4336 Watching for file changes with StatReloader
+INFO 2026-05-19 17:15:23,151 runserver 11104 10996 [mHTTP GET / 200 [0.07, 127.0.0.1:56267][0m
+INFO 2026-05-19 17:15:28,649 runserver 11104 10996 [mHTTP GET /api/schema/ 200 [0.18, 127.0.0.1:56267][0m
+INFO 2026-05-19 17:16:21,911 runserver 11104 10996 [mHTTP POST /api/auth/login/ 200 [1.54, 127.0.0.1:56267][0m
+INFO 2026-05-19 17:17:57,139 runserver 11104 10996 [mHTTP POST /api/assignments/upload/ 201 [0.21, 127.0.0.1:56285][0m
+INFO 2026-05-19 17:23:01,058 autoreload 11104 4336 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\assignments\views.py changed, reloading.
+INFO 2026-05-19 17:23:02,608 autoreload 5528 9024 Watching for file changes with StatReloader
+INFO 2026-05-19 17:23:08,827 autoreload 5528 9024 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\assignments\views.py changed, reloading.
+INFO 2026-05-19 17:23:10,305 autoreload 2308 8204 Watching for file changes with StatReloader
+INFO 2026-05-19 17:23:32,191 runserver 2308 10888 [mHTTP GET / 200 [0.04, 127.0.0.1:56394][0m
+INFO 2026-05-19 17:23:32,660 runserver 2308 10888 [mHTTP GET /api/schema/ 200 [0.17, 127.0.0.1:56394][0m
