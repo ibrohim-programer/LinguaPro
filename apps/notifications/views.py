@@ -168,16 +168,24 @@ class MyNotificationDeleteView(generics.DestroyAPIView):
     permission_classes = [permissions.IsAuthenticated]
 
     def get_queryset(self):
-        # o'zi YUBORGAN emas, o'ziga KELGAN xabarlar
         return Notification.objects.filter(recipient=self.request.user)
 
     def destroy(self, request, *args, **kwargs):
-        deleted, _ = Notification.objects.filter(
-            pk=kwargs['pk'], recipient=request.user  # faqat o'ziga kelganini o'chiradi
-        ).delete()
-        if not deleted:
+        notification = Notification.objects.filter(
+            pk=kwargs['pk'], recipient=request.user
+        ).first()
+
+        if not notification:
             return Response(
                 {'detail': 'Topilmadi yoki sizga tegishli emas.'},
                 status=status.HTTP_404_NOT_FOUND
             )
+
+        if not notification.is_read:
+            return Response(
+                {'detail': 'O\'qilmagan xabarni o\'chirib bo\'lmaydi.'},
+                status=status.HTTP_400_BAD_REQUEST
+            )
+
+        notification.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)

@@ -90,7 +90,7 @@ class ProfileView(GenericAPIView):
 
     def get(self, request, *args, **kwargs):
         user = self.request.user
-        serializer = ProfileSerealizers(user) 
+        serializer = ProfileSerealizers(user, context={'request': request})
         return Response({"User Data": serializer.data}, status=200)
 
 

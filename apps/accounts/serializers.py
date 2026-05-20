@@ -46,11 +46,21 @@ class LoginSerializer(serializers.Serializer):
         return data
 
 class ProfileSerealizers(serializers.ModelSerializer):
-    username = serializers.CharField(read_only = True)
+    username = serializers.CharField(read_only=True)
+
     class Meta:
         model = User
-        fields = ["id","role","username","full_name","phone","avatar","timezone","bio","learning_goal","created_at","updated_at", ]
-        read_only_fields = ['id' , 'email' , 'role' ]
+        fields = ["id", "role", "username", "full_name", "phone", "avatar", "timezone", "bio", "learning_goal", "created_at", "updated_at"]
+        read_only_fields = ['id', 'email', 'role']
+
+    def to_representation(self, instance):
+        rep = super().to_representation(instance)
+        request = self.context.get('request')
+        if instance.avatar and request:
+            rep['avatar'] = request.build_absolute_uri(instance.avatar.url)
+        else:
+            rep['avatar'] = None
+        return rep
         
 class ProfileUpdateSerealizers(serializers.ModelSerializer):
     avatar = serializers.ImageField(required=False, allow_null=True)

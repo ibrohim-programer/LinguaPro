@@ -278,35 +278,56 @@ class AssignmentSubmissionStatusView(generics.GenericAPIView):
     serializer_class = StudentSubmissionStatusSerializer
 
     def get(self, request, pk):
+        user = request.user
+
+        # Assignment olish
         assignment = get_object_or_404(Assignment, pk=pk)
+
+        # TEACHER FAQAT O'Z ASSIGNMENTINI KO'RA OLSIN
+        if user.role == 'teacher' and assignment.created_by_id != user.id:
+            return Response(
+                {'detail': 'Sizda bu assignmentni ko‘rish uchun ruxsat yo‘q.'},
+                status=status.HTTP_403_FORBIDDEN,
+            )
+
         group = assignment.group
+
         group_students = group.group_students.select_related('student').all()
 
         submissions = Submission.objects.filter(
             assignment=assignment
         ).select_related('student')
-        submission_map = {sub.student_id: sub for sub in submissions}
+
+        submission_map = {
+            sub.student_id: sub
+            for sub in submissions
+        }
 
         result = []
+
         for gs in group_students:
             student = gs.student
             submission = submission_map.get(student.id)
 
-            # BUG FIX: absolute URL qaytaradi (avval null kelardi)
+            file_url = None
+
             if submission and submission.file_answer:
-                file_url = request.build_absolute_uri(submission.file_answer.url)
-            else:
-                file_url = None
+                try:
+                    file_url = request.build_absolute_uri(
+                        submission.file_answer.url
+                    )
+                except Exception:
+                    file_url = None
 
             result.append({
-                'student_id':   student.id,
-                'username':     student.username,
-                'full_name':    getattr(student, 'full_name', '') or student.get_full_name(),
-                'status':       'topshirgan' if submission else 'topshirmagan',
+                'student_id': student.id,
+                'username': student.username,
+                'full_name': getattr(student, 'full_name', '') or student.get_full_name(),
+                'status': 'topshirgan' if submission else 'topshirmagan',
                 'submitted_at': submission.submitted_at if submission else None,
-                'score':        submission.score if submission else None,
-                'text_answer':  submission.text_answer if submission else None,
-                'file_url':     file_url,
+                'score': submission.score if submission else None,
+                'text_answer': submission.text_answer if submission else None,
+                'file_url': file_url,
             })
 
         serializer = self.get_serializer(result, many=True)

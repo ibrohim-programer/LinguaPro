@@ -48,7 +48,8 @@ INSTALLED_APPS = [
     "apps.attendance",                
     "apps.assignments",             
     "apps.notifications" ,           
-    "apps.messages_app",              
+    "apps.messages_app", 
+    "apps.results",             
 ]
 
 AUTH_USER_MODEL = 'accounts.CustomUser'
@@ -134,6 +135,8 @@ USE_TZ = True
 
 MEDIA_URL  = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
+
+ 
  
 # Static fayllar
 STATIC_URL  = '/static/'

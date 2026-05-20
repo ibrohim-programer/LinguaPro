@@ -2369,3 +2369,118 @@ INFO 2026-05-19 19:10:02,522 autoreload 3784 3536 C:\Users\user\Documents\Loyxal
 INFO 2026-05-19 19:10:03,882 autoreload 10420 6104 Watching for file changes with StatReloader
 INFO 2026-05-19 19:10:04,660 runserver 10420 1572 [mHTTP GET / 200 [0.03, 127.0.0.1:54206][0m
 INFO 2026-05-19 19:10:04,889 runserver 10420 1572 [mHTTP GET /api/schema/ 200 [0.14, 127.0.0.1:54206][0m
+INFO 2026-05-20 15:07:27,072 autoreload 4524 5528 Watching for file changes with StatReloader
+INFO 2026-05-20 15:07:32,503 runserver 4524 1344 [mHTTP GET / 200 [0.05, 127.0.0.1:55839][0m
+INFO 2026-05-20 15:07:33,782 runserver 4524 1344 [mHTTP GET /api/schema/ 200 [0.17, 127.0.0.1:55839][0m
+WARNING 2026-05-20 15:07:56,009 log 4524 7756 Bad Request: /api/auth/login/
+WARNING 2026-05-20 15:07:56,010 runserver 4524 1344 [31;1mHTTP POST /api/auth/login/ 400 [1.36, 127.0.0.1:55839][0m
+WARNING 2026-05-20 15:08:03,236 log 4524 7756 Bad Request: /api/auth/login/
+WARNING 2026-05-20 15:08:03,236 runserver 4524 1344 [31;1mHTTP POST /api/auth/login/ 400 [1.34, 127.0.0.1:55839][0m
+INFO 2026-05-20 15:08:10,470 runserver 4524 1344 [mHTTP POST /api/auth/login/ 200 [1.38, 127.0.0.1:55839][0m
+INFO 2026-05-20 15:11:59,493 autoreload 4524 5528 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\notifications\views.py changed, reloading.
+INFO 2026-05-20 15:12:01,087 autoreload 8728 4656 Watching for file changes with StatReloader
+INFO 2026-05-20 15:12:37,149 autoreload 8728 4656 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\notifications\views.py changed, reloading.
+INFO 2026-05-20 15:12:38,677 autoreload 8352 3336 Watching for file changes with StatReloader
+INFO 2026-05-20 15:12:55,106 autoreload 8352 3336 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\results\urls.py changed, reloading.
+INFO 2026-05-20 15:12:56,837 autoreload 1620 9044 Watching for file changes with StatReloader
+INFO 2026-05-20 15:13:07,987 autoreload 1620 9044 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\results\views.py changed, reloading.
+INFO 2026-05-20 15:13:09,234 autoreload 10148 4988 Watching for file changes with StatReloader
+INFO 2026-05-20 15:13:17,158 autoreload 3076 9156 Watching for file changes with StatReloader
+INFO 2026-05-20 15:13:34,124 autoreload 3076 9156 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\results\views.py changed, reloading.
+INFO 2026-05-20 15:13:35,524 autoreload 8412 7852 Watching for file changes with StatReloader
+INFO 2026-05-20 15:13:48,120 autoreload 5040 10168 Watching for file changes with StatReloader
+INFO 2026-05-20 15:14:01,775 runserver 5040 9292 [mHTTP GET / 200 [0.03, 127.0.0.1:55964][0m
+INFO 2026-05-20 15:14:02,227 runserver 5040 9292 [mHTTP GET /api/schema/ 200 [0.17, 127.0.0.1:55964][0m
+INFO 2026-05-20 15:14:35,523 runserver 5040 9292 [mHTTP POST /api/auth/login/ 200 [1.38, 127.0.0.1:55964][0m
+INFO 2026-05-20 15:14:59,894 runserver 5040 9292 [mHTTP GET /api/auth/user-list/ 200 [0.11, 127.0.0.1:55964][0m
+INFO 2026-05-20 18:06:28,374 autoreload 5040 10168 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\results\views.py changed, reloading.
+INFO 2026-05-20 18:06:29,955 autoreload 9840 8800 Watching for file changes with StatReloader
+INFO 2026-05-20 18:06:33,127 autoreload 9840 8800 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\results\urls.py changed, reloading.
+INFO 2026-05-20 18:06:34,762 autoreload 7988 2992 Watching for file changes with StatReloader
+INFO 2026-05-20 18:06:40,937 autoreload 7988 2992 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\results\models.py changed, reloading.
+INFO 2026-05-20 18:06:42,525 autoreload 6216 9800 Watching for file changes with StatReloader
+INFO 2026-05-20 18:18:36,763 autoreload 11236 10496 Watching for file changes with StatReloader
+INFO 2026-05-20 18:20:02,407 autoreload 11236 10496 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\results\urls.py changed, reloading.
+INFO 2026-05-20 18:20:03,823 autoreload 9388 5276 Watching for file changes with StatReloader
+INFO 2026-05-20 18:20:06,638 autoreload 9388 5276 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\results\urls.py changed, reloading.
+INFO 2026-05-20 18:20:07,989 autoreload 10044 9252 Watching for file changes with StatReloader
+INFO 2026-05-20 18:20:18,247 autoreload 5164 10560 Watching for file changes with StatReloader
+INFO 2026-05-20 18:20:30,197 runserver 5164 10888 [mHTTP GET / 200 [0.06, 127.0.0.1:55240][0m
+INFO 2026-05-20 18:20:30,542 runserver 5164 10888 [mHTTP GET /api/schema/ 200 [0.20, 127.0.0.1:55240][0m
+WARNING 2026-05-20 18:21:09,803 log 5164 10528 Bad Request: /api/auth/login/
+WARNING 2026-05-20 18:21:09,803 runserver 5164 10888 [31;1mHTTP POST /api/auth/login/ 400 [1.65, 127.0.0.1:55240][0m
+INFO 2026-05-20 18:21:20,378 runserver 5164 10888 [mHTTP POST /api/auth/login/ 200 [1.55, 127.0.0.1:55240][0m
+INFO 2026-05-20 18:21:59,233 runserver 5164 10888 [mHTTP GET /api/auth/my-profile-list/ 200 [0.08, 127.0.0.1:55240][0m
+INFO 2026-05-20 18:22:27,943 runserver 5164 10888 [mHTTP PUT /api/auth/my-profile-update/ 200 [0.28, 127.0.0.1:55240][0m
+INFO 2026-05-20 18:22:35,162 runserver 5164 10888 [mHTTP GET /api/auth/my-profile-list/ 200 [0.08, 127.0.0.1:55240][0m
+INFO 2026-05-20 18:22:48,606 runserver 5164 10888 [mHTTP GET /media/avatars/photo_2026-05-10_02-41-39.jpg 200 [0.08, 127.0.0.1:55240][0m
+WARNING 2026-05-20 18:22:48,666 log 5164 10528 Not Found: /favicon.ico
+WARNING 2026-05-20 18:22:48,666 runserver 5164 10888 [33mHTTP GET /favicon.ico 404 [0.02, 127.0.0.1:55240][0m
+INFO 2026-05-20 18:43:40,745 autoreload 5164 10560 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\config\urls.py changed, reloading.
+INFO 2026-05-20 18:43:42,096 autoreload 10620 10476 Watching for file changes with StatReloader
+INFO 2026-05-20 18:43:46,651 autoreload 10620 10476 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\config\urls.py changed, reloading.
+INFO 2026-05-20 18:43:48,172 autoreload 5388 9988 Watching for file changes with StatReloader
+INFO 2026-05-20 18:43:53,063 autoreload 5388 9988 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\config\urls.py changed, reloading.
+INFO 2026-05-20 18:43:54,302 autoreload 3700 1172 Watching for file changes with StatReloader
+INFO 2026-05-20 18:44:21,223 autoreload 3700 1172 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\config\settings.py changed, reloading.
+INFO 2026-05-20 18:44:22,663 autoreload 1512 4672 Watching for file changes with StatReloader
+INFO 2026-05-20 18:44:34,271 autoreload 1512 4672 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\config\settings.py changed, reloading.
+INFO 2026-05-20 18:44:35,506 autoreload 2512 5820 Watching for file changes with StatReloader
+INFO 2026-05-20 18:46:41,097 autoreload 10676 8028 Watching for file changes with StatReloader
+INFO 2026-05-20 18:46:54,886 autoreload 10676 8028 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\config\urls.py changed, reloading.
+INFO 2026-05-20 18:46:56,243 autoreload 11080 2392 Watching for file changes with StatReloader
+INFO 2026-05-20 18:47:01,143 autoreload 11080 2392 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\config\urls.py changed, reloading.
+INFO 2026-05-20 18:47:02,628 autoreload 1280 10536 Watching for file changes with StatReloader
+INFO 2026-05-20 18:55:30,335 runserver 1280 9656 [mHTTP POST /api/auth/login/ 200 [1.62, 127.0.0.1:63535][0m
+INFO 2026-05-20 18:56:24,426 runserver 1280 9656 [mHTTP GET /api/assignments/my/ 200 [0.13, 127.0.0.1:63535][0m
+INFO 2026-05-20 18:56:43,928 runserver 1280 9656 [mHTTP POST /api/auth/login/ 200 [1.51, 127.0.0.1:63535][0m
+INFO 2026-05-20 18:58:03,551 runserver 1280 9656 [mHTTP POST /api/auth/login/ 200 [1.40, 127.0.0.1:63563][0m
+INFO 2026-05-20 18:58:32,593 runserver 1280 9656 [mHTTP GET /api/assignments/my/ 200 [0.10, 127.0.0.1:63563][0m
+INFO 2026-05-20 19:01:31,032 runserver 1280 9656 [mHTTP POST /api/auth/login/ 200 [1.48, 127.0.0.1:63583][0m
+INFO 2026-05-20 19:02:51,430 runserver 1280 9656 [mHTTP POST /api/auth/login/ 200 [1.50, 127.0.0.1:63597][0m
+INFO 2026-05-20 19:03:41,887 runserver 1280 9656 [mHTTP GET /api/groups/my-groups/ 200 [0.12, 127.0.0.1:63597][0m
+INFO 2026-05-20 19:03:48,727 runserver 1280 9656 [mHTTP GET /api/groups/my-groups/ 200 [0.11, 127.0.0.1:63597][0m
+INFO 2026-05-20 19:03:49,216 runserver 1280 9656 [mHTTP GET /api/groups/my-groups/ 200 [0.08, 127.0.0.1:63597][0m
+INFO 2026-05-20 19:03:49,502 runserver 1280 9656 [mHTTP GET /api/groups/my-groups/ 200 [0.11, 127.0.0.1:63597][0m
+INFO 2026-05-20 19:04:20,102 runserver 1280 9656 [mHTTP POST /api/auth/login/ 200 [1.43, 127.0.0.1:63597][0m
+INFO 2026-05-20 19:05:15,739 runserver 1280 9656 [mHTTP GET /api/groups/my/ 200 [0.11, 127.0.0.1:63597][0m
+INFO 2026-05-20 19:05:57,041 runserver 1280 9656 [mHTTP POST /api/auth/login/ 200 [1.42, 127.0.0.1:63597][0m
+INFO 2026-05-20 19:06:44,666 runserver 1280 9656 [mHTTP GET /api/groups/my-groups/ 200 [0.11, 127.0.0.1:63597][0m
+INFO 2026-05-20 19:07:14,371 runserver 1280 9656 [mHTTP GET /api/assignments/my/ 200 [0.12, 127.0.0.1:63597][0m
+WARNING 2026-05-20 19:07:41,765 log 1280 10904 Bad Request: /api/assignments/1/submit/
+WARNING 2026-05-20 19:07:41,765 runserver 1280 9656 [31;1mHTTP POST /api/assignments/1/submit/ 400 [0.10, 127.0.0.1:63597][0m
+INFO 2026-05-20 19:07:50,478 runserver 1280 9656 [mHTTP POST /api/assignments/1/submit/ 201 [0.14, 127.0.0.1:63597][0m
+INFO 2026-05-20 19:08:12,678 runserver 1280 9656 [mHTTP GET /media/submissions/Yangi_matnli_hujjat.txt 200 [0.07, 127.0.0.1:63597][0m
+INFO 2026-05-20 19:09:56,380 runserver 1280 9656 [mHTTP GET /api/assignments/my/ 200 [0.12, 127.0.0.1:63646][0m
+INFO 2026-05-20 19:10:45,788 runserver 1280 9656 [mHTTP GET / 200 [0.04, 127.0.0.1:63646][0m
+INFO 2026-05-20 19:10:46,091 runserver 1280 9656 [mHTTP GET /api/schema/ 200 [0.16, 127.0.0.1:63646][0m
+INFO 2026-05-20 23:16:51,149 autoreload 4764 7968 Watching for file changes with StatReloader
+INFO 2026-05-20 23:19:34,048 runserver 4764 7780 [32mHTTP GET /admin 301 [0.03, 127.0.0.1:52053][0m
+INFO 2026-05-20 23:19:34,237 runserver 4764 7780 [mHTTP GET /admin/ 200 [0.19, 127.0.0.1:52053][0m
+INFO 2026-05-20 23:19:34,410 runserver 4764 7780 [mHTTP GET /static/admin/css/dark_mode.css 200 [0.15, 127.0.0.1:52054][0m
+INFO 2026-05-20 23:19:34,413 runserver 4764 7780 [mHTTP GET /static/admin/css/base.css 200 [0.16, 127.0.0.1:52053][0m
+INFO 2026-05-20 23:19:34,418 runserver 4764 7780 [mHTTP GET /static/admin/js/theme.js 200 [0.15, 127.0.0.1:52060][0m
+INFO 2026-05-20 23:19:34,419 runserver 4764 7780 [mHTTP GET /static/admin/css/dashboard.css 200 [0.16, 127.0.0.1:52058][0m
+INFO 2026-05-20 23:19:34,426 runserver 4764 7780 [mHTTP GET /static/admin/css/nav_sidebar.css 200 [0.17, 127.0.0.1:52057][0m
+INFO 2026-05-20 23:19:34,430 runserver 4764 7780 [mHTTP GET /static/admin/css/responsive.css 200 [0.17, 127.0.0.1:52059][0m
+INFO 2026-05-20 23:19:34,434 runserver 4764 7780 [mHTTP GET /static/admin/js/nav_sidebar.js 200 [0.01, 127.0.0.1:52058][0m
+INFO 2026-05-20 23:19:34,468 runserver 4764 7780 [mHTTP GET /static/admin/img/icon-addlink.svg 200 [0.03, 127.0.0.1:52058][0m
+INFO 2026-05-20 23:19:34,470 runserver 4764 7780 [mHTTP GET /static/admin/img/icon-changelink.svg 200 [0.03, 127.0.0.1:52059][0m
+WARNING 2026-05-20 23:19:34,588 log 4764 7792 Not Found: /favicon.ico
+WARNING 2026-05-20 23:19:34,589 runserver 4764 7780 [33mHTTP GET /favicon.ico 404 [0.03, 127.0.0.1:52059][0m
+INFO 2026-05-20 23:19:37,567 runserver 4764 7780 [mHTTP GET /admin/ 200 [0.09, 127.0.0.1:52059][0m
+INFO 2026-05-20 23:19:39,321 runserver 4764 7780 [mHTTP GET / 200 [0.02, 127.0.0.1:52059][0m
+INFO 2026-05-20 23:19:39,652 runserver 4764 7780 [mHTTP GET /api/schema/ 200 [0.20, 127.0.0.1:52059][0m
+WARNING 2026-05-20 23:19:59,360 log 4764 5404 Bad Request: /api/auth/login/
+WARNING 2026-05-20 23:19:59,360 runserver 4764 7780 [31;1mHTTP POST /api/auth/login/ 400 [1.52, 127.0.0.1:52059][0m
+INFO 2026-05-20 23:20:06,116 runserver 4764 7780 [mHTTP POST /api/auth/login/ 200 [1.55, 127.0.0.1:52059][0m
+INFO 2026-05-20 23:20:23,390 runserver 4764 7780 [mHTTP GET /api/assignments/my/ 200 [0.15, 127.0.0.1:52059][0m
+INFO 2026-05-20 23:20:54,978 runserver 4764 7780 [mHTTP POST /api/assignments/10/submit/ 201 [0.13, 127.0.0.1:52059][0m
+INFO 2026-05-20 23:21:25,188 runserver 4764 7780 [mHTTP GET /media/submissions/Yangi_matnli_hujjat_P2HZxDo.txt 200 [0.02, 127.0.0.1:52059][0m
+INFO 2026-05-20 23:22:01,140 runserver 4764 7780 [mHTTP GET /api/assignments/my/ 200 [0.14, 127.0.0.1:52059][0m
+INFO 2026-05-20 23:22:04,684 runserver 4764 7780 [mHTTP GET /api/assignments/my/ 200 [0.10, 127.0.0.1:52059][0m
+WARNING 2026-05-20 23:22:47,718 log 4764 10004 Bad Request: /api/assignments/2/submit/
+WARNING 2026-05-20 23:22:47,719 runserver 4764 7780 [31;1mHTTP POST /api/assignments/2/submit/ 400 [0.09, 127.0.0.1:52059][0m
+INFO 2026-05-20 23:24:58,396 autoreload 4764 7968 C:\Users\user\Documents\Loyxalar\LinguaPro\Beckend-LinguardPro\apps\notifications\views.py changed, reloading.
+INFO 2026-05-20 23:24:59,781 autoreload 9604 9032 Watching for file changes with StatReloader
+INFO 2026-05-20 23:26:34,483 autoreload 9872 8324 Watching for file changes with StatReloader
