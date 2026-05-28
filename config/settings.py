@@ -225,15 +225,14 @@ CORS_ALLOW_HEADERS = [
     "x-csrftoken",
 ]
 
+CORS_ALLOW_ALL_ORIGINS = True 
 
-CORS_ALLOW_ALL_ORIGINS = False
-
-CORS_ALLOWED_ORIGINS = [
-    "http://185.190.143.64",
-    "http://127.0.0.1:8000",
-    "http://localhost:3000",
-    "http://localhost:5173",
-]
+# CORS_ALLOW_ALL_ORIGINS = False
+# CORS_ALLOWED_ORIGINS = [
+#     "http://51.20.249.164",      
+#     "http://localhost:3000",
+#     "http://localhost:5173",
+# ]
 
 
 SPECTACULAR_SETTINGS = {
@@ -243,7 +242,7 @@ SPECTACULAR_SETTINGS = {
     'SERVE_INCLUDE_SCHEMA': False,
     'SERVERS': [
         {'url': 'http://127.0.0.1:8000', 'description': 'Localhost server'},
-        {'url': 'http://185.190.143.64:8000/', 'description': 'Production server'}
+        {'url': 'http://51.20.249.164:8000/', 'description': 'AWS Production server'}
     ],
 }
 

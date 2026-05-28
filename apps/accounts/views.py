@@ -232,7 +232,11 @@ class VerfiyPasswordView(GenericAPIView):
             user = User.objects.get(username=username)
             user.set_password(new_password)
             user.save()
-            return Response({"Success": user.password}, status=200)
+            tokens = get_tokens_for_user(user)
+            return Response({
+                "message": "Parol muvaffaqiyatli yangilandi ✅",
+                "tokens": tokens
+            }, status=200)
         except Exception as e:
             return Response({"Error": str(e)}, status=400)
 
